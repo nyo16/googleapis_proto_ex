@@ -22,3 +22,11 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 googleapis_proto_ex-*.tar
 
+
+.elixir_ls
+
+/.elixir_ls/
+
+/tmp
+
+tmp
