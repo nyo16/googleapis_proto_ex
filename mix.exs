@@ -45,7 +45,8 @@ defmodule GoogleapisProtoEx.MixProject do
   defp deps do
     [
       {:protobuf, "~> 0.7.1"},
-      {:grpc, "~> 0.5.0-beta.1"}
+      {:grpc, "~> 0.3.1"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
