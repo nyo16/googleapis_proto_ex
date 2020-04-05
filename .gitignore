@@ -27,6 +27,6 @@ googleapis_proto_ex-*.tar
 
 /.elixir_ls/
 
-/tmp
+/tmp/
 
 tmp
