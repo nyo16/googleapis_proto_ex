@@ -28,8 +28,7 @@ defmodule GoogleapisProtoEx.MixProject do
       # This option is only needed when you don't want to use the OTP application name
       name: "googleapis_proto_ex",
       # These are the default files included in the package
-      files: ~w(lib .formatter.exs mix.exs README* readme* LICENSE*
-                license* CHANGELOG* changelog*),
+      files: ~w(lib .formatter.exs mix.exs README* LICENSE*),
       licenses: ["Apache-2.0"],
       links: %{"GitHub" => "https://github.com/nyo16/googleapis_proto_ex"}
     ]
@@ -46,7 +45,7 @@ defmodule GoogleapisProtoEx.MixProject do
   defp deps do
     [
       {:protobuf, "~> 0.7.1"},
-      {:grpc, github: "elixir-grpc/grpc"}
+      {:grpc, "~> 0.5.0-beta.1"}
     ]
   end
 end
