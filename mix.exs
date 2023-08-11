@@ -44,7 +44,11 @@ defmodule GoogleapisProtoEx.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:protobuf, "~> 0.7.1"},
+      {:protobuf, "~> 0.12.0"},
+      # Only for files generated from Google's protos.
+      # Can be ignored if you don't use Google's protos.
+      # Or you can generate the code by yourself.
+      {:google_protos, "~> 0.1"},
       {:grpc, "~> 0.3.1"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
