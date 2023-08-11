@@ -1,12 +1,15 @@
 defmodule Google.Api.Context do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :rules, 1, repeated: true, type: Google.Api.ContextRule
 end
+
 defmodule Google.Api.ContextRule do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :selector, 1, type: :string
   field :requested, 2, repeated: true, type: :string

@@ -1,27 +1,34 @@
 defmodule Google.Api.BackendRule.PathTranslation do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :PATH_TRANSLATION_UNSPECIFIED, 0
   field :CONSTANT_ADDRESS, 1
   field :APPEND_PATH_TO_ADDRESS, 2
 end
+
 defmodule Google.Api.Backend do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :rules, 1, repeated: true, type: Google.Api.BackendRule
 end
+
 defmodule Google.Api.BackendRule.OverridesByRequestProtocolEntry do
   @moduledoc false
-  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :key, 1, type: :string
   field :value, 2, type: Google.Api.BackendRule
 end
+
 defmodule Google.Api.BackendRule do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   oneof :authentication, 0
 

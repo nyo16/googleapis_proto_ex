@@ -1,6 +1,7 @@
 defmodule Google.Api.Http do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :rules, 1, repeated: true, type: Google.Api.HttpRule
 
@@ -8,9 +9,11 @@ defmodule Google.Api.Http do
     type: :bool,
     json_name: "fullyDecodeReservedExpansion"
 end
+
 defmodule Google.Api.HttpRule do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   oneof :pattern, 0
 
@@ -29,9 +32,11 @@ defmodule Google.Api.HttpRule do
     type: Google.Api.HttpRule,
     json_name: "additionalBindings"
 end
+
 defmodule Google.Api.CustomHttpPattern do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :kind, 1, type: :string
   field :path, 2, type: :string

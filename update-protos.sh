@@ -4,7 +4,7 @@ if [ "$MIX_HOME" = "" ]; then
     export MIX_HOME=$HOME/.mix
 fi
 
-PLUGIN_PATH=$MIX_HOME/escripts/protoc-gen-elixir
+PLUGIN_PATH=/Users/nmaroulis/.asdf/shims/protoc-gen-elixir
 
 if [ ! -f $PLUGIN_PATH ]; then
     mix escript.install hex protobuf
@@ -19,21 +19,7 @@ GOOGLEAPIS_PATH=$TMP_DIR/googleapis
 PROTOC_PATH=$TMP_DIR/protoc
 PROTOC=$PROTOC_PATH/bin/protoc
 
-FILENAME=""
-case "$(uname -s)" in
-    
-    Darwin)
-        FILENAME="osx-x86_64.zip"
-        echo "Running on Linux"
-    ;;
-    
-    Linux)
-        FILENAME="linux-x86_64.zip"
-        echo "Running on Osx"
-    ;;
-esac
 
-PROTOC_VERSION="3.11.4"
 PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v24.0/protoc-24.0-osx-aarch_64.zip
 
 cd $DIR
@@ -58,29 +44,29 @@ mkdir -p $OUT
 
 
 $PROTOC -I $PROTOC_PATH/include/google \
-  --plugin=protoc-gen-elixir=$PLUGIN_PATH \
-  --elixir_out=plugins=grpc:$OUT \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
 $PROTOC_PATH/include/google/protobuf/duration.proto
 
 $PROTOC -I $PROTOC_PATH/include/google \
-  --plugin=protoc-gen-elixir=$PLUGIN_PATH \
-  --elixir_out=plugins=grpc:$OUT \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
 $PROTOC_PATH/include/google/protobuf/api.proto
 
 $PROTOC -I $PROTOC_PATH/include/google \
-  --plugin=protoc-gen-elixir=$PLUGIN_PATH \
-  --elixir_out=plugins=grpc:$OUT \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
 $PROTOC_PATH/include/google/protobuf/field_mask.proto
 
 $PROTOC -I $PROTOC_PATH/include/google \
-  --plugin=protoc-gen-elixir=$PLUGIN_PATH \
-  --elixir_out=plugins=grpc:$OUT \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
 $PROTOC_PATH/include/google/protobuf/empty.proto
 
 
 $PROTOC -I $PROTOC_PATH/include/google \
-  --plugin=protoc-gen-elixir=$PLUGIN_PATH \
-  --elixir_out=plugins=grpc:$OUT \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
 $PROTOC_PATH/include/google/protobuf/timestamp.proto
 
 $PROTOC -I $GOOGLEAPIS_PATH \
@@ -128,27 +114,20 @@ $PROTOC -I $GOOGLEAPIS_PATH \
 --elixir_out=plugins=grpc:$OUT \
 $GOOGLEAPIS_PATH/google/cloud/tasks/v2/*.proto
 
-# $PROTOC -I $GOOGLEAPIS_PATH \
-# --plugin=protoc-gen-elixir=$PLUGIN_PATH \
-# --elixir_out=plugins=grpc:$OUT \
-# $GOOGLEAPIS_PATH/google/cloud/secretmanager/v1/*.proto
+$PROTOC -I $GOOGLEAPIS_PATH \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$(find $GOOGLEAPIS_PATH/google/cloud/secretmanager -iname "*.proto")
 
-# $PROTOC -I $GOOGLEAPIS_PATH \
-# --plugin=protoc-gen-elixir=$PLUGIN_PATH \
-# --elixir_out=plugins=grpc:$OUT \
-# $GOOGLEAPIS_PATH/google/cloud/secretmanager/logging/v1/*.proto
+$PROTOC -I $GOOGLEAPIS_PATH \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$(find $GOOGLEAPIS_PATH/google/bigtable -iname "*.proto")
 
-# $PROTOC -I $GOOGLEAPIS_PATH \
-# --plugin=protoc-gen-elixir=$PLUGIN_PATH \
-# --elixir_out=plugins=grpc:$OUT \
-# $GOOGLEAPIS_PATH/google/bigtable/v2/*.proto
-
-
-# $PROTOC -I $GOOGLEAPIS_PATH \
-# --plugin=protoc-gen-elixir=$PLUGIN_PATH \
-# --elixir_out=plugins=grpc:$OUT \
-# $(find $GOOGLEAPIS_PATH/google/bigtable -iname "*.proto")
-
+$PROTOC -I $GOOGLEAPIS_PATH \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$(find $GOOGLEAPIS_PATH/google/ai/generativelanguage -iname "*.proto")
 
 
 

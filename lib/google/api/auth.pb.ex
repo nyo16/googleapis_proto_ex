@@ -1,22 +1,27 @@
 defmodule Google.Api.Authentication do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :rules, 3, repeated: true, type: Google.Api.AuthenticationRule
   field :providers, 4, repeated: true, type: Google.Api.AuthProvider
 end
+
 defmodule Google.Api.AuthenticationRule do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :selector, 1, type: :string
   field :oauth, 2, type: Google.Api.OAuthRequirements
   field :allow_without_credential, 5, type: :bool, json_name: "allowWithoutCredential"
   field :requirements, 7, repeated: true, type: Google.Api.AuthRequirement
 end
+
 defmodule Google.Api.JwtLocation do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   oneof :in, 0
 
@@ -25,9 +30,11 @@ defmodule Google.Api.JwtLocation do
   field :cookie, 4, type: :string, oneof: 0
   field :value_prefix, 3, type: :string, json_name: "valuePrefix"
 end
+
 defmodule Google.Api.AuthProvider do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :id, 1, type: :string
   field :issuer, 2, type: :string
@@ -36,15 +43,19 @@ defmodule Google.Api.AuthProvider do
   field :authorization_url, 5, type: :string, json_name: "authorizationUrl"
   field :jwt_locations, 6, repeated: true, type: Google.Api.JwtLocation, json_name: "jwtLocations"
 end
+
 defmodule Google.Api.OAuthRequirements do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :canonical_scopes, 1, type: :string, json_name: "canonicalScopes"
 end
+
 defmodule Google.Api.AuthRequirement do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :provider_id, 1, type: :string, json_name: "providerId"
   field :audiences, 2, type: :string

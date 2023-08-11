@@ -1,6 +1,7 @@
 defmodule Google.Type.DayOfWeek do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :DAY_OF_WEEK_UNSPECIFIED, 0
   field :MONDAY, 1

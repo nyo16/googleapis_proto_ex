@@ -1,6 +1,7 @@
 defmodule Google.Api.LogDescriptor do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :name, 1, type: :string
   field :labels, 2, repeated: true, type: Google.Api.LabelDescriptor

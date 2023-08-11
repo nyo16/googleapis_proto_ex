@@ -1,15 +1,18 @@
 defmodule Google.Api.MetricDescriptor.MetricKind do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :METRIC_KIND_UNSPECIFIED, 0
   field :GAUGE, 1
   field :DELTA, 2
   field :CUMULATIVE, 3
 end
+
 defmodule Google.Api.MetricDescriptor.ValueType do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :VALUE_TYPE_UNSPECIFIED, 0
   field :BOOL, 1
@@ -19,9 +22,11 @@ defmodule Google.Api.MetricDescriptor.ValueType do
   field :DISTRIBUTION, 5
   field :MONEY, 6
 end
+
 defmodule Google.Api.MetricDescriptor.MetricDescriptorMetadata do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :launch_stage, 1,
     type: Google.Api.LaunchStage,
@@ -32,9 +37,11 @@ defmodule Google.Api.MetricDescriptor.MetricDescriptorMetadata do
   field :sample_period, 2, type: Google.Protobuf.Duration, json_name: "samplePeriod"
   field :ingest_delay, 3, type: Google.Protobuf.Duration, json_name: "ingestDelay"
 end
+
 defmodule Google.Api.MetricDescriptor do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :name, 1, type: :string
   field :type, 8, type: :string
@@ -61,16 +68,20 @@ defmodule Google.Api.MetricDescriptor do
     type: :string,
     json_name: "monitoredResourceTypes"
 end
+
 defmodule Google.Api.Metric.LabelsEntry do
   @moduledoc false
-  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :key, 1, type: :string
   field :value, 2, type: :string
 end
+
 defmodule Google.Api.Metric do
   @moduledoc false
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :type, 3, type: :string
   field :labels, 2, repeated: true, type: Google.Api.Metric.LabelsEntry, map: true

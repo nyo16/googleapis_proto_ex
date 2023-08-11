@@ -1,6 +1,7 @@
 defmodule Google.Api.LaunchStage do
   @moduledoc false
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.10.0"
+
+  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
 
   field :LAUNCH_STAGE_UNSPECIFIED, 0
   field :UNIMPLEMENTED, 6
