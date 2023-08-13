@@ -42,6 +42,15 @@ rm -rf $OUT
 # create output directory.
 mkdir -p $OUT
 
+$PROTOC -I $PROTOC_PATH/include/google \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$PROTOC_PATH/include/google/protobuf/type.proto
+
+$PROTOC -I $PROTOC_PATH/include/google \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$PROTOC_PATH/include/google/protobuf/any.proto
 
 $PROTOC -I $PROTOC_PATH/include/google \
 --plugin=protoc-gen-elixir=$PLUGIN_PATH \
