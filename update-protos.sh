@@ -128,10 +128,3 @@ $PROTOC -I $GOOGLEAPIS_PATH \
 --plugin=protoc-gen-elixir=$PLUGIN_PATH \
 --elixir_out=plugins=grpc:$OUT \
 $(find $GOOGLEAPIS_PATH/google/ai/generativelanguage -iname "*.proto")
-
-
-
-
-
-
-# # rm -rf $TMP_DIR
