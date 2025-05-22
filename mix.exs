@@ -44,8 +44,8 @@ defmodule GoogleapisProtoEx.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:protobuf, "~> 0.12.0"},
-      {:grpc, "~> 0.6.0"},
+      {:protobuf, "~> 0.14.1"},
+      {:grpc, "~> 0.10.1"},
       {:ex_doc, ">= 0.30.5", only: :dev, runtime: false}
     ]
   end
