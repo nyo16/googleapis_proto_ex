@@ -4,7 +4,7 @@ if [ "$MIX_HOME" = "" ]; then
     export MIX_HOME=$HOME/.mix
 fi
 
-PLUGIN_PATH=/Users/nmaroulis/.asdf/shims/protoc-gen-elixir
+PLUGIN_PATH=/Users/nmaroulis/.mix/escripts/protoc-gen-elixir 
 
 if [ ! -f $PLUGIN_PATH ]; then
     mix escript.install hex protobuf
@@ -20,7 +20,7 @@ PROTOC_PATH=$TMP_DIR/protoc
 PROTOC=$PROTOC_PATH/bin/protoc
 
 
-PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v24.0/protoc-24.0-osx-aarch_64.zip
+PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v31.0/protoc-24.0-osx-aarch_64.zip
 
 cd $DIR
 mkdir -p $TMP_DIR

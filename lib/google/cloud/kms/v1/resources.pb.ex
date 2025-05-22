@@ -1,7 +1,7 @@
 defmodule Google.Cloud.Kms.V1.ProtectionLevel do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :PROTECTION_LEVEL_UNSPECIFIED, 0
   field :SOFTWARE, 1
@@ -10,10 +10,29 @@ defmodule Google.Cloud.Kms.V1.ProtectionLevel do
   field :EXTERNAL_VPC, 4
 end
 
+defmodule Google.Cloud.Kms.V1.AccessReason do
+  @moduledoc false
+
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :REASON_UNSPECIFIED, 0
+  field :CUSTOMER_INITIATED_SUPPORT, 1
+  field :GOOGLE_INITIATED_SERVICE, 2
+  field :THIRD_PARTY_DATA_REQUEST, 3
+  field :GOOGLE_INITIATED_REVIEW, 4
+  field :CUSTOMER_INITIATED_ACCESS, 5
+  field :GOOGLE_INITIATED_SYSTEM_OPERATION, 6
+  field :REASON_NOT_EXPECTED, 7
+  field :MODIFIED_CUSTOMER_INITIATED_ACCESS, 8
+  field :MODIFIED_GOOGLE_INITIATED_SYSTEM_OPERATION, 9
+  field :GOOGLE_RESPONSE_TO_PRODUCTION_ALERT, 10
+  field :CUSTOMER_AUTHORIZED_WORKFLOW_SERVICING, 11
+end
+
 defmodule Google.Cloud.Kms.V1.CryptoKey.CryptoKeyPurpose do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :CRYPTO_KEY_PURPOSE_UNSPECIFIED, 0
   field :ENCRYPT_DECRYPT, 1
@@ -26,7 +45,7 @@ end
 defmodule Google.Cloud.Kms.V1.KeyOperationAttestation.AttestationFormat do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :ATTESTATION_FORMAT_UNSPECIFIED, 0
   field :CAVIUM_V1_COMPRESSED, 3
@@ -36,7 +55,7 @@ end
 defmodule Google.Cloud.Kms.V1.CryptoKeyVersion.CryptoKeyVersionAlgorithm do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED, 0
   field :GOOGLE_SYMMETRIC_ENCRYPTION, 1
@@ -67,18 +86,21 @@ defmodule Google.Cloud.Kms.V1.CryptoKeyVersion.CryptoKeyVersionAlgorithm do
   field :EC_SIGN_P256_SHA256, 12
   field :EC_SIGN_P384_SHA384, 13
   field :EC_SIGN_SECP256K1_SHA256, 31
+  field :EC_SIGN_ED25519, 40
   field :HMAC_SHA256, 32
   field :HMAC_SHA1, 33
   field :HMAC_SHA384, 34
   field :HMAC_SHA512, 35
   field :HMAC_SHA224, 36
   field :EXTERNAL_SYMMETRIC_ENCRYPTION, 18
+  field :PQ_SIGN_ML_DSA_65, 56
+  field :PQ_SIGN_SLH_DSA_SHA2_128S, 57
 end
 
 defmodule Google.Cloud.Kms.V1.CryptoKeyVersion.CryptoKeyVersionState do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :CRYPTO_KEY_VERSION_STATE_UNSPECIFIED, 0
   field :PENDING_GENERATION, 5
@@ -96,16 +118,26 @@ end
 defmodule Google.Cloud.Kms.V1.CryptoKeyVersion.CryptoKeyVersionView do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :CRYPTO_KEY_VERSION_VIEW_UNSPECIFIED, 0
   field :FULL, 1
 end
 
+defmodule Google.Cloud.Kms.V1.PublicKey.PublicKeyFormat do
+  @moduledoc false
+
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :PUBLIC_KEY_FORMAT_UNSPECIFIED, 0
+  field :PEM, 1
+  field :NIST_PQC, 3
+end
+
 defmodule Google.Cloud.Kms.V1.ImportJob.ImportMethod do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :IMPORT_METHOD_UNSPECIFIED, 0
   field :RSA_OAEP_3072_SHA1_AES_256, 1
@@ -119,7 +151,7 @@ end
 defmodule Google.Cloud.Kms.V1.ImportJob.ImportJobState do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :IMPORT_JOB_STATE_UNSPECIFIED, 0
   field :PENDING_GENERATION, 1
@@ -130,7 +162,7 @@ end
 defmodule Google.Cloud.Kms.V1.KeyRing do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :name, 1, type: :string, deprecated: false
 
@@ -143,7 +175,7 @@ end
 defmodule Google.Cloud.Kms.V1.CryptoKey.LabelsEntry do
   @moduledoc false
 
-  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, map: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :key, 1, type: :string
   field :value, 2, type: :string
@@ -152,7 +184,7 @@ end
 defmodule Google.Cloud.Kms.V1.CryptoKey do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   oneof :rotation_schedule, 0
 
@@ -185,12 +217,17 @@ defmodule Google.Cloud.Kms.V1.CryptoKey do
     deprecated: false
 
   field :crypto_key_backend, 15, type: :string, json_name: "cryptoKeyBackend", deprecated: false
+
+  field :key_access_justifications_policy, 17,
+    type: Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy,
+    json_name: "keyAccessJustificationsPolicy",
+    deprecated: false
 end
 
 defmodule Google.Cloud.Kms.V1.CryptoKeyVersionTemplate do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :protection_level, 1,
     type: Google.Cloud.Kms.V1.ProtectionLevel,
@@ -206,7 +243,7 @@ end
 defmodule Google.Cloud.Kms.V1.KeyOperationAttestation.CertificateChains do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :cavium_certs, 1, repeated: true, type: :string, json_name: "caviumCerts"
   field :google_card_certs, 2, repeated: true, type: :string, json_name: "googleCardCerts"
@@ -220,7 +257,7 @@ end
 defmodule Google.Cloud.Kms.V1.KeyOperationAttestation do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :format, 4,
     type: Google.Cloud.Kms.V1.KeyOperationAttestation.AttestationFormat,
@@ -238,7 +275,7 @@ end
 defmodule Google.Cloud.Kms.V1.CryptoKeyVersion do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :name, 1, type: :string, deprecated: false
   field :state, 3, type: Google.Cloud.Kms.V1.CryptoKeyVersion.CryptoKeyVersionState, enum: true
@@ -305,10 +342,19 @@ defmodule Google.Cloud.Kms.V1.CryptoKeyVersion do
   field :reimport_eligible, 18, type: :bool, json_name: "reimportEligible", deprecated: false
 end
 
+defmodule Google.Cloud.Kms.V1.ChecksummedData do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :data, 3, type: :bytes
+  field :crc32c_checksum, 2, type: Google.Protobuf.Int64Value, json_name: "crc32cChecksum"
+end
+
 defmodule Google.Cloud.Kms.V1.PublicKey do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :pem, 1, type: :string
 
@@ -323,12 +369,19 @@ defmodule Google.Cloud.Kms.V1.PublicKey do
     type: Google.Cloud.Kms.V1.ProtectionLevel,
     json_name: "protectionLevel",
     enum: true
+
+  field :public_key_format, 7,
+    type: Google.Cloud.Kms.V1.PublicKey.PublicKeyFormat,
+    json_name: "publicKeyFormat",
+    enum: true
+
+  field :public_key, 8, type: Google.Cloud.Kms.V1.ChecksummedData, json_name: "publicKey"
 end
 
 defmodule Google.Cloud.Kms.V1.ImportJob.WrappingPublicKey do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :pem, 1, type: :string
 end
@@ -336,7 +389,7 @@ end
 defmodule Google.Cloud.Kms.V1.ImportJob do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :name, 1, type: :string, deprecated: false
 
@@ -388,8 +441,20 @@ end
 defmodule Google.Cloud.Kms.V1.ExternalProtectionLevelOptions do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :external_key_uri, 1, type: :string, json_name: "externalKeyUri"
   field :ekm_connection_key_path, 2, type: :string, json_name: "ekmConnectionKeyPath"
+end
+
+defmodule Google.Cloud.Kms.V1.KeyAccessJustificationsPolicy do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :allowed_access_reasons, 1,
+    repeated: true,
+    type: Google.Cloud.Kms.V1.AccessReason,
+    json_name: "allowedAccessReasons",
+    enum: true
 end

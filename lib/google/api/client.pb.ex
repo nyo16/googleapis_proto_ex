@@ -1,7 +1,7 @@
 defmodule Google.Api.ClientLibraryOrganization do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :CLIENT_LIBRARY_ORGANIZATION_UNSPECIFIED, 0
   field :CLOUD, 1
@@ -16,7 +16,7 @@ end
 defmodule Google.Api.ClientLibraryDestination do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :CLIENT_LIBRARY_DESTINATION_UNSPECIFIED, 0
   field :GITHUB, 10
@@ -26,16 +26,20 @@ end
 defmodule Google.Api.CommonLanguageSettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :reference_docs_uri, 1, type: :string, json_name: "referenceDocsUri", deprecated: true
   field :destinations, 2, repeated: true, type: Google.Api.ClientLibraryDestination, enum: true
+
+  field :selective_gapic_generation, 3,
+    type: Google.Api.SelectiveGapicGeneration,
+    json_name: "selectiveGapicGeneration"
 end
 
 defmodule Google.Api.ClientLibrarySettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :version, 1, type: :string
   field :launch_stage, 2, type: Google.Api.LaunchStage, json_name: "launchStage", enum: true
@@ -53,7 +57,7 @@ end
 defmodule Google.Api.Publishing do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :method_settings, 2,
     repeated: true,
@@ -81,12 +85,16 @@ defmodule Google.Api.Publishing do
   field :proto_reference_documentation_uri, 110,
     type: :string,
     json_name: "protoReferenceDocumentationUri"
+
+  field :rest_reference_documentation_uri, 111,
+    type: :string,
+    json_name: "restReferenceDocumentationUri"
 end
 
 defmodule Google.Api.JavaSettings.ServiceClassNamesEntry do
   @moduledoc false
 
-  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, map: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :key, 1, type: :string
   field :value, 2, type: :string
@@ -95,7 +103,7 @@ end
 defmodule Google.Api.JavaSettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :library_package, 1, type: :string, json_name: "libraryPackage"
 
@@ -111,7 +119,7 @@ end
 defmodule Google.Api.CppSettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :common, 1, type: Google.Api.CommonLanguageSettings
 end
@@ -119,23 +127,41 @@ end
 defmodule Google.Api.PhpSettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :common, 1, type: Google.Api.CommonLanguageSettings
+end
+
+defmodule Google.Api.PythonSettings.ExperimentalFeatures do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :rest_async_io_enabled, 1, type: :bool, json_name: "restAsyncIoEnabled"
+
+  field :protobuf_pythonic_types_enabled, 2,
+    type: :bool,
+    json_name: "protobufPythonicTypesEnabled"
+
+  field :unversioned_package_disabled, 3, type: :bool, json_name: "unversionedPackageDisabled"
 end
 
 defmodule Google.Api.PythonSettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :common, 1, type: Google.Api.CommonLanguageSettings
+
+  field :experimental_features, 2,
+    type: Google.Api.PythonSettings.ExperimentalFeatures,
+    json_name: "experimentalFeatures"
 end
 
 defmodule Google.Api.NodeSettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :common, 1, type: Google.Api.CommonLanguageSettings
 end
@@ -143,7 +169,7 @@ end
 defmodule Google.Api.DotnetSettings.RenamedServicesEntry do
   @moduledoc false
 
-  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, map: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :key, 1, type: :string
   field :value, 2, type: :string
@@ -152,7 +178,7 @@ end
 defmodule Google.Api.DotnetSettings.RenamedResourcesEntry do
   @moduledoc false
 
-  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, map: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :key, 1, type: :string
   field :value, 2, type: :string
@@ -161,7 +187,7 @@ end
 defmodule Google.Api.DotnetSettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :common, 1, type: Google.Api.CommonLanguageSettings
 
@@ -193,23 +219,38 @@ end
 defmodule Google.Api.RubySettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :common, 1, type: Google.Api.CommonLanguageSettings
+end
+
+defmodule Google.Api.GoSettings.RenamedServicesEntry do
+  @moduledoc false
+
+  use Protobuf, map: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :key, 1, type: :string
+  field :value, 2, type: :string
 end
 
 defmodule Google.Api.GoSettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :common, 1, type: Google.Api.CommonLanguageSettings
+
+  field :renamed_services, 2,
+    repeated: true,
+    type: Google.Api.GoSettings.RenamedServicesEntry,
+    json_name: "renamedServices",
+    map: true
 end
 
 defmodule Google.Api.MethodSettings.LongRunning do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :initial_poll_delay, 1, type: Google.Protobuf.Duration, json_name: "initialPollDelay"
   field :poll_delay_multiplier, 2, type: :float, json_name: "pollDelayMultiplier"
@@ -220,8 +261,18 @@ end
 defmodule Google.Api.MethodSettings do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :selector, 1, type: :string
   field :long_running, 2, type: Google.Api.MethodSettings.LongRunning, json_name: "longRunning"
+  field :auto_populated_fields, 3, repeated: true, type: :string, json_name: "autoPopulatedFields"
+end
+
+defmodule Google.Api.SelectiveGapicGeneration do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :methods, 1, repeated: true, type: :string
+  field :generate_omitted_as_internal, 2, type: :bool, json_name: "generateOmittedAsInternal"
 end

@@ -1,7 +1,7 @@
 defmodule Google.Bigtable.Admin.V2.CreateClusterMetadata.TableProgress.State do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :STATE_UNSPECIFIED, 0
   field :PENDING, 1
@@ -13,7 +13,7 @@ end
 defmodule Google.Bigtable.Admin.V2.CreateInstanceRequest.ClustersEntry do
   @moduledoc false
 
-  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, map: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :key, 1, type: :string
   field :value, 2, type: Google.Bigtable.Admin.V2.Cluster
@@ -22,7 +22,7 @@ end
 defmodule Google.Bigtable.Admin.V2.CreateInstanceRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :parent, 1, type: :string, deprecated: false
   field :instance_id, 2, type: :string, json_name: "instanceId", deprecated: false
@@ -38,7 +38,7 @@ end
 defmodule Google.Bigtable.Admin.V2.GetInstanceRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :name, 1, type: :string, deprecated: false
 end
@@ -46,7 +46,7 @@ end
 defmodule Google.Bigtable.Admin.V2.ListInstancesRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :parent, 1, type: :string, deprecated: false
   field :page_token, 2, type: :string, json_name: "pageToken"
@@ -55,7 +55,7 @@ end
 defmodule Google.Bigtable.Admin.V2.ListInstancesResponse do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :instances, 1, repeated: true, type: Google.Bigtable.Admin.V2.Instance
   field :failed_locations, 2, repeated: true, type: :string, json_name: "failedLocations"
@@ -65,7 +65,7 @@ end
 defmodule Google.Bigtable.Admin.V2.PartialUpdateInstanceRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :instance, 1, type: Google.Bigtable.Admin.V2.Instance, deprecated: false
 
@@ -78,7 +78,7 @@ end
 defmodule Google.Bigtable.Admin.V2.DeleteInstanceRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :name, 1, type: :string, deprecated: false
 end
@@ -86,7 +86,7 @@ end
 defmodule Google.Bigtable.Admin.V2.CreateClusterRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :parent, 1, type: :string, deprecated: false
   field :cluster_id, 2, type: :string, json_name: "clusterId", deprecated: false
@@ -96,7 +96,7 @@ end
 defmodule Google.Bigtable.Admin.V2.GetClusterRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :name, 1, type: :string, deprecated: false
 end
@@ -104,7 +104,7 @@ end
 defmodule Google.Bigtable.Admin.V2.ListClustersRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :parent, 1, type: :string, deprecated: false
   field :page_token, 2, type: :string, json_name: "pageToken"
@@ -113,7 +113,7 @@ end
 defmodule Google.Bigtable.Admin.V2.ListClustersResponse do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :clusters, 1, repeated: true, type: Google.Bigtable.Admin.V2.Cluster
   field :failed_locations, 2, repeated: true, type: :string, json_name: "failedLocations"
@@ -123,7 +123,7 @@ end
 defmodule Google.Bigtable.Admin.V2.DeleteClusterRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :name, 1, type: :string, deprecated: false
 end
@@ -131,7 +131,7 @@ end
 defmodule Google.Bigtable.Admin.V2.CreateInstanceMetadata do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :original_request, 1,
     type: Google.Bigtable.Admin.V2.CreateInstanceRequest,
@@ -144,7 +144,7 @@ end
 defmodule Google.Bigtable.Admin.V2.UpdateInstanceMetadata do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :original_request, 1,
     type: Google.Bigtable.Admin.V2.PartialUpdateInstanceRequest,
@@ -157,7 +157,7 @@ end
 defmodule Google.Bigtable.Admin.V2.CreateClusterMetadata.TableProgress do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :estimated_size_bytes, 2, type: :int64, json_name: "estimatedSizeBytes"
   field :estimated_copied_bytes, 3, type: :int64, json_name: "estimatedCopiedBytes"
@@ -170,7 +170,7 @@ end
 defmodule Google.Bigtable.Admin.V2.CreateClusterMetadata.TablesEntry do
   @moduledoc false
 
-  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, map: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :key, 1, type: :string
   field :value, 2, type: Google.Bigtable.Admin.V2.CreateClusterMetadata.TableProgress
@@ -179,7 +179,7 @@ end
 defmodule Google.Bigtable.Admin.V2.CreateClusterMetadata do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :original_request, 1,
     type: Google.Bigtable.Admin.V2.CreateClusterRequest,
@@ -197,7 +197,7 @@ end
 defmodule Google.Bigtable.Admin.V2.UpdateClusterMetadata do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :original_request, 1, type: Google.Bigtable.Admin.V2.Cluster, json_name: "originalRequest"
   field :request_time, 2, type: Google.Protobuf.Timestamp, json_name: "requestTime"
@@ -207,7 +207,7 @@ end
 defmodule Google.Bigtable.Admin.V2.PartialUpdateClusterMetadata do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :request_time, 1, type: Google.Protobuf.Timestamp, json_name: "requestTime"
   field :finish_time, 2, type: Google.Protobuf.Timestamp, json_name: "finishTime"
@@ -220,7 +220,7 @@ end
 defmodule Google.Bigtable.Admin.V2.PartialUpdateClusterRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :cluster, 1, type: Google.Bigtable.Admin.V2.Cluster, deprecated: false
 
@@ -233,7 +233,7 @@ end
 defmodule Google.Bigtable.Admin.V2.CreateAppProfileRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :parent, 1, type: :string, deprecated: false
   field :app_profile_id, 2, type: :string, json_name: "appProfileId", deprecated: false
@@ -249,7 +249,7 @@ end
 defmodule Google.Bigtable.Admin.V2.GetAppProfileRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :name, 1, type: :string, deprecated: false
 end
@@ -257,7 +257,7 @@ end
 defmodule Google.Bigtable.Admin.V2.ListAppProfilesRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :parent, 1, type: :string, deprecated: false
   field :page_size, 3, type: :int32, json_name: "pageSize"
@@ -267,7 +267,7 @@ end
 defmodule Google.Bigtable.Admin.V2.ListAppProfilesResponse do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :app_profiles, 1,
     repeated: true,
@@ -281,7 +281,7 @@ end
 defmodule Google.Bigtable.Admin.V2.UpdateAppProfileRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :app_profile, 1,
     type: Google.Bigtable.Admin.V2.AppProfile,
@@ -299,7 +299,7 @@ end
 defmodule Google.Bigtable.Admin.V2.DeleteAppProfileRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :name, 1, type: :string, deprecated: false
   field :ignore_warnings, 2, type: :bool, json_name: "ignoreWarnings", deprecated: false
@@ -308,13 +308,13 @@ end
 defmodule Google.Bigtable.Admin.V2.UpdateAppProfileMetadata do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 end
 
 defmodule Google.Bigtable.Admin.V2.ListHotTabletsRequest do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :parent, 1, type: :string, deprecated: false
   field :start_time, 2, type: Google.Protobuf.Timestamp, json_name: "startTime"
@@ -326,7 +326,7 @@ end
 defmodule Google.Bigtable.Admin.V2.ListHotTabletsResponse do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :hot_tablets, 1,
     repeated: true,
@@ -336,12 +336,208 @@ defmodule Google.Bigtable.Admin.V2.ListHotTabletsResponse do
   field :next_page_token, 2, type: :string, json_name: "nextPageToken"
 end
 
+defmodule Google.Bigtable.Admin.V2.CreateLogicalViewRequest do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :parent, 1, type: :string, deprecated: false
+  field :logical_view_id, 2, type: :string, json_name: "logicalViewId", deprecated: false
+
+  field :logical_view, 3,
+    type: Google.Bigtable.Admin.V2.LogicalView,
+    json_name: "logicalView",
+    deprecated: false
+end
+
+defmodule Google.Bigtable.Admin.V2.CreateLogicalViewMetadata do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :original_request, 1,
+    type: Google.Bigtable.Admin.V2.CreateLogicalViewRequest,
+    json_name: "originalRequest"
+
+  field :start_time, 2, type: Google.Protobuf.Timestamp, json_name: "startTime"
+  field :end_time, 3, type: Google.Protobuf.Timestamp, json_name: "endTime"
+end
+
+defmodule Google.Bigtable.Admin.V2.GetLogicalViewRequest do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :name, 1, type: :string, deprecated: false
+end
+
+defmodule Google.Bigtable.Admin.V2.ListLogicalViewsRequest do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :parent, 1, type: :string, deprecated: false
+  field :page_size, 2, type: :int32, json_name: "pageSize", deprecated: false
+  field :page_token, 3, type: :string, json_name: "pageToken", deprecated: false
+end
+
+defmodule Google.Bigtable.Admin.V2.ListLogicalViewsResponse do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :logical_views, 1,
+    repeated: true,
+    type: Google.Bigtable.Admin.V2.LogicalView,
+    json_name: "logicalViews"
+
+  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
+end
+
+defmodule Google.Bigtable.Admin.V2.UpdateLogicalViewRequest do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :logical_view, 1,
+    type: Google.Bigtable.Admin.V2.LogicalView,
+    json_name: "logicalView",
+    deprecated: false
+
+  field :update_mask, 2,
+    type: Google.Protobuf.FieldMask,
+    json_name: "updateMask",
+    deprecated: false
+end
+
+defmodule Google.Bigtable.Admin.V2.UpdateLogicalViewMetadata do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :original_request, 1,
+    type: Google.Bigtable.Admin.V2.UpdateLogicalViewRequest,
+    json_name: "originalRequest"
+
+  field :start_time, 2, type: Google.Protobuf.Timestamp, json_name: "startTime"
+  field :end_time, 3, type: Google.Protobuf.Timestamp, json_name: "endTime"
+end
+
+defmodule Google.Bigtable.Admin.V2.DeleteLogicalViewRequest do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :name, 1, type: :string, deprecated: false
+  field :etag, 2, type: :string, deprecated: false
+end
+
+defmodule Google.Bigtable.Admin.V2.CreateMaterializedViewRequest do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :parent, 1, type: :string, deprecated: false
+
+  field :materialized_view_id, 2,
+    type: :string,
+    json_name: "materializedViewId",
+    deprecated: false
+
+  field :materialized_view, 3,
+    type: Google.Bigtable.Admin.V2.MaterializedView,
+    json_name: "materializedView",
+    deprecated: false
+end
+
+defmodule Google.Bigtable.Admin.V2.CreateMaterializedViewMetadata do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :original_request, 1,
+    type: Google.Bigtable.Admin.V2.CreateMaterializedViewRequest,
+    json_name: "originalRequest"
+
+  field :start_time, 2, type: Google.Protobuf.Timestamp, json_name: "startTime"
+  field :end_time, 3, type: Google.Protobuf.Timestamp, json_name: "endTime"
+end
+
+defmodule Google.Bigtable.Admin.V2.GetMaterializedViewRequest do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :name, 1, type: :string, deprecated: false
+end
+
+defmodule Google.Bigtable.Admin.V2.ListMaterializedViewsRequest do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :parent, 1, type: :string, deprecated: false
+  field :page_size, 2, type: :int32, json_name: "pageSize", deprecated: false
+  field :page_token, 3, type: :string, json_name: "pageToken", deprecated: false
+end
+
+defmodule Google.Bigtable.Admin.V2.ListMaterializedViewsResponse do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :materialized_views, 1,
+    repeated: true,
+    type: Google.Bigtable.Admin.V2.MaterializedView,
+    json_name: "materializedViews"
+
+  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
+end
+
+defmodule Google.Bigtable.Admin.V2.UpdateMaterializedViewRequest do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :materialized_view, 1,
+    type: Google.Bigtable.Admin.V2.MaterializedView,
+    json_name: "materializedView",
+    deprecated: false
+
+  field :update_mask, 2,
+    type: Google.Protobuf.FieldMask,
+    json_name: "updateMask",
+    deprecated: false
+end
+
+defmodule Google.Bigtable.Admin.V2.UpdateMaterializedViewMetadata do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :original_request, 1,
+    type: Google.Bigtable.Admin.V2.UpdateMaterializedViewRequest,
+    json_name: "originalRequest"
+
+  field :start_time, 2, type: Google.Protobuf.Timestamp, json_name: "startTime"
+  field :end_time, 3, type: Google.Protobuf.Timestamp, json_name: "endTime"
+end
+
+defmodule Google.Bigtable.Admin.V2.DeleteMaterializedViewRequest do
+  @moduledoc false
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :name, 1, type: :string, deprecated: false
+  field :etag, 2, type: :string, deprecated: false
+end
+
 defmodule Google.Bigtable.Admin.V2.BigtableInstanceAdmin.Service do
   @moduledoc false
 
   use GRPC.Service,
     name: "google.bigtable.admin.v2.BigtableInstanceAdmin",
-    protoc_gen_elixir_version: "0.12.0"
+    protoc_gen_elixir_version: "0.14.1"
 
   rpc :CreateInstance,
       Google.Bigtable.Admin.V2.CreateInstanceRequest,
@@ -406,6 +602,44 @@ defmodule Google.Bigtable.Admin.V2.BigtableInstanceAdmin.Service do
   rpc :ListHotTablets,
       Google.Bigtable.Admin.V2.ListHotTabletsRequest,
       Google.Bigtable.Admin.V2.ListHotTabletsResponse
+
+  rpc :CreateLogicalView,
+      Google.Bigtable.Admin.V2.CreateLogicalViewRequest,
+      Google.Longrunning.Operation
+
+  rpc :GetLogicalView,
+      Google.Bigtable.Admin.V2.GetLogicalViewRequest,
+      Google.Bigtable.Admin.V2.LogicalView
+
+  rpc :ListLogicalViews,
+      Google.Bigtable.Admin.V2.ListLogicalViewsRequest,
+      Google.Bigtable.Admin.V2.ListLogicalViewsResponse
+
+  rpc :UpdateLogicalView,
+      Google.Bigtable.Admin.V2.UpdateLogicalViewRequest,
+      Google.Longrunning.Operation
+
+  rpc :DeleteLogicalView, Google.Bigtable.Admin.V2.DeleteLogicalViewRequest, Google.Protobuf.Empty
+
+  rpc :CreateMaterializedView,
+      Google.Bigtable.Admin.V2.CreateMaterializedViewRequest,
+      Google.Longrunning.Operation
+
+  rpc :GetMaterializedView,
+      Google.Bigtable.Admin.V2.GetMaterializedViewRequest,
+      Google.Bigtable.Admin.V2.MaterializedView
+
+  rpc :ListMaterializedViews,
+      Google.Bigtable.Admin.V2.ListMaterializedViewsRequest,
+      Google.Bigtable.Admin.V2.ListMaterializedViewsResponse
+
+  rpc :UpdateMaterializedView,
+      Google.Bigtable.Admin.V2.UpdateMaterializedViewRequest,
+      Google.Longrunning.Operation
+
+  rpc :DeleteMaterializedView,
+      Google.Bigtable.Admin.V2.DeleteMaterializedViewRequest,
+      Google.Protobuf.Empty
 end
 
 defmodule Google.Bigtable.Admin.V2.BigtableInstanceAdmin.Stub do

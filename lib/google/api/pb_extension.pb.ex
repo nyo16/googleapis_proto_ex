@@ -1,6 +1,7 @@
 defmodule Google.Api.PbExtension do
   @moduledoc false
-  use Protobuf, protoc_gen_elixir_version: "0.12.0"
+
+  use Protobuf, protoc_gen_elixir_version: "0.14.1"
 
   extend Google.Protobuf.MethodOptions, :http, 72_295_728,
     optional: true,
@@ -21,11 +22,23 @@ defmodule Google.Api.PbExtension do
     type: :string,
     json_name: "oauthScopes"
 
+  extend Google.Protobuf.ServiceOptions, :api_version, 525_000_001,
+    optional: true,
+    type: :string,
+    json_name: "apiVersion"
+
   extend Google.Protobuf.FieldOptions, :field_behavior, 1052,
     repeated: true,
     type: Google.Api.FieldBehavior,
     json_name: "fieldBehavior",
-    enum: true
+    enum: true,
+    packed: false,
+    deprecated: false
+
+  extend Google.Protobuf.FieldOptions, :field_info, 291_403_980,
+    optional: true,
+    type: Google.Api.FieldInfo,
+    json_name: "fieldInfo"
 
   extend Google.Protobuf.FieldOptions, :field_policy, 158_361_448,
     optional: true,

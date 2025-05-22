@@ -1,7 +1,7 @@
 defmodule Google.Type.Color do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :red, 1, type: :float
   field :green, 2, type: :float

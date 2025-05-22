@@ -1,7 +1,7 @@
 defmodule Google.Api.MetricDescriptor.MetricKind do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :METRIC_KIND_UNSPECIFIED, 0
   field :GAUGE, 1
@@ -12,7 +12,7 @@ end
 defmodule Google.Api.MetricDescriptor.ValueType do
   @moduledoc false
 
-  use Protobuf, enum: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :VALUE_TYPE_UNSPECIFIED, 0
   field :BOOL, 1
@@ -23,10 +23,21 @@ defmodule Google.Api.MetricDescriptor.ValueType do
   field :MONEY, 6
 end
 
+defmodule Google.Api.MetricDescriptor.MetricDescriptorMetadata.TimeSeriesResourceHierarchyLevel do
+  @moduledoc false
+
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+
+  field :TIME_SERIES_RESOURCE_HIERARCHY_LEVEL_UNSPECIFIED, 0
+  field :PROJECT, 1
+  field :ORGANIZATION, 2
+  field :FOLDER, 3
+end
+
 defmodule Google.Api.MetricDescriptor.MetricDescriptorMetadata do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :launch_stage, 1,
     type: Google.Api.LaunchStage,
@@ -36,12 +47,18 @@ defmodule Google.Api.MetricDescriptor.MetricDescriptorMetadata do
 
   field :sample_period, 2, type: Google.Protobuf.Duration, json_name: "samplePeriod"
   field :ingest_delay, 3, type: Google.Protobuf.Duration, json_name: "ingestDelay"
+
+  field :time_series_resource_hierarchy_level, 4,
+    repeated: true,
+    type: Google.Api.MetricDescriptor.MetricDescriptorMetadata.TimeSeriesResourceHierarchyLevel,
+    json_name: "timeSeriesResourceHierarchyLevel",
+    enum: true
 end
 
 defmodule Google.Api.MetricDescriptor do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :name, 1, type: :string
   field :type, 8, type: :string
@@ -72,7 +89,7 @@ end
 defmodule Google.Api.Metric.LabelsEntry do
   @moduledoc false
 
-  use Protobuf, map: true, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, map: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :key, 1, type: :string
   field :value, 2, type: :string
@@ -81,7 +98,7 @@ end
 defmodule Google.Api.Metric do
   @moduledoc false
 
-  use Protobuf, syntax: :proto3, protoc_gen_elixir_version: "0.12.0"
+  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
 
   field :type, 3, type: :string
   field :labels, 2, repeated: true, type: Google.Api.Metric.LabelsEntry, map: true
