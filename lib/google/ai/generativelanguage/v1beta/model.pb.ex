@@ -1,7 +1,7 @@
 defmodule Google.Ai.Generativelanguage.V1beta.Model do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
   field :name, 1, type: :string, deprecated: false
   field :base_model_id, 2, type: :string, json_name: "baseModelId", deprecated: false
@@ -20,4 +20,5 @@ defmodule Google.Ai.Generativelanguage.V1beta.Model do
   field :max_temperature, 13, proto3_optional: true, type: :float, json_name: "maxTemperature"
   field :top_p, 10, proto3_optional: true, type: :float, json_name: "topP"
   field :top_k, 11, proto3_optional: true, type: :int32, json_name: "topK"
+  field :thinking, 15, type: :bool
 end

@@ -1,7 +1,7 @@
 defmodule Google.Ai.Generativelanguage.V1beta.File.State do
   @moduledoc false
 
-  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
   field :STATE_UNSPECIFIED, 0
   field :PROCESSING, 1
@@ -12,7 +12,7 @@ end
 defmodule Google.Ai.Generativelanguage.V1beta.File.Source do
   @moduledoc false
 
-  use Protobuf, enum: true, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+  use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
   field :SOURCE_UNSPECIFIED, 0
   field :UPLOADED, 1
@@ -22,12 +22,12 @@ end
 defmodule Google.Ai.Generativelanguage.V1beta.File do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
   oneof :metadata, 0
 
   field :video_metadata, 12,
-    type: Google.Ai.Generativelanguage.V1beta.VideoMetadata,
+    type: Google.Ai.Generativelanguage.V1beta.VideoFileMetadata,
     json_name: "videoMetadata",
     oneof: 0,
     deprecated: false
@@ -65,10 +65,10 @@ defmodule Google.Ai.Generativelanguage.V1beta.File do
   field :error, 11, type: Google.Rpc.Status, deprecated: false
 end
 
-defmodule Google.Ai.Generativelanguage.V1beta.VideoMetadata do
+defmodule Google.Ai.Generativelanguage.V1beta.VideoFileMetadata do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.14.1", syntax: :proto3
+  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
   field :video_duration, 1, type: Google.Protobuf.Duration, json_name: "videoDuration"
 end

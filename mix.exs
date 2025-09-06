@@ -4,7 +4,7 @@ defmodule GoogleapisProtoEx.MixProject do
   def project do
     [
       app: :googleapis_proto_ex,
-      version: "0.2.0",
+      version: "0.3.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -44,8 +44,8 @@ defmodule GoogleapisProtoEx.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:protobuf, "~> 0.14.1"},
-      {:grpc, "~> 0.10.1"},
+      {:protobuf, "~> 0.15.0"},
+      {:grpc, "~> 0.10.2"},
       {:ex_doc, ">= 0.30.5", only: :dev, runtime: false}
     ]
   end
