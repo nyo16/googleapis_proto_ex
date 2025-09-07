@@ -4,7 +4,7 @@ defmodule GoogleapisProtoEx.MixProject do
   def project do
     [
       app: :googleapis_proto_ex,
-      version: "0.3.0",
+      version: "0.3.1",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -20,7 +20,7 @@ defmodule GoogleapisProtoEx.MixProject do
   end
 
   defp description() do
-    "Google protos for Bigtable, Pubsub, Datastore and more"
+    "Google protos for Bigtable v2/Admin v2, Pubsub (including Schema), Datastore and more"
   end
 
   defp package() do

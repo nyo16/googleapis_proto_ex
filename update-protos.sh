@@ -164,23 +164,35 @@ $PROTOC -I $GOOGLEAPIS_PATH \
 --elixir_out=plugins=grpc:$OUT \
 $GOOGLEAPIS_PATH/google/api/*.proto
 
-echo_info "Generating Google Datastore Admin v1..."
-$PROTOC -I $GOOGLEAPIS_PATH \
---plugin=protoc-gen-elixir=$PLUGIN_PATH \
---elixir_out=plugins=grpc:$OUT \
-$GOOGLEAPIS_PATH/google/datastore/admin/v1/*.proto
-
 echo_info "Generating Google Datastore v1..."
 $PROTOC -I $GOOGLEAPIS_PATH \
 --plugin=protoc-gen-elixir=$PLUGIN_PATH \
 --elixir_out=plugins=grpc:$OUT \
 $GOOGLEAPIS_PATH/google/datastore/v1/*.proto
 
+echo_info "Generating Google Datastore Admin v1..."
+$PROTOC -I $GOOGLEAPIS_PATH \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$GOOGLEAPIS_PATH/google/datastore/admin/v1/*.proto
+
+echo_info "Generating Google Datastore (all versions)..."
+$PROTOC -I $GOOGLEAPIS_PATH \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$(find $GOOGLEAPIS_PATH/google/datastore -iname "*.proto")
+
 echo_info "Generating Google Pub/Sub v1..."
 $PROTOC -I $GOOGLEAPIS_PATH \
 --plugin=protoc-gen-elixir=$PLUGIN_PATH \
 --elixir_out=plugins=grpc:$OUT \
 $GOOGLEAPIS_PATH/google/pubsub/v1/*.proto
+
+echo_info "Generating Google Pub/Sub v1 Schema..."
+$PROTOC -I $GOOGLEAPIS_PATH \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$GOOGLEAPIS_PATH/google/pubsub/v1/schema.proto
 
 echo_info "Generating Google Storage v1..."
 $PROTOC -I $GOOGLEAPIS_PATH \
@@ -206,7 +218,19 @@ $PROTOC -I $GOOGLEAPIS_PATH \
 --elixir_out=plugins=grpc:$OUT \
 $(find $GOOGLEAPIS_PATH/google/cloud/secretmanager -iname "*.proto")
 
-echo_info "Generating Google Cloud Bigtable..."
+echo_info "Generating Google Cloud Bigtable v2..."
+$PROTOC -I $GOOGLEAPIS_PATH \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$GOOGLEAPIS_PATH/google/bigtable/v2/*.proto
+
+echo_info "Generating Google Cloud Bigtable Admin v2..."
+$PROTOC -I $GOOGLEAPIS_PATH \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$GOOGLEAPIS_PATH/google/bigtable/admin/v2/*.proto
+
+echo_info "Generating Google Cloud Bigtable (all versions)..."
 $PROTOC -I $GOOGLEAPIS_PATH \
 --plugin=protoc-gen-elixir=$PLUGIN_PATH \
 --elixir_out=plugins=grpc:$OUT \
