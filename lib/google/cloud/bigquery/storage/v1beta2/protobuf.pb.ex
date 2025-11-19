@@ -3,7 +3,7 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta2.ProtoSchema do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :proto_descriptor, 1, type: Google.Protobuf.DescriptorProto, json_name: "protoDescriptor"
+  field(:proto_descriptor, 1, type: Google.Protobuf.DescriptorProto, json_name: "protoDescriptor")
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta2.ProtoRows do
@@ -11,5 +11,5 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta2.ProtoRows do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :serialized_rows, 1, repeated: true, type: :bytes, json_name: "serializedRows"
+  field(:serialized_rows, 1, repeated: true, type: :bytes, json_name: "serializedRows")
 end

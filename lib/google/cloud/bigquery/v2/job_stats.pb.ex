@@ -3,10 +3,10 @@ defmodule Google.Cloud.Bigquery.V2.ReservationEdition do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :RESERVATION_EDITION_UNSPECIFIED, 0
-  field :STANDARD, 1
-  field :ENTERPRISE, 2
-  field :ENTERPRISE_PLUS, 3
+  field(:RESERVATION_EDITION_UNSPECIFIED, 0)
+  field(:STANDARD, 1)
+  field(:ENTERPRISE, 2)
+  field(:ENTERPRISE_PLUS, 3)
 end
 
 defmodule Google.Cloud.Bigquery.V2.ExplainQueryStage.ComputeMode do
@@ -14,9 +14,9 @@ defmodule Google.Cloud.Bigquery.V2.ExplainQueryStage.ComputeMode do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :COMPUTE_MODE_UNSPECIFIED, 0
-  field :BIGQUERY, 1
-  field :BI_ENGINE, 2
+  field(:COMPUTE_MODE_UNSPECIFIED, 0)
+  field(:BIGQUERY, 1)
+  field(:BI_ENGINE, 2)
 end
 
 defmodule Google.Cloud.Bigquery.V2.BiEngineReason.Code do
@@ -24,13 +24,13 @@ defmodule Google.Cloud.Bigquery.V2.BiEngineReason.Code do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :CODE_UNSPECIFIED, 0
-  field :NO_RESERVATION, 1
-  field :INSUFFICIENT_RESERVATION, 2
-  field :UNSUPPORTED_SQL_TEXT, 4
-  field :INPUT_TOO_LARGE, 5
-  field :OTHER_REASON, 6
-  field :TABLE_EXCLUDED, 7
+  field(:CODE_UNSPECIFIED, 0)
+  field(:NO_RESERVATION, 1)
+  field(:INSUFFICIENT_RESERVATION, 2)
+  field(:UNSUPPORTED_SQL_TEXT, 4)
+  field(:INPUT_TOO_LARGE, 5)
+  field(:OTHER_REASON, 6)
+  field(:TABLE_EXCLUDED, 7)
 end
 
 defmodule Google.Cloud.Bigquery.V2.BiEngineStatistics.BiEngineMode do
@@ -38,10 +38,10 @@ defmodule Google.Cloud.Bigquery.V2.BiEngineStatistics.BiEngineMode do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :ACCELERATION_MODE_UNSPECIFIED, 0
-  field :DISABLED, 1
-  field :PARTIAL, 2
-  field :FULL, 3
+  field(:ACCELERATION_MODE_UNSPECIFIED, 0)
+  field(:DISABLED, 1)
+  field(:PARTIAL, 2)
+  field(:FULL, 3)
 end
 
 defmodule Google.Cloud.Bigquery.V2.BiEngineStatistics.BiEngineAccelerationMode do
@@ -49,11 +49,11 @@ defmodule Google.Cloud.Bigquery.V2.BiEngineStatistics.BiEngineAccelerationMode d
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :BI_ENGINE_ACCELERATION_MODE_UNSPECIFIED, 0
-  field :BI_ENGINE_DISABLED, 1
-  field :PARTIAL_INPUT, 2
-  field :FULL_INPUT, 3
-  field :FULL_QUERY, 4
+  field(:BI_ENGINE_ACCELERATION_MODE_UNSPECIFIED, 0)
+  field(:BI_ENGINE_DISABLED, 1)
+  field(:PARTIAL_INPUT, 2)
+  field(:FULL_INPUT, 3)
+  field(:FULL_QUERY, 4)
 end
 
 defmodule Google.Cloud.Bigquery.V2.IndexUnusedReason.Code do
@@ -61,28 +61,28 @@ defmodule Google.Cloud.Bigquery.V2.IndexUnusedReason.Code do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :CODE_UNSPECIFIED, 0
-  field :INDEX_CONFIG_NOT_AVAILABLE, 1
-  field :PENDING_INDEX_CREATION, 2
-  field :BASE_TABLE_TRUNCATED, 3
-  field :INDEX_CONFIG_MODIFIED, 4
-  field :TIME_TRAVEL_QUERY, 5
-  field :NO_PRUNING_POWER, 6
-  field :UNINDEXED_SEARCH_FIELDS, 7
-  field :UNSUPPORTED_SEARCH_PATTERN, 8
-  field :OPTIMIZED_WITH_MATERIALIZED_VIEW, 9
-  field :SECURED_BY_DATA_MASKING, 11
-  field :MISMATCHED_TEXT_ANALYZER, 12
-  field :BASE_TABLE_TOO_SMALL, 13
-  field :BASE_TABLE_TOO_LARGE, 14
-  field :ESTIMATED_PERFORMANCE_GAIN_TOO_LOW, 15
-  field :COLUMN_METADATA_INDEX_NOT_USED, 21
-  field :NOT_SUPPORTED_IN_STANDARD_EDITION, 17
-  field :INDEX_SUPPRESSED_BY_FUNCTION_OPTION, 18
-  field :QUERY_CACHE_HIT, 19
-  field :STALE_INDEX, 20
-  field :INTERNAL_ERROR, 10
-  field :OTHER_REASON, 16
+  field(:CODE_UNSPECIFIED, 0)
+  field(:INDEX_CONFIG_NOT_AVAILABLE, 1)
+  field(:PENDING_INDEX_CREATION, 2)
+  field(:BASE_TABLE_TRUNCATED, 3)
+  field(:INDEX_CONFIG_MODIFIED, 4)
+  field(:TIME_TRAVEL_QUERY, 5)
+  field(:NO_PRUNING_POWER, 6)
+  field(:UNINDEXED_SEARCH_FIELDS, 7)
+  field(:UNSUPPORTED_SEARCH_PATTERN, 8)
+  field(:OPTIMIZED_WITH_MATERIALIZED_VIEW, 9)
+  field(:SECURED_BY_DATA_MASKING, 11)
+  field(:MISMATCHED_TEXT_ANALYZER, 12)
+  field(:BASE_TABLE_TOO_SMALL, 13)
+  field(:BASE_TABLE_TOO_LARGE, 14)
+  field(:ESTIMATED_PERFORMANCE_GAIN_TOO_LOW, 15)
+  field(:COLUMN_METADATA_INDEX_NOT_USED, 21)
+  field(:NOT_SUPPORTED_IN_STANDARD_EDITION, 17)
+  field(:INDEX_SUPPRESSED_BY_FUNCTION_OPTION, 18)
+  field(:QUERY_CACHE_HIT, 19)
+  field(:STALE_INDEX, 20)
+  field(:INTERNAL_ERROR, 10)
+  field(:OTHER_REASON, 16)
 end
 
 defmodule Google.Cloud.Bigquery.V2.StoredColumnsUsage.StoredColumnsUnusedReason.Code do
@@ -90,13 +90,13 @@ defmodule Google.Cloud.Bigquery.V2.StoredColumnsUsage.StoredColumnsUnusedReason.
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :CODE_UNSPECIFIED, 0
-  field :STORED_COLUMNS_COVER_INSUFFICIENT, 1
-  field :BASE_TABLE_HAS_RLS, 2
-  field :BASE_TABLE_HAS_CLS, 3
-  field :UNSUPPORTED_PREFILTER, 4
-  field :INTERNAL_ERROR, 5
-  field :OTHER_REASON, 6
+  field(:CODE_UNSPECIFIED, 0)
+  field(:STORED_COLUMNS_COVER_INSUFFICIENT, 1)
+  field(:BASE_TABLE_HAS_RLS, 2)
+  field(:BASE_TABLE_HAS_CLS, 3)
+  field(:UNSUPPORTED_PREFILTER, 4)
+  field(:INTERNAL_ERROR, 5)
+  field(:OTHER_REASON, 6)
 end
 
 defmodule Google.Cloud.Bigquery.V2.SearchStatistics.IndexUsageMode do
@@ -104,10 +104,10 @@ defmodule Google.Cloud.Bigquery.V2.SearchStatistics.IndexUsageMode do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :INDEX_USAGE_MODE_UNSPECIFIED, 0
-  field :UNUSED, 1
-  field :PARTIALLY_USED, 2
-  field :FULLY_USED, 4
+  field(:INDEX_USAGE_MODE_UNSPECIFIED, 0)
+  field(:UNUSED, 1)
+  field(:PARTIALLY_USED, 2)
+  field(:FULLY_USED, 4)
 end
 
 defmodule Google.Cloud.Bigquery.V2.VectorSearchStatistics.IndexUsageMode do
@@ -115,10 +115,10 @@ defmodule Google.Cloud.Bigquery.V2.VectorSearchStatistics.IndexUsageMode do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :INDEX_USAGE_MODE_UNSPECIFIED, 0
-  field :UNUSED, 1
-  field :PARTIALLY_USED, 2
-  field :FULLY_USED, 4
+  field(:INDEX_USAGE_MODE_UNSPECIFIED, 0)
+  field(:UNUSED, 1)
+  field(:PARTIALLY_USED, 2)
+  field(:FULLY_USED, 4)
 end
 
 defmodule Google.Cloud.Bigquery.V2.IncrementalResultStats.DisabledReason do
@@ -126,8 +126,8 @@ defmodule Google.Cloud.Bigquery.V2.IncrementalResultStats.DisabledReason do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :DISABLED_REASON_UNSPECIFIED, 0
-  field :OTHER, 1
+  field(:DISABLED_REASON_UNSPECIFIED, 0)
+  field(:OTHER, 1)
 end
 
 defmodule Google.Cloud.Bigquery.V2.MlStatistics.TrainingType do
@@ -135,9 +135,9 @@ defmodule Google.Cloud.Bigquery.V2.MlStatistics.TrainingType do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :TRAINING_TYPE_UNSPECIFIED, 0
-  field :SINGLE_TRAINING, 1
-  field :HPARAM_TUNING, 2
+  field(:TRAINING_TYPE_UNSPECIFIED, 0)
+  field(:SINGLE_TRAINING, 1)
+  field(:HPARAM_TUNING, 2)
 end
 
 defmodule Google.Cloud.Bigquery.V2.ScriptStatistics.EvaluationKind do
@@ -145,9 +145,9 @@ defmodule Google.Cloud.Bigquery.V2.ScriptStatistics.EvaluationKind do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :EVALUATION_KIND_UNSPECIFIED, 0
-  field :STATEMENT, 1
-  field :EXPRESSION, 2
+  field(:EVALUATION_KIND_UNSPECIFIED, 0)
+  field(:STATEMENT, 1)
+  field(:EXPRESSION, 2)
 end
 
 defmodule Google.Cloud.Bigquery.V2.MaterializedView.RejectedReason do
@@ -155,18 +155,18 @@ defmodule Google.Cloud.Bigquery.V2.MaterializedView.RejectedReason do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :REJECTED_REASON_UNSPECIFIED, 0
-  field :NO_DATA, 1
-  field :COST, 2
-  field :BASE_TABLE_TRUNCATED, 3
-  field :BASE_TABLE_DATA_CHANGE, 4
-  field :BASE_TABLE_PARTITION_EXPIRATION_CHANGE, 5
-  field :BASE_TABLE_EXPIRED_PARTITION, 6
-  field :BASE_TABLE_INCOMPATIBLE_METADATA_CHANGE, 7
-  field :TIME_ZONE, 8
-  field :OUT_OF_TIME_TRAVEL_WINDOW, 9
-  field :BASE_TABLE_FINE_GRAINED_SECURITY_POLICY, 10
-  field :BASE_TABLE_TOO_STALE, 11
+  field(:REJECTED_REASON_UNSPECIFIED, 0)
+  field(:NO_DATA, 1)
+  field(:COST, 2)
+  field(:BASE_TABLE_TRUNCATED, 3)
+  field(:BASE_TABLE_DATA_CHANGE, 4)
+  field(:BASE_TABLE_PARTITION_EXPIRATION_CHANGE, 5)
+  field(:BASE_TABLE_EXPIRED_PARTITION, 6)
+  field(:BASE_TABLE_INCOMPATIBLE_METADATA_CHANGE, 7)
+  field(:TIME_ZONE, 8)
+  field(:OUT_OF_TIME_TRAVEL_WINDOW, 9)
+  field(:BASE_TABLE_FINE_GRAINED_SECURITY_POLICY, 10)
+  field(:BASE_TABLE_TOO_STALE, 11)
 end
 
 defmodule Google.Cloud.Bigquery.V2.TableMetadataCacheUsage.UnusedReason do
@@ -174,10 +174,10 @@ defmodule Google.Cloud.Bigquery.V2.TableMetadataCacheUsage.UnusedReason do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :UNUSED_REASON_UNSPECIFIED, 0
-  field :EXCEEDED_MAX_STALENESS, 1
-  field :METADATA_CACHING_NOT_ENABLED, 3
-  field :OTHER_REASON, 2
+  field(:UNUSED_REASON_UNSPECIFIED, 0)
+  field(:EXCEEDED_MAX_STALENESS, 1)
+  field(:METADATA_CACHING_NOT_ENABLED, 3)
+  field(:OTHER_REASON, 2)
 end
 
 defmodule Google.Cloud.Bigquery.V2.ExplainQueryStep do
@@ -185,8 +185,8 @@ defmodule Google.Cloud.Bigquery.V2.ExplainQueryStep do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :kind, 1, type: :string
-  field :substeps, 2, repeated: true, type: :string
+  field(:kind, 1, type: :string)
+  field(:substeps, 2, repeated: true, type: :string)
 end
 
 defmodule Google.Cloud.Bigquery.V2.ExplainQueryStage do
@@ -194,53 +194,57 @@ defmodule Google.Cloud.Bigquery.V2.ExplainQueryStage do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string
-  field :id, 2, type: Google.Protobuf.Int64Value
-  field :start_ms, 3, type: :int64, json_name: "startMs"
-  field :end_ms, 4, type: :int64, json_name: "endMs"
-  field :input_stages, 5, repeated: true, type: :int64, json_name: "inputStages"
-  field :wait_ratio_avg, 6, type: Google.Protobuf.DoubleValue, json_name: "waitRatioAvg"
-  field :wait_ms_avg, 7, type: Google.Protobuf.Int64Value, json_name: "waitMsAvg"
-  field :wait_ratio_max, 8, type: Google.Protobuf.DoubleValue, json_name: "waitRatioMax"
-  field :wait_ms_max, 9, type: Google.Protobuf.Int64Value, json_name: "waitMsMax"
-  field :read_ratio_avg, 10, type: Google.Protobuf.DoubleValue, json_name: "readRatioAvg"
-  field :read_ms_avg, 11, type: Google.Protobuf.Int64Value, json_name: "readMsAvg"
-  field :read_ratio_max, 12, type: Google.Protobuf.DoubleValue, json_name: "readRatioMax"
-  field :read_ms_max, 13, type: Google.Protobuf.Int64Value, json_name: "readMsMax"
-  field :compute_ratio_avg, 14, type: Google.Protobuf.DoubleValue, json_name: "computeRatioAvg"
-  field :compute_ms_avg, 15, type: Google.Protobuf.Int64Value, json_name: "computeMsAvg"
-  field :compute_ratio_max, 16, type: Google.Protobuf.DoubleValue, json_name: "computeRatioMax"
-  field :compute_ms_max, 17, type: Google.Protobuf.Int64Value, json_name: "computeMsMax"
-  field :write_ratio_avg, 18, type: Google.Protobuf.DoubleValue, json_name: "writeRatioAvg"
-  field :write_ms_avg, 19, type: Google.Protobuf.Int64Value, json_name: "writeMsAvg"
-  field :write_ratio_max, 20, type: Google.Protobuf.DoubleValue, json_name: "writeRatioMax"
-  field :write_ms_max, 21, type: Google.Protobuf.Int64Value, json_name: "writeMsMax"
+  field(:name, 1, type: :string)
+  field(:id, 2, type: Google.Protobuf.Int64Value)
+  field(:start_ms, 3, type: :int64, json_name: "startMs")
+  field(:end_ms, 4, type: :int64, json_name: "endMs")
+  field(:input_stages, 5, repeated: true, type: :int64, json_name: "inputStages")
+  field(:wait_ratio_avg, 6, type: Google.Protobuf.DoubleValue, json_name: "waitRatioAvg")
+  field(:wait_ms_avg, 7, type: Google.Protobuf.Int64Value, json_name: "waitMsAvg")
+  field(:wait_ratio_max, 8, type: Google.Protobuf.DoubleValue, json_name: "waitRatioMax")
+  field(:wait_ms_max, 9, type: Google.Protobuf.Int64Value, json_name: "waitMsMax")
+  field(:read_ratio_avg, 10, type: Google.Protobuf.DoubleValue, json_name: "readRatioAvg")
+  field(:read_ms_avg, 11, type: Google.Protobuf.Int64Value, json_name: "readMsAvg")
+  field(:read_ratio_max, 12, type: Google.Protobuf.DoubleValue, json_name: "readRatioMax")
+  field(:read_ms_max, 13, type: Google.Protobuf.Int64Value, json_name: "readMsMax")
+  field(:compute_ratio_avg, 14, type: Google.Protobuf.DoubleValue, json_name: "computeRatioAvg")
+  field(:compute_ms_avg, 15, type: Google.Protobuf.Int64Value, json_name: "computeMsAvg")
+  field(:compute_ratio_max, 16, type: Google.Protobuf.DoubleValue, json_name: "computeRatioMax")
+  field(:compute_ms_max, 17, type: Google.Protobuf.Int64Value, json_name: "computeMsMax")
+  field(:write_ratio_avg, 18, type: Google.Protobuf.DoubleValue, json_name: "writeRatioAvg")
+  field(:write_ms_avg, 19, type: Google.Protobuf.Int64Value, json_name: "writeMsAvg")
+  field(:write_ratio_max, 20, type: Google.Protobuf.DoubleValue, json_name: "writeRatioMax")
+  field(:write_ms_max, 21, type: Google.Protobuf.Int64Value, json_name: "writeMsMax")
 
-  field :shuffle_output_bytes, 22,
+  field(:shuffle_output_bytes, 22,
     type: Google.Protobuf.Int64Value,
     json_name: "shuffleOutputBytes"
+  )
 
-  field :shuffle_output_bytes_spilled, 23,
+  field(:shuffle_output_bytes_spilled, 23,
     type: Google.Protobuf.Int64Value,
     json_name: "shuffleOutputBytesSpilled"
+  )
 
-  field :records_read, 24, type: Google.Protobuf.Int64Value, json_name: "recordsRead"
-  field :records_written, 25, type: Google.Protobuf.Int64Value, json_name: "recordsWritten"
-  field :parallel_inputs, 26, type: Google.Protobuf.Int64Value, json_name: "parallelInputs"
+  field(:records_read, 24, type: Google.Protobuf.Int64Value, json_name: "recordsRead")
+  field(:records_written, 25, type: Google.Protobuf.Int64Value, json_name: "recordsWritten")
+  field(:parallel_inputs, 26, type: Google.Protobuf.Int64Value, json_name: "parallelInputs")
 
-  field :completed_parallel_inputs, 27,
+  field(:completed_parallel_inputs, 27,
     type: Google.Protobuf.Int64Value,
     json_name: "completedParallelInputs"
+  )
 
-  field :status, 28, type: :string
-  field :steps, 29, repeated: true, type: Google.Cloud.Bigquery.V2.ExplainQueryStep
-  field :slot_ms, 30, type: Google.Protobuf.Int64Value, json_name: "slotMs"
+  field(:status, 28, type: :string)
+  field(:steps, 29, repeated: true, type: Google.Cloud.Bigquery.V2.ExplainQueryStep)
+  field(:slot_ms, 30, type: Google.Protobuf.Int64Value, json_name: "slotMs")
 
-  field :compute_mode, 31,
+  field(:compute_mode, 31,
     type: Google.Cloud.Bigquery.V2.ExplainQueryStage.ComputeMode,
     json_name: "computeMode",
     enum: true,
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.QueryTimelineSample do
@@ -248,19 +252,21 @@ defmodule Google.Cloud.Bigquery.V2.QueryTimelineSample do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :elapsed_ms, 1, type: Google.Protobuf.Int64Value, json_name: "elapsedMs"
-  field :total_slot_ms, 2, type: Google.Protobuf.Int64Value, json_name: "totalSlotMs"
-  field :pending_units, 3, type: Google.Protobuf.Int64Value, json_name: "pendingUnits"
-  field :completed_units, 4, type: Google.Protobuf.Int64Value, json_name: "completedUnits"
-  field :active_units, 5, type: Google.Protobuf.Int64Value, json_name: "activeUnits"
+  field(:elapsed_ms, 1, type: Google.Protobuf.Int64Value, json_name: "elapsedMs")
+  field(:total_slot_ms, 2, type: Google.Protobuf.Int64Value, json_name: "totalSlotMs")
+  field(:pending_units, 3, type: Google.Protobuf.Int64Value, json_name: "pendingUnits")
+  field(:completed_units, 4, type: Google.Protobuf.Int64Value, json_name: "completedUnits")
+  field(:active_units, 5, type: Google.Protobuf.Int64Value, json_name: "activeUnits")
 
-  field :shuffle_ram_usage_ratio, 6,
+  field(:shuffle_ram_usage_ratio, 6,
     type: Google.Protobuf.DoubleValue,
     json_name: "shuffleRamUsageRatio"
+  )
 
-  field :estimated_runnable_units, 7,
+  field(:estimated_runnable_units, 7,
     type: Google.Protobuf.Int64Value,
     json_name: "estimatedRunnableUnits"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.ExternalServiceCost do
@@ -268,12 +274,12 @@ defmodule Google.Cloud.Bigquery.V2.ExternalServiceCost do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :external_service, 1, type: :string, json_name: "externalService"
-  field :bytes_processed, 2, type: Google.Protobuf.Int64Value, json_name: "bytesProcessed"
-  field :bytes_billed, 3, type: Google.Protobuf.Int64Value, json_name: "bytesBilled"
-  field :slot_ms, 4, type: Google.Protobuf.Int64Value, json_name: "slotMs"
-  field :reserved_slot_count, 5, type: :int64, json_name: "reservedSlotCount"
-  field :billing_method, 6, type: :string, json_name: "billingMethod"
+  field(:external_service, 1, type: :string, json_name: "externalService")
+  field(:bytes_processed, 2, type: Google.Protobuf.Int64Value, json_name: "bytesProcessed")
+  field(:bytes_billed, 3, type: Google.Protobuf.Int64Value, json_name: "bytesBilled")
+  field(:slot_ms, 4, type: Google.Protobuf.Int64Value, json_name: "slotMs")
+  field(:reserved_slot_count, 5, type: :int64, json_name: "reservedSlotCount")
+  field(:billing_method, 6, type: :string, json_name: "billingMethod")
 end
 
 defmodule Google.Cloud.Bigquery.V2.ExportDataStatistics do
@@ -281,8 +287,8 @@ defmodule Google.Cloud.Bigquery.V2.ExportDataStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :file_count, 1, type: Google.Protobuf.Int64Value, json_name: "fileCount"
-  field :row_count, 2, type: Google.Protobuf.Int64Value, json_name: "rowCount"
+  field(:file_count, 1, type: Google.Protobuf.Int64Value, json_name: "fileCount")
+  field(:row_count, 2, type: Google.Protobuf.Int64Value, json_name: "rowCount")
 end
 
 defmodule Google.Cloud.Bigquery.V2.BiEngineReason do
@@ -290,12 +296,13 @@ defmodule Google.Cloud.Bigquery.V2.BiEngineReason do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :code, 1,
+  field(:code, 1,
     type: Google.Cloud.Bigquery.V2.BiEngineReason.Code,
     enum: true,
     deprecated: false
+  )
 
-  field :message, 2, type: :string, deprecated: false
+  field(:message, 2, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.V2.BiEngineStatistics do
@@ -303,22 +310,25 @@ defmodule Google.Cloud.Bigquery.V2.BiEngineStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :bi_engine_mode, 1,
+  field(:bi_engine_mode, 1,
     type: Google.Cloud.Bigquery.V2.BiEngineStatistics.BiEngineMode,
     json_name: "biEngineMode",
     enum: true,
     deprecated: false
+  )
 
-  field :acceleration_mode, 3,
+  field(:acceleration_mode, 3,
     type: Google.Cloud.Bigquery.V2.BiEngineStatistics.BiEngineAccelerationMode,
     json_name: "accelerationMode",
     enum: true,
     deprecated: false
+  )
 
-  field :bi_engine_reasons, 2,
+  field(:bi_engine_reasons, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.BiEngineReason,
     json_name: "biEngineReasons"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.IndexUnusedReason do
@@ -326,19 +336,21 @@ defmodule Google.Cloud.Bigquery.V2.IndexUnusedReason do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :code, 1,
+  field(:code, 1,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.IndexUnusedReason.Code,
     enum: true
+  )
 
-  field :message, 2, proto3_optional: true, type: :string
+  field(:message, 2, proto3_optional: true, type: :string)
 
-  field :base_table, 3,
+  field(:base_table, 3,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "baseTable"
+  )
 
-  field :index_name, 4, proto3_optional: true, type: :string, json_name: "indexName"
+  field(:index_name, 4, proto3_optional: true, type: :string, json_name: "indexName")
 end
 
 defmodule Google.Cloud.Bigquery.V2.IndexPruningStats do
@@ -346,20 +358,23 @@ defmodule Google.Cloud.Bigquery.V2.IndexPruningStats do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :base_table, 1,
+  field(:base_table, 1,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "baseTable"
+  )
 
-  field :pre_index_pruning_parallel_input_count, 2,
+  field(:pre_index_pruning_parallel_input_count, 2,
     proto3_optional: true,
     type: :int64,
     json_name: "preIndexPruningParallelInputCount"
+  )
 
-  field :post_index_pruning_parallel_input_count, 3,
+  field(:post_index_pruning_parallel_input_count, 3,
     proto3_optional: true,
     type: :int64,
     json_name: "postIndexPruningParallelInputCount"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.StoredColumnsUsage.StoredColumnsUnusedReason do
@@ -367,13 +382,14 @@ defmodule Google.Cloud.Bigquery.V2.StoredColumnsUsage.StoredColumnsUnusedReason 
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :code, 1,
+  field(:code, 1,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.StoredColumnsUsage.StoredColumnsUnusedReason.Code,
     enum: true
+  )
 
-  field :message, 2, proto3_optional: true, type: :string
-  field :uncovered_columns, 3, repeated: true, type: :string, json_name: "uncoveredColumns"
+  field(:message, 2, proto3_optional: true, type: :string)
+  field(:uncovered_columns, 3, repeated: true, type: :string, json_name: "uncoveredColumns")
 end
 
 defmodule Google.Cloud.Bigquery.V2.StoredColumnsUsage do
@@ -381,20 +397,23 @@ defmodule Google.Cloud.Bigquery.V2.StoredColumnsUsage do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :is_query_accelerated, 1,
+  field(:is_query_accelerated, 1,
     proto3_optional: true,
     type: :bool,
     json_name: "isQueryAccelerated"
+  )
 
-  field :base_table, 2,
+  field(:base_table, 2,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "baseTable"
+  )
 
-  field :stored_columns_unused_reasons, 3,
+  field(:stored_columns_unused_reasons, 3,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.StoredColumnsUsage.StoredColumnsUnusedReason,
     json_name: "storedColumnsUnusedReasons"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.SearchStatistics do
@@ -402,20 +421,23 @@ defmodule Google.Cloud.Bigquery.V2.SearchStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :index_usage_mode, 1,
+  field(:index_usage_mode, 1,
     type: Google.Cloud.Bigquery.V2.SearchStatistics.IndexUsageMode,
     json_name: "indexUsageMode",
     enum: true
+  )
 
-  field :index_unused_reasons, 2,
+  field(:index_unused_reasons, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.IndexUnusedReason,
     json_name: "indexUnusedReasons"
+  )
 
-  field :index_pruning_stats, 3,
+  field(:index_pruning_stats, 3,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.IndexPruningStats,
     json_name: "indexPruningStats"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.VectorSearchStatistics do
@@ -423,20 +445,23 @@ defmodule Google.Cloud.Bigquery.V2.VectorSearchStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :index_usage_mode, 1,
+  field(:index_usage_mode, 1,
     type: Google.Cloud.Bigquery.V2.VectorSearchStatistics.IndexUsageMode,
     json_name: "indexUsageMode",
     enum: true
+  )
 
-  field :index_unused_reasons, 2,
+  field(:index_unused_reasons, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.IndexUnusedReason,
     json_name: "indexUnusedReasons"
+  )
 
-  field :stored_columns_usages, 3,
+  field(:stored_columns_usages, 3,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.StoredColumnsUsage,
     json_name: "storedColumnsUsages"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.QueryInfo do
@@ -444,10 +469,11 @@ defmodule Google.Cloud.Bigquery.V2.QueryInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :optimization_details, 2,
+  field(:optimization_details, 2,
     type: Google.Protobuf.Struct,
     json_name: "optimizationDetails",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.LoadQueryStatistics do
@@ -455,30 +481,35 @@ defmodule Google.Cloud.Bigquery.V2.LoadQueryStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :input_files, 1,
+  field(:input_files, 1,
     type: Google.Protobuf.Int64Value,
     json_name: "inputFiles",
     deprecated: false
+  )
 
-  field :input_file_bytes, 2,
+  field(:input_file_bytes, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "inputFileBytes",
     deprecated: false
+  )
 
-  field :output_rows, 3,
+  field(:output_rows, 3,
     type: Google.Protobuf.Int64Value,
     json_name: "outputRows",
     deprecated: false
+  )
 
-  field :output_bytes, 4,
+  field(:output_bytes, 4,
     type: Google.Protobuf.Int64Value,
     json_name: "outputBytes",
     deprecated: false
+  )
 
-  field :bad_records, 5,
+  field(:bad_records, 5,
     type: Google.Protobuf.Int64Value,
     json_name: "badRecords",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.IncrementalResultStats do
@@ -486,18 +517,21 @@ defmodule Google.Cloud.Bigquery.V2.IncrementalResultStats do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :disabled_reason, 1,
+  field(:disabled_reason, 1,
     type: Google.Cloud.Bigquery.V2.IncrementalResultStats.DisabledReason,
     json_name: "disabledReason",
     enum: true
+  )
 
-  field :result_set_last_replace_time, 2,
+  field(:result_set_last_replace_time, 2,
     type: Google.Protobuf.Timestamp,
     json_name: "resultSetLastReplaceTime"
+  )
 
-  field :result_set_last_modify_time, 3,
+  field(:result_set_last_modify_time, 3,
     type: Google.Protobuf.Timestamp,
     json_name: "resultSetLastModifyTime"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.JobStatistics2 do
@@ -505,212 +539,251 @@ defmodule Google.Cloud.Bigquery.V2.JobStatistics2 do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :query_plan, 1,
+  field(:query_plan, 1,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.ExplainQueryStage,
     json_name: "queryPlan",
     deprecated: false
+  )
 
-  field :estimated_bytes_processed, 2,
+  field(:estimated_bytes_processed, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "estimatedBytesProcessed",
     deprecated: false
+  )
 
-  field :timeline, 3,
+  field(:timeline, 3,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.QueryTimelineSample,
     deprecated: false
+  )
 
-  field :total_partitions_processed, 4,
+  field(:total_partitions_processed, 4,
     type: Google.Protobuf.Int64Value,
     json_name: "totalPartitionsProcessed",
     deprecated: false
+  )
 
-  field :total_bytes_processed, 5,
+  field(:total_bytes_processed, 5,
     type: Google.Protobuf.Int64Value,
     json_name: "totalBytesProcessed",
     deprecated: false
+  )
 
-  field :total_bytes_processed_accuracy, 21,
+  field(:total_bytes_processed_accuracy, 21,
     type: :string,
     json_name: "totalBytesProcessedAccuracy",
     deprecated: false
+  )
 
-  field :total_bytes_billed, 6,
+  field(:total_bytes_billed, 6,
     type: Google.Protobuf.Int64Value,
     json_name: "totalBytesBilled",
     deprecated: false
+  )
 
-  field :billing_tier, 7,
+  field(:billing_tier, 7,
     type: Google.Protobuf.Int32Value,
     json_name: "billingTier",
     deprecated: false
+  )
 
-  field :total_slot_ms, 8,
+  field(:total_slot_ms, 8,
     type: Google.Protobuf.Int64Value,
     json_name: "totalSlotMs",
     deprecated: false
+  )
 
-  field :total_services_sku_slot_ms, 52,
+  field(:total_services_sku_slot_ms, 52,
     proto3_optional: true,
     type: :int64,
     json_name: "totalServicesSkuSlotMs",
     deprecated: false
+  )
 
-  field :cache_hit, 9, type: Google.Protobuf.BoolValue, json_name: "cacheHit", deprecated: false
+  field(:cache_hit, 9, type: Google.Protobuf.BoolValue, json_name: "cacheHit", deprecated: false)
 
-  field :referenced_tables, 10,
+  field(:referenced_tables, 10,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "referencedTables",
     deprecated: false
+  )
 
-  field :referenced_routines, 24,
+  field(:referenced_routines, 24,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.RoutineReference,
     json_name: "referencedRoutines",
     deprecated: false
+  )
 
-  field :schema, 11, type: Google.Cloud.Bigquery.V2.TableSchema, deprecated: false
+  field(:schema, 11, type: Google.Cloud.Bigquery.V2.TableSchema, deprecated: false)
 
-  field :num_dml_affected_rows, 12,
+  field(:num_dml_affected_rows, 12,
     type: Google.Protobuf.Int64Value,
     json_name: "numDmlAffectedRows",
     deprecated: false
+  )
 
-  field :dml_stats, 32,
+  field(:dml_stats, 32,
     type: Google.Cloud.Bigquery.V2.DmlStats,
     json_name: "dmlStats",
     deprecated: false
+  )
 
-  field :undeclared_query_parameters, 13,
+  field(:undeclared_query_parameters, 13,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.QueryParameter,
     json_name: "undeclaredQueryParameters",
     deprecated: false
+  )
 
-  field :statement_type, 14, type: :string, json_name: "statementType", deprecated: false
+  field(:statement_type, 14, type: :string, json_name: "statementType", deprecated: false)
 
-  field :ddl_operation_performed, 15,
+  field(:ddl_operation_performed, 15,
     type: :string,
     json_name: "ddlOperationPerformed",
     deprecated: false
+  )
 
-  field :ddl_target_table, 16,
+  field(:ddl_target_table, 16,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "ddlTargetTable",
     deprecated: false
+  )
 
-  field :ddl_destination_table, 31,
+  field(:ddl_destination_table, 31,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "ddlDestinationTable",
     deprecated: false
+  )
 
-  field :ddl_target_row_access_policy, 26,
+  field(:ddl_target_row_access_policy, 26,
     type: Google.Cloud.Bigquery.V2.RowAccessPolicyReference,
     json_name: "ddlTargetRowAccessPolicy",
     deprecated: false
+  )
 
-  field :ddl_affected_row_access_policy_count, 27,
+  field(:ddl_affected_row_access_policy_count, 27,
     type: Google.Protobuf.Int64Value,
     json_name: "ddlAffectedRowAccessPolicyCount",
     deprecated: false
+  )
 
-  field :ddl_target_routine, 22,
+  field(:ddl_target_routine, 22,
     type: Google.Cloud.Bigquery.V2.RoutineReference,
     json_name: "ddlTargetRoutine",
     deprecated: false
+  )
 
-  field :ddl_target_dataset, 30,
+  field(:ddl_target_dataset, 30,
     type: Google.Cloud.Bigquery.V2.DatasetReference,
     json_name: "ddlTargetDataset",
     deprecated: false
+  )
 
-  field :ml_statistics, 23,
+  field(:ml_statistics, 23,
     type: Google.Cloud.Bigquery.V2.MlStatistics,
     json_name: "mlStatistics",
     deprecated: false
+  )
 
-  field :export_data_statistics, 25,
+  field(:export_data_statistics, 25,
     type: Google.Cloud.Bigquery.V2.ExportDataStatistics,
     json_name: "exportDataStatistics",
     deprecated: false
+  )
 
-  field :external_service_costs, 28,
+  field(:external_service_costs, 28,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.ExternalServiceCost,
     json_name: "externalServiceCosts",
     deprecated: false
+  )
 
-  field :bi_engine_statistics, 29,
+  field(:bi_engine_statistics, 29,
     type: Google.Cloud.Bigquery.V2.BiEngineStatistics,
     json_name: "biEngineStatistics",
     deprecated: false
+  )
 
-  field :load_query_statistics, 33,
+  field(:load_query_statistics, 33,
     type: Google.Cloud.Bigquery.V2.LoadQueryStatistics,
     json_name: "loadQueryStatistics",
     deprecated: false
+  )
 
-  field :dcl_target_table, 34,
+  field(:dcl_target_table, 34,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "dclTargetTable",
     deprecated: false
+  )
 
-  field :dcl_target_view, 35,
+  field(:dcl_target_view, 35,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "dclTargetView",
     deprecated: false
+  )
 
-  field :dcl_target_dataset, 36,
+  field(:dcl_target_dataset, 36,
     type: Google.Cloud.Bigquery.V2.DatasetReference,
     json_name: "dclTargetDataset",
     deprecated: false
+  )
 
-  field :search_statistics, 37,
+  field(:search_statistics, 37,
     type: Google.Cloud.Bigquery.V2.SearchStatistics,
     json_name: "searchStatistics",
     deprecated: false
+  )
 
-  field :vector_search_statistics, 44,
+  field(:vector_search_statistics, 44,
     type: Google.Cloud.Bigquery.V2.VectorSearchStatistics,
     json_name: "vectorSearchStatistics",
     deprecated: false
+  )
 
-  field :performance_insights, 38,
+  field(:performance_insights, 38,
     type: Google.Cloud.Bigquery.V2.PerformanceInsights,
     json_name: "performanceInsights",
     deprecated: false
+  )
 
-  field :query_info, 39,
+  field(:query_info, 39,
     type: Google.Cloud.Bigquery.V2.QueryInfo,
     json_name: "queryInfo",
     deprecated: false
+  )
 
-  field :spark_statistics, 40,
+  field(:spark_statistics, 40,
     type: Google.Cloud.Bigquery.V2.SparkStatistics,
     json_name: "sparkStatistics",
     deprecated: false
+  )
 
-  field :transferred_bytes, 41,
+  field(:transferred_bytes, 41,
     type: Google.Protobuf.Int64Value,
     json_name: "transferredBytes",
     deprecated: false
+  )
 
-  field :materialized_view_statistics, 42,
+  field(:materialized_view_statistics, 42,
     type: Google.Cloud.Bigquery.V2.MaterializedViewStatistics,
     json_name: "materializedViewStatistics",
     deprecated: false
+  )
 
-  field :metadata_cache_statistics, 43,
+  field(:metadata_cache_statistics, 43,
     type: Google.Cloud.Bigquery.V2.MetadataCacheStatistics,
     json_name: "metadataCacheStatistics",
     deprecated: false
+  )
 
-  field :incremental_result_stats, 53,
+  field(:incremental_result_stats, 53,
     type: Google.Cloud.Bigquery.V2.IncrementalResultStats,
     json_name: "incrementalResultStats",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.JobStatistics3 do
@@ -718,35 +791,41 @@ defmodule Google.Cloud.Bigquery.V2.JobStatistics3 do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :input_files, 1,
+  field(:input_files, 1,
     type: Google.Protobuf.Int64Value,
     json_name: "inputFiles",
     deprecated: false
+  )
 
-  field :input_file_bytes, 2,
+  field(:input_file_bytes, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "inputFileBytes",
     deprecated: false
+  )
 
-  field :output_rows, 3,
+  field(:output_rows, 3,
     type: Google.Protobuf.Int64Value,
     json_name: "outputRows",
     deprecated: false
+  )
 
-  field :output_bytes, 4,
+  field(:output_bytes, 4,
     type: Google.Protobuf.Int64Value,
     json_name: "outputBytes",
     deprecated: false
+  )
 
-  field :bad_records, 5,
+  field(:bad_records, 5,
     type: Google.Protobuf.Int64Value,
     json_name: "badRecords",
     deprecated: false
+  )
 
-  field :timeline, 7,
+  field(:timeline, 7,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.QueryTimelineSample,
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.JobStatistics4 do
@@ -754,21 +833,24 @@ defmodule Google.Cloud.Bigquery.V2.JobStatistics4 do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :destination_uri_file_counts, 1,
+  field(:destination_uri_file_counts, 1,
     repeated: true,
     type: :int64,
     json_name: "destinationUriFileCounts",
     deprecated: false
+  )
 
-  field :input_bytes, 2,
+  field(:input_bytes, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "inputBytes",
     deprecated: false
+  )
 
-  field :timeline, 3,
+  field(:timeline, 3,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.QueryTimelineSample,
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.CopyJobStatistics do
@@ -776,15 +858,17 @@ defmodule Google.Cloud.Bigquery.V2.CopyJobStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :copied_rows, 1,
+  field(:copied_rows, 1,
     type: Google.Protobuf.Int64Value,
     json_name: "copiedRows",
     deprecated: false
+  )
 
-  field :copied_logical_bytes, 2,
+  field(:copied_logical_bytes, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "copiedLogicalBytes",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.MlStatistics do
@@ -792,30 +876,34 @@ defmodule Google.Cloud.Bigquery.V2.MlStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :max_iterations, 1, type: :int64, json_name: "maxIterations", deprecated: false
+  field(:max_iterations, 1, type: :int64, json_name: "maxIterations", deprecated: false)
 
-  field :iteration_results, 2,
+  field(:iteration_results, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.Model.TrainingRun.IterationResult,
     json_name: "iterationResults"
+  )
 
-  field :model_type, 3,
+  field(:model_type, 3,
     type: Google.Cloud.Bigquery.V2.Model.ModelType,
     json_name: "modelType",
     enum: true,
     deprecated: false
+  )
 
-  field :training_type, 4,
+  field(:training_type, 4,
     type: Google.Cloud.Bigquery.V2.MlStatistics.TrainingType,
     json_name: "trainingType",
     enum: true,
     deprecated: false
+  )
 
-  field :hparam_trials, 5,
+  field(:hparam_trials, 5,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.Model.HparamTuningTrial,
     json_name: "hparamTrials",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.ScriptStatistics.ScriptStackFrame do
@@ -823,12 +911,12 @@ defmodule Google.Cloud.Bigquery.V2.ScriptStatistics.ScriptStackFrame do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :start_line, 1, type: :int32, json_name: "startLine", deprecated: false
-  field :start_column, 2, type: :int32, json_name: "startColumn", deprecated: false
-  field :end_line, 3, type: :int32, json_name: "endLine", deprecated: false
-  field :end_column, 4, type: :int32, json_name: "endColumn", deprecated: false
-  field :procedure_id, 5, type: :string, json_name: "procedureId", deprecated: false
-  field :text, 6, type: :string, deprecated: false
+  field(:start_line, 1, type: :int32, json_name: "startLine", deprecated: false)
+  field(:start_column, 2, type: :int32, json_name: "startColumn", deprecated: false)
+  field(:end_line, 3, type: :int32, json_name: "endLine", deprecated: false)
+  field(:end_column, 4, type: :int32, json_name: "endColumn", deprecated: false)
+  field(:procedure_id, 5, type: :string, json_name: "procedureId", deprecated: false)
+  field(:text, 6, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.V2.ScriptStatistics do
@@ -836,15 +924,17 @@ defmodule Google.Cloud.Bigquery.V2.ScriptStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :evaluation_kind, 1,
+  field(:evaluation_kind, 1,
     type: Google.Cloud.Bigquery.V2.ScriptStatistics.EvaluationKind,
     json_name: "evaluationKind",
     enum: true
+  )
 
-  field :stack_frames, 2,
+  field(:stack_frames, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.ScriptStatistics.ScriptStackFrame,
     json_name: "stackFrames"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.RowLevelSecurityStatistics do
@@ -852,7 +942,7 @@ defmodule Google.Cloud.Bigquery.V2.RowLevelSecurityStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :row_level_security_applied, 1, type: :bool, json_name: "rowLevelSecurityApplied"
+  field(:row_level_security_applied, 1, type: :bool, json_name: "rowLevelSecurityApplied")
 end
 
 defmodule Google.Cloud.Bigquery.V2.DataMaskingStatistics do
@@ -860,7 +950,7 @@ defmodule Google.Cloud.Bigquery.V2.DataMaskingStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :data_masking_applied, 1, type: :bool, json_name: "dataMaskingApplied"
+  field(:data_masking_applied, 1, type: :bool, json_name: "dataMaskingApplied")
 end
 
 defmodule Google.Cloud.Bigquery.V2.JobStatistics.TransactionInfo do
@@ -868,7 +958,7 @@ defmodule Google.Cloud.Bigquery.V2.JobStatistics.TransactionInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :transaction_id, 1, type: :string, json_name: "transactionId", deprecated: false
+  field(:transaction_id, 1, type: :string, json_name: "transactionId", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.V2.JobStatistics do
@@ -876,80 +966,92 @@ defmodule Google.Cloud.Bigquery.V2.JobStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :creation_time, 1, type: :int64, json_name: "creationTime", deprecated: false
-  field :start_time, 2, type: :int64, json_name: "startTime", deprecated: false
-  field :end_time, 3, type: :int64, json_name: "endTime", deprecated: false
+  field(:creation_time, 1, type: :int64, json_name: "creationTime", deprecated: false)
+  field(:start_time, 2, type: :int64, json_name: "startTime", deprecated: false)
+  field(:end_time, 3, type: :int64, json_name: "endTime", deprecated: false)
 
-  field :total_bytes_processed, 4,
+  field(:total_bytes_processed, 4,
     type: Google.Protobuf.Int64Value,
     json_name: "totalBytesProcessed",
     deprecated: false
+  )
 
-  field :completion_ratio, 5,
+  field(:completion_ratio, 5,
     type: Google.Protobuf.DoubleValue,
     json_name: "completionRatio",
     deprecated: false
+  )
 
-  field :quota_deferments, 9,
+  field(:quota_deferments, 9,
     repeated: true,
     type: :string,
     json_name: "quotaDeferments",
     deprecated: false
+  )
 
-  field :query, 6, type: Google.Cloud.Bigquery.V2.JobStatistics2, deprecated: false
-  field :load, 7, type: Google.Cloud.Bigquery.V2.JobStatistics3, deprecated: false
-  field :extract, 8, type: Google.Cloud.Bigquery.V2.JobStatistics4, deprecated: false
-  field :copy, 21, type: Google.Cloud.Bigquery.V2.CopyJobStatistics, deprecated: false
+  field(:query, 6, type: Google.Cloud.Bigquery.V2.JobStatistics2, deprecated: false)
+  field(:load, 7, type: Google.Cloud.Bigquery.V2.JobStatistics3, deprecated: false)
+  field(:extract, 8, type: Google.Cloud.Bigquery.V2.JobStatistics4, deprecated: false)
+  field(:copy, 21, type: Google.Cloud.Bigquery.V2.CopyJobStatistics, deprecated: false)
 
-  field :total_slot_ms, 10,
+  field(:total_slot_ms, 10,
     type: Google.Protobuf.Int64Value,
     json_name: "totalSlotMs",
     deprecated: false
+  )
 
-  field :reservation_id, 15, type: :string, deprecated: false
-  field :num_child_jobs, 12, type: :int64, json_name: "numChildJobs", deprecated: false
-  field :parent_job_id, 13, type: :string, json_name: "parentJobId", deprecated: false
+  field(:reservation_id, 15, type: :string, deprecated: false)
+  field(:num_child_jobs, 12, type: :int64, json_name: "numChildJobs", deprecated: false)
+  field(:parent_job_id, 13, type: :string, json_name: "parentJobId", deprecated: false)
 
-  field :script_statistics, 14,
+  field(:script_statistics, 14,
     type: Google.Cloud.Bigquery.V2.ScriptStatistics,
     json_name: "scriptStatistics",
     deprecated: false
+  )
 
-  field :row_level_security_statistics, 16,
+  field(:row_level_security_statistics, 16,
     type: Google.Cloud.Bigquery.V2.RowLevelSecurityStatistics,
     json_name: "rowLevelSecurityStatistics",
     deprecated: false
+  )
 
-  field :data_masking_statistics, 20,
+  field(:data_masking_statistics, 20,
     type: Google.Cloud.Bigquery.V2.DataMaskingStatistics,
     json_name: "dataMaskingStatistics",
     deprecated: false
+  )
 
-  field :transaction_info, 17,
+  field(:transaction_info, 17,
     type: Google.Cloud.Bigquery.V2.JobStatistics.TransactionInfo,
     json_name: "transactionInfo",
     deprecated: false
+  )
 
-  field :session_info, 18,
+  field(:session_info, 18,
     type: Google.Cloud.Bigquery.V2.SessionInfo,
     json_name: "sessionInfo",
     deprecated: false
+  )
 
-  field :final_execution_duration_ms, 22,
+  field(:final_execution_duration_ms, 22,
     type: :int64,
     json_name: "finalExecutionDurationMs",
     deprecated: false
+  )
 
-  field :edition, 24,
+  field(:edition, 24,
     type: Google.Cloud.Bigquery.V2.ReservationEdition,
     enum: true,
     deprecated: false
+  )
 
-  field :reservation_group_path, 26,
+  field(:reservation_group_path, 26,
     repeated: true,
     type: :string,
     json_name: "reservationGroupPath",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.DmlStats do
@@ -957,20 +1059,23 @@ defmodule Google.Cloud.Bigquery.V2.DmlStats do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :inserted_row_count, 1,
+  field(:inserted_row_count, 1,
     type: Google.Protobuf.Int64Value,
     json_name: "insertedRowCount",
     deprecated: false
+  )
 
-  field :deleted_row_count, 2,
+  field(:deleted_row_count, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "deletedRowCount",
     deprecated: false
+  )
 
-  field :updated_row_count, 3,
+  field(:updated_row_count, 3,
     type: Google.Protobuf.Int64Value,
     json_name: "updatedRowCount",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.PerformanceInsights do
@@ -978,22 +1083,25 @@ defmodule Google.Cloud.Bigquery.V2.PerformanceInsights do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :avg_previous_execution_ms, 1,
+  field(:avg_previous_execution_ms, 1,
     type: :int64,
     json_name: "avgPreviousExecutionMs",
     deprecated: false
+  )
 
-  field :stage_performance_standalone_insights, 2,
+  field(:stage_performance_standalone_insights, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.StagePerformanceStandaloneInsight,
     json_name: "stagePerformanceStandaloneInsights",
     deprecated: false
+  )
 
-  field :stage_performance_change_insights, 3,
+  field(:stage_performance_change_insights, 3,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.StagePerformanceChangeInsight,
     json_name: "stagePerformanceChangeInsights",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.StagePerformanceChangeInsight do
@@ -1001,13 +1109,14 @@ defmodule Google.Cloud.Bigquery.V2.StagePerformanceChangeInsight do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :stage_id, 1, type: :int64, json_name: "stageId", deprecated: false
+  field(:stage_id, 1, type: :int64, json_name: "stageId", deprecated: false)
 
-  field :input_data_change, 2,
+  field(:input_data_change, 2,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.InputDataChange,
     json_name: "inputDataChange",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.InputDataChange do
@@ -1015,10 +1124,11 @@ defmodule Google.Cloud.Bigquery.V2.InputDataChange do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :records_read_diff_percentage, 1,
+  field(:records_read_diff_percentage, 1,
     type: :float,
     json_name: "recordsReadDiffPercentage",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.StagePerformanceStandaloneInsight do
@@ -1026,37 +1136,42 @@ defmodule Google.Cloud.Bigquery.V2.StagePerformanceStandaloneInsight do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :stage_id, 1, type: :int64, json_name: "stageId", deprecated: false
+  field(:stage_id, 1, type: :int64, json_name: "stageId", deprecated: false)
 
-  field :slot_contention, 2,
+  field(:slot_contention, 2,
     proto3_optional: true,
     type: :bool,
     json_name: "slotContention",
     deprecated: false
+  )
 
-  field :insufficient_shuffle_quota, 3,
+  field(:insufficient_shuffle_quota, 3,
     proto3_optional: true,
     type: :bool,
     json_name: "insufficientShuffleQuota",
     deprecated: false
+  )
 
-  field :bi_engine_reasons, 5,
+  field(:bi_engine_reasons, 5,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.BiEngineReason,
     json_name: "biEngineReasons",
     deprecated: false
+  )
 
-  field :high_cardinality_joins, 6,
+  field(:high_cardinality_joins, 6,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.HighCardinalityJoin,
     json_name: "highCardinalityJoins",
     deprecated: false
+  )
 
-  field :partition_skew, 7,
+  field(:partition_skew, 7,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.PartitionSkew,
     json_name: "partitionSkew",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.HighCardinalityJoin do
@@ -1064,10 +1179,10 @@ defmodule Google.Cloud.Bigquery.V2.HighCardinalityJoin do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :left_rows, 1, type: :int64, json_name: "leftRows", deprecated: false
-  field :right_rows, 2, type: :int64, json_name: "rightRows", deprecated: false
-  field :output_rows, 3, type: :int64, json_name: "outputRows", deprecated: false
-  field :step_index, 4, type: :int32, json_name: "stepIndex", deprecated: false
+  field(:left_rows, 1, type: :int64, json_name: "leftRows", deprecated: false)
+  field(:right_rows, 2, type: :int64, json_name: "rightRows", deprecated: false)
+  field(:output_rows, 3, type: :int64, json_name: "outputRows", deprecated: false)
+  field(:step_index, 4, type: :int32, json_name: "stepIndex", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.V2.PartitionSkew.SkewSource do
@@ -1075,7 +1190,7 @@ defmodule Google.Cloud.Bigquery.V2.PartitionSkew.SkewSource do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :stage_id, 1, type: :int64, json_name: "stageId", deprecated: false
+  field(:stage_id, 1, type: :int64, json_name: "stageId", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.V2.PartitionSkew do
@@ -1083,11 +1198,12 @@ defmodule Google.Cloud.Bigquery.V2.PartitionSkew do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :skew_sources, 1,
+  field(:skew_sources, 1,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.PartitionSkew.SkewSource,
     json_name: "skewSources",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.SparkStatistics.LoggingInfo do
@@ -1095,8 +1211,8 @@ defmodule Google.Cloud.Bigquery.V2.SparkStatistics.LoggingInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :resource_type, 1, type: :string, json_name: "resourceType", deprecated: false
-  field :project_id, 2, type: :string, json_name: "projectId", deprecated: false
+  field(:resource_type, 1, type: :string, json_name: "resourceType", deprecated: false)
+  field(:project_id, 2, type: :string, json_name: "projectId", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.V2.SparkStatistics.EndpointsEntry do
@@ -1104,8 +1220,8 @@ defmodule Google.Cloud.Bigquery.V2.SparkStatistics.EndpointsEntry do
 
   use Protobuf, map: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :key, 1, type: :string
-  field :value, 2, type: :string
+  field(:key, 1, type: :string)
+  field(:value, 2, type: :string)
 end
 
 defmodule Google.Cloud.Bigquery.V2.SparkStatistics do
@@ -1113,41 +1229,47 @@ defmodule Google.Cloud.Bigquery.V2.SparkStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :spark_job_id, 1,
+  field(:spark_job_id, 1,
     proto3_optional: true,
     type: :string,
     json_name: "sparkJobId",
     deprecated: false
+  )
 
-  field :spark_job_location, 2,
+  field(:spark_job_location, 2,
     proto3_optional: true,
     type: :string,
     json_name: "sparkJobLocation",
     deprecated: false
+  )
 
-  field :endpoints, 3,
+  field(:endpoints, 3,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.SparkStatistics.EndpointsEntry,
     map: true,
     deprecated: false
+  )
 
-  field :logging_info, 4,
+  field(:logging_info, 4,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.SparkStatistics.LoggingInfo,
     json_name: "loggingInfo",
     deprecated: false
+  )
 
-  field :kms_key_name, 5,
+  field(:kms_key_name, 5,
     proto3_optional: true,
     type: :string,
     json_name: "kmsKeyName",
     deprecated: false
+  )
 
-  field :gcs_staging_bucket, 6,
+  field(:gcs_staging_bucket, 6,
     proto3_optional: true,
     type: :string,
     json_name: "gcsStagingBucket",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.MaterializedViewStatistics do
@@ -1155,10 +1277,11 @@ defmodule Google.Cloud.Bigquery.V2.MaterializedViewStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :materialized_view, 1,
+  field(:materialized_view, 1,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.MaterializedView,
     json_name: "materializedView"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.MaterializedView do
@@ -1166,23 +1289,26 @@ defmodule Google.Cloud.Bigquery.V2.MaterializedView do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :table_reference, 1,
+  field(:table_reference, 1,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "tableReference"
+  )
 
-  field :chosen, 2, proto3_optional: true, type: :bool
+  field(:chosen, 2, proto3_optional: true, type: :bool)
 
-  field :estimated_bytes_saved, 3,
+  field(:estimated_bytes_saved, 3,
     proto3_optional: true,
     type: :int64,
     json_name: "estimatedBytesSaved"
+  )
 
-  field :rejected_reason, 4,
+  field(:rejected_reason, 4,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.MaterializedView.RejectedReason,
     json_name: "rejectedReason",
     enum: true
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.PruningStats do
@@ -1190,20 +1316,23 @@ defmodule Google.Cloud.Bigquery.V2.PruningStats do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :post_cmeta_pruning_partition_count, 1,
+  field(:post_cmeta_pruning_partition_count, 1,
     proto3_optional: true,
     type: :int64,
     json_name: "postCmetaPruningPartitionCount"
+  )
 
-  field :pre_cmeta_pruning_parallel_input_count, 2,
+  field(:pre_cmeta_pruning_parallel_input_count, 2,
     proto3_optional: true,
     type: :int64,
     json_name: "preCmetaPruningParallelInputCount"
+  )
 
-  field :post_cmeta_pruning_parallel_input_count, 3,
+  field(:post_cmeta_pruning_parallel_input_count, 3,
     proto3_optional: true,
     type: :int64,
     json_name: "postCmetaPruningParallelInputCount"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.TableMetadataCacheUsage do
@@ -1211,25 +1340,28 @@ defmodule Google.Cloud.Bigquery.V2.TableMetadataCacheUsage do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :table_reference, 1,
+  field(:table_reference, 1,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "tableReference"
+  )
 
-  field :unused_reason, 2,
+  field(:unused_reason, 2,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.TableMetadataCacheUsage.UnusedReason,
     json_name: "unusedReason",
     enum: true
+  )
 
-  field :explanation, 3, proto3_optional: true, type: :string
-  field :staleness, 5, type: Google.Protobuf.Duration
-  field :table_type, 6, type: :string, json_name: "tableType"
+  field(:explanation, 3, proto3_optional: true, type: :string)
+  field(:staleness, 5, type: Google.Protobuf.Duration)
+  field(:table_type, 6, type: :string, json_name: "tableType")
 
-  field :pruning_stats, 7,
+  field(:pruning_stats, 7,
     proto3_optional: true,
     type: Google.Cloud.Bigquery.V2.PruningStats,
     json_name: "pruningStats"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.MetadataCacheStatistics do
@@ -1237,8 +1369,9 @@ defmodule Google.Cloud.Bigquery.V2.MetadataCacheStatistics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :table_metadata_cache_usage, 1,
+  field(:table_metadata_cache_usage, 1,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.TableMetadataCacheUsage,
     json_name: "tableMetadataCacheUsage"
+  )
 end

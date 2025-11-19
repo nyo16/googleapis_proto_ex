@@ -3,9 +3,9 @@ defmodule Google.Cloud.Bigquery.V2.RangePartitioning.Range do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :start, 1, type: :string, deprecated: false
-  field :end, 2, type: :string, deprecated: false
-  field :interval, 3, type: :string, deprecated: false
+  field(:start, 1, type: :string, deprecated: false)
+  field(:end, 2, type: :string, deprecated: false)
+  field(:interval, 3, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.V2.RangePartitioning do
@@ -13,6 +13,6 @@ defmodule Google.Cloud.Bigquery.V2.RangePartitioning do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :field, 1, type: :string, deprecated: false
-  field :range, 2, type: Google.Cloud.Bigquery.V2.RangePartitioning.Range
+  field(:field, 1, type: :string, deprecated: false)
+  field(:range, 2, type: Google.Cloud.Bigquery.V2.RangePartitioning.Range)
 end

@@ -3,5 +3,5 @@ defmodule Google.Protobuf.FieldMask do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :paths, 1, repeated: true, type: :string
+  field(:paths, 1, repeated: true, type: :string)
 end

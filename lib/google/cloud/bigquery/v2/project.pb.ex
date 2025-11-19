@@ -3,7 +3,7 @@ defmodule Google.Cloud.Bigquery.V2.GetServiceAccountRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :project_id, 1, type: :string, json_name: "projectId", deprecated: false
+  field(:project_id, 1, type: :string, json_name: "projectId", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.V2.GetServiceAccountResponse do
@@ -11,8 +11,8 @@ defmodule Google.Cloud.Bigquery.V2.GetServiceAccountResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :kind, 1, type: :string
-  field :email, 2, type: :string
+  field(:kind, 1, type: :string)
+  field(:email, 2, type: :string)
 end
 
 defmodule Google.Cloud.Bigquery.V2.ProjectService.Service do
@@ -22,9 +22,11 @@ defmodule Google.Cloud.Bigquery.V2.ProjectService.Service do
     name: "google.cloud.bigquery.v2.ProjectService",
     protoc_gen_elixir_version: "0.15.0"
 
-  rpc :GetServiceAccount,
-      Google.Cloud.Bigquery.V2.GetServiceAccountRequest,
-      Google.Cloud.Bigquery.V2.GetServiceAccountResponse
+  rpc(
+    :GetServiceAccount,
+    Google.Cloud.Bigquery.V2.GetServiceAccountRequest,
+    Google.Cloud.Bigquery.V2.GetServiceAccountResponse
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.ProjectService.Stub do

@@ -3,6 +3,6 @@ defmodule Google.Cloud.Bigquery.V2.JsonExtension do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :JSON_EXTENSION_UNSPECIFIED, 0
-  field :GEOJSON, 1
+  field(:JSON_EXTENSION_UNSPECIFIED, 0)
+  field(:GEOJSON, 1)
 end

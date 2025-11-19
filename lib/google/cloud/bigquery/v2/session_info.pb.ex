@@ -3,5 +3,5 @@ defmodule Google.Cloud.Bigquery.V2.SessionInfo do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :session_id, 1, type: :string, json_name: "sessionId", deprecated: false
+  field(:session_id, 1, type: :string, json_name: "sessionId", deprecated: false)
 end

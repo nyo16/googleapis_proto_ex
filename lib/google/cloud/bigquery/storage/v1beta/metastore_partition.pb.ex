@@ -3,12 +3,13 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.CreateMetastorePartitionRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
 
-  field :metastore_partition, 2,
+  field(:metastore_partition, 2,
     type: Google.Cloud.Bigquery.Storage.V1beta.MetastorePartition,
     json_name: "metastorePartition",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchCreateMetastorePartitionsRequest do
@@ -16,19 +17,21 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchCreateMetastorePartitionsReq
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
 
-  field :requests, 2,
+  field(:requests, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.Storage.V1beta.CreateMetastorePartitionRequest,
     deprecated: false
+  )
 
-  field :skip_existing_partitions, 3,
+  field(:skip_existing_partitions, 3,
     type: :bool,
     json_name: "skipExistingPartitions",
     deprecated: false
+  )
 
-  field :trace_id, 4, type: :string, json_name: "traceId", deprecated: false
+  field(:trace_id, 4, type: :string, json_name: "traceId", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchCreateMetastorePartitionsResponse do
@@ -36,9 +39,10 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchCreateMetastorePartitionsRes
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :partitions, 1,
+  field(:partitions, 1,
     repeated: true,
     type: Google.Cloud.Bigquery.Storage.V1beta.MetastorePartition
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchDeleteMetastorePartitionsRequest do
@@ -46,15 +50,16 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchDeleteMetastorePartitionsReq
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
 
-  field :partition_values, 2,
+  field(:partition_values, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.Storage.V1beta.MetastorePartitionValues,
     json_name: "partitionValues",
     deprecated: false
+  )
 
-  field :trace_id, 4, type: :string, json_name: "traceId", deprecated: false
+  field(:trace_id, 4, type: :string, json_name: "traceId", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.UpdateMetastorePartitionRequest do
@@ -62,15 +67,17 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.UpdateMetastorePartitionRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :metastore_partition, 1,
+  field(:metastore_partition, 1,
     type: Google.Cloud.Bigquery.Storage.V1beta.MetastorePartition,
     json_name: "metastorePartition",
     deprecated: false
+  )
 
-  field :update_mask, 2,
+  field(:update_mask, 2,
     type: Google.Protobuf.FieldMask,
     json_name: "updateMask",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchUpdateMetastorePartitionsRequest do
@@ -78,14 +85,15 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchUpdateMetastorePartitionsReq
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
 
-  field :requests, 2,
+  field(:requests, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.Storage.V1beta.UpdateMetastorePartitionRequest,
     deprecated: false
+  )
 
-  field :trace_id, 4, type: :string, json_name: "traceId", deprecated: false
+  field(:trace_id, 4, type: :string, json_name: "traceId", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchUpdateMetastorePartitionsResponse do
@@ -93,9 +101,10 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchUpdateMetastorePartitionsRes
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :partitions, 1,
+  field(:partitions, 1,
     repeated: true,
     type: Google.Cloud.Bigquery.Storage.V1beta.MetastorePartition
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.ListMetastorePartitionsRequest do
@@ -103,9 +112,9 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.ListMetastorePartitionsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :filter, 2, type: :string, deprecated: false
-  field :trace_id, 3, type: :string, json_name: "traceId", deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:filter, 2, type: :string, deprecated: false)
+  field(:trace_id, 3, type: :string, json_name: "traceId", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.ListMetastorePartitionsResponse do
@@ -113,13 +122,14 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.ListMetastorePartitionsResponse d
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  oneof :response, 0
+  oneof(:response, 0)
 
-  field :partitions, 1,
+  field(:partitions, 1,
     type: Google.Cloud.Bigquery.Storage.V1beta.MetastorePartitionList,
     oneof: 0
+  )
 
-  field :streams, 2, type: Google.Cloud.Bigquery.Storage.V1beta.StreamList, oneof: 0
+  field(:streams, 2, type: Google.Cloud.Bigquery.Storage.V1beta.StreamList, oneof: 0)
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.StreamMetastorePartitionsRequest do
@@ -127,18 +137,20 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.StreamMetastorePartitionsRequest 
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
 
-  field :metastore_partitions, 2,
+  field(:metastore_partitions, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.Storage.V1beta.MetastorePartition,
     json_name: "metastorePartitions",
     deprecated: false
+  )
 
-  field :skip_existing_partitions, 3,
+  field(:skip_existing_partitions, 3,
     type: :bool,
     json_name: "skipExistingPartitions",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.StreamMetastorePartitionsResponse do
@@ -146,13 +158,15 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.StreamMetastorePartitionsResponse
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :total_partitions_streamed_count, 2,
+  field(:total_partitions_streamed_count, 2,
     type: :int64,
     json_name: "totalPartitionsStreamedCount"
+  )
 
-  field :total_partitions_inserted_count, 3,
+  field(:total_partitions_inserted_count, 3,
     type: :int64,
     json_name: "totalPartitionsInsertedCount"
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchSizeTooLargeError do
@@ -160,8 +174,8 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.BatchSizeTooLargeError do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :max_batch_size, 1, type: :int64, json_name: "maxBatchSize"
-  field :error_message, 2, type: :string, json_name: "errorMessage", deprecated: false
+  field(:max_batch_size, 1, type: :int64, json_name: "maxBatchSize")
+  field(:error_message, 2, type: :string, json_name: "errorMessage", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.MetastorePartitionService.Service do
@@ -171,25 +185,35 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta.MetastorePartitionService.Service
     name: "google.cloud.bigquery.storage.v1beta.MetastorePartitionService",
     protoc_gen_elixir_version: "0.15.0"
 
-  rpc :BatchCreateMetastorePartitions,
-      Google.Cloud.Bigquery.Storage.V1beta.BatchCreateMetastorePartitionsRequest,
-      Google.Cloud.Bigquery.Storage.V1beta.BatchCreateMetastorePartitionsResponse
+  rpc(
+    :BatchCreateMetastorePartitions,
+    Google.Cloud.Bigquery.Storage.V1beta.BatchCreateMetastorePartitionsRequest,
+    Google.Cloud.Bigquery.Storage.V1beta.BatchCreateMetastorePartitionsResponse
+  )
 
-  rpc :BatchDeleteMetastorePartitions,
-      Google.Cloud.Bigquery.Storage.V1beta.BatchDeleteMetastorePartitionsRequest,
-      Google.Protobuf.Empty
+  rpc(
+    :BatchDeleteMetastorePartitions,
+    Google.Cloud.Bigquery.Storage.V1beta.BatchDeleteMetastorePartitionsRequest,
+    Google.Protobuf.Empty
+  )
 
-  rpc :BatchUpdateMetastorePartitions,
-      Google.Cloud.Bigquery.Storage.V1beta.BatchUpdateMetastorePartitionsRequest,
-      Google.Cloud.Bigquery.Storage.V1beta.BatchUpdateMetastorePartitionsResponse
+  rpc(
+    :BatchUpdateMetastorePartitions,
+    Google.Cloud.Bigquery.Storage.V1beta.BatchUpdateMetastorePartitionsRequest,
+    Google.Cloud.Bigquery.Storage.V1beta.BatchUpdateMetastorePartitionsResponse
+  )
 
-  rpc :ListMetastorePartitions,
-      Google.Cloud.Bigquery.Storage.V1beta.ListMetastorePartitionsRequest,
-      Google.Cloud.Bigquery.Storage.V1beta.ListMetastorePartitionsResponse
+  rpc(
+    :ListMetastorePartitions,
+    Google.Cloud.Bigquery.Storage.V1beta.ListMetastorePartitionsRequest,
+    Google.Cloud.Bigquery.Storage.V1beta.ListMetastorePartitionsResponse
+  )
 
-  rpc :StreamMetastorePartitions,
-      stream(Google.Cloud.Bigquery.Storage.V1beta.StreamMetastorePartitionsRequest),
-      stream(Google.Cloud.Bigquery.Storage.V1beta.StreamMetastorePartitionsResponse)
+  rpc(
+    :StreamMetastorePartitions,
+    stream(Google.Cloud.Bigquery.Storage.V1beta.StreamMetastorePartitionsRequest),
+    stream(Google.Cloud.Bigquery.Storage.V1beta.StreamMetastorePartitionsResponse)
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta.MetastorePartitionService.Stub do

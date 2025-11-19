@@ -3,8 +3,8 @@ defmodule Google.Cloud.Bigquery.V2.BigLakeConfiguration.FileFormat do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :FILE_FORMAT_UNSPECIFIED, 0
-  field :PARQUET, 1
+  field(:FILE_FORMAT_UNSPECIFIED, 0)
+  field(:PARQUET, 1)
 end
 
 defmodule Google.Cloud.Bigquery.V2.BigLakeConfiguration.TableFormat do
@@ -12,8 +12,8 @@ defmodule Google.Cloud.Bigquery.V2.BigLakeConfiguration.TableFormat do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :TABLE_FORMAT_UNSPECIFIED, 0
-  field :ICEBERG, 1
+  field(:TABLE_FORMAT_UNSPECIFIED, 0)
+  field(:ICEBERG, 1)
 end
 
 defmodule Google.Cloud.Bigquery.V2.BigLakeConfiguration do
@@ -21,18 +21,20 @@ defmodule Google.Cloud.Bigquery.V2.BigLakeConfiguration do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :connection_id, 1, type: :string, json_name: "connectionId", deprecated: false
-  field :storage_uri, 2, type: :string, json_name: "storageUri", deprecated: false
+  field(:connection_id, 1, type: :string, json_name: "connectionId", deprecated: false)
+  field(:storage_uri, 2, type: :string, json_name: "storageUri", deprecated: false)
 
-  field :file_format, 3,
+  field(:file_format, 3,
     type: Google.Cloud.Bigquery.V2.BigLakeConfiguration.FileFormat,
     json_name: "fileFormat",
     enum: true,
     deprecated: false
+  )
 
-  field :table_format, 4,
+  field(:table_format, 4,
     type: Google.Cloud.Bigquery.V2.BigLakeConfiguration.TableFormat,
     json_name: "tableFormat",
     enum: true,
     deprecated: false
+  )
 end

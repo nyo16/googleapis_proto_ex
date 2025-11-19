@@ -3,10 +3,10 @@ defmodule Google.Cloud.Secretmanager.V1beta2.ListSecretsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :page_size, 2, type: :int32, json_name: "pageSize", deprecated: false
-  field :page_token, 3, type: :string, json_name: "pageToken", deprecated: false
-  field :filter, 4, type: :string, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:page_size, 2, type: :int32, json_name: "pageSize", deprecated: false)
+  field(:page_token, 3, type: :string, json_name: "pageToken", deprecated: false)
+  field(:filter, 4, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.ListSecretsResponse do
@@ -14,9 +14,9 @@ defmodule Google.Cloud.Secretmanager.V1beta2.ListSecretsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :secrets, 1, repeated: true, type: Google.Cloud.Secretmanager.V1beta2.Secret
-  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
-  field :total_size, 3, type: :int32, json_name: "totalSize"
+  field(:secrets, 1, repeated: true, type: Google.Cloud.Secretmanager.V1beta2.Secret)
+  field(:next_page_token, 2, type: :string, json_name: "nextPageToken")
+  field(:total_size, 3, type: :int32, json_name: "totalSize")
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.CreateSecretRequest do
@@ -24,9 +24,9 @@ defmodule Google.Cloud.Secretmanager.V1beta2.CreateSecretRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :secret_id, 2, type: :string, json_name: "secretId", deprecated: false
-  field :secret, 3, type: Google.Cloud.Secretmanager.V1beta2.Secret, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:secret_id, 2, type: :string, json_name: "secretId", deprecated: false)
+  field(:secret, 3, type: Google.Cloud.Secretmanager.V1beta2.Secret, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.AddSecretVersionRequest do
@@ -34,8 +34,8 @@ defmodule Google.Cloud.Secretmanager.V1beta2.AddSecretVersionRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :payload, 2, type: Google.Cloud.Secretmanager.V1beta2.SecretPayload, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:payload, 2, type: Google.Cloud.Secretmanager.V1beta2.SecretPayload, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.GetSecretRequest do
@@ -43,7 +43,7 @@ defmodule Google.Cloud.Secretmanager.V1beta2.GetSecretRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.ListSecretVersionsRequest do
@@ -51,10 +51,10 @@ defmodule Google.Cloud.Secretmanager.V1beta2.ListSecretVersionsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :page_size, 2, type: :int32, json_name: "pageSize", deprecated: false
-  field :page_token, 3, type: :string, json_name: "pageToken", deprecated: false
-  field :filter, 4, type: :string, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:page_size, 2, type: :int32, json_name: "pageSize", deprecated: false)
+  field(:page_token, 3, type: :string, json_name: "pageToken", deprecated: false)
+  field(:filter, 4, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.ListSecretVersionsResponse do
@@ -62,9 +62,9 @@ defmodule Google.Cloud.Secretmanager.V1beta2.ListSecretVersionsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :versions, 1, repeated: true, type: Google.Cloud.Secretmanager.V1beta2.SecretVersion
-  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
-  field :total_size, 3, type: :int32, json_name: "totalSize"
+  field(:versions, 1, repeated: true, type: Google.Cloud.Secretmanager.V1beta2.SecretVersion)
+  field(:next_page_token, 2, type: :string, json_name: "nextPageToken")
+  field(:total_size, 3, type: :int32, json_name: "totalSize")
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.GetSecretVersionRequest do
@@ -72,7 +72,7 @@ defmodule Google.Cloud.Secretmanager.V1beta2.GetSecretVersionRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.UpdateSecretRequest do
@@ -80,12 +80,13 @@ defmodule Google.Cloud.Secretmanager.V1beta2.UpdateSecretRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :secret, 1, type: Google.Cloud.Secretmanager.V1beta2.Secret, deprecated: false
+  field(:secret, 1, type: Google.Cloud.Secretmanager.V1beta2.Secret, deprecated: false)
 
-  field :update_mask, 2,
+  field(:update_mask, 2,
     type: Google.Protobuf.FieldMask,
     json_name: "updateMask",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.AccessSecretVersionRequest do
@@ -93,7 +94,7 @@ defmodule Google.Cloud.Secretmanager.V1beta2.AccessSecretVersionRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.AccessSecretVersionResponse do
@@ -101,8 +102,8 @@ defmodule Google.Cloud.Secretmanager.V1beta2.AccessSecretVersionResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :payload, 2, type: Google.Cloud.Secretmanager.V1beta2.SecretPayload
+  field(:name, 1, type: :string, deprecated: false)
+  field(:payload, 2, type: Google.Cloud.Secretmanager.V1beta2.SecretPayload)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.DeleteSecretRequest do
@@ -110,8 +111,8 @@ defmodule Google.Cloud.Secretmanager.V1beta2.DeleteSecretRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :etag, 2, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
+  field(:etag, 2, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.DisableSecretVersionRequest do
@@ -119,8 +120,8 @@ defmodule Google.Cloud.Secretmanager.V1beta2.DisableSecretVersionRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :etag, 2, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
+  field(:etag, 2, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.EnableSecretVersionRequest do
@@ -128,8 +129,8 @@ defmodule Google.Cloud.Secretmanager.V1beta2.EnableSecretVersionRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :etag, 2, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
+  field(:etag, 2, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.DestroySecretVersionRequest do
@@ -137,8 +138,8 @@ defmodule Google.Cloud.Secretmanager.V1beta2.DestroySecretVersionRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :etag, 2, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
+  field(:etag, 2, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.SecretManagerService.Service do
@@ -148,59 +149,87 @@ defmodule Google.Cloud.Secretmanager.V1beta2.SecretManagerService.Service do
     name: "google.cloud.secretmanager.v1beta2.SecretManagerService",
     protoc_gen_elixir_version: "0.15.0"
 
-  rpc :ListSecrets,
-      Google.Cloud.Secretmanager.V1beta2.ListSecretsRequest,
-      Google.Cloud.Secretmanager.V1beta2.ListSecretsResponse
+  rpc(
+    :ListSecrets,
+    Google.Cloud.Secretmanager.V1beta2.ListSecretsRequest,
+    Google.Cloud.Secretmanager.V1beta2.ListSecretsResponse
+  )
 
-  rpc :CreateSecret,
-      Google.Cloud.Secretmanager.V1beta2.CreateSecretRequest,
-      Google.Cloud.Secretmanager.V1beta2.Secret
+  rpc(
+    :CreateSecret,
+    Google.Cloud.Secretmanager.V1beta2.CreateSecretRequest,
+    Google.Cloud.Secretmanager.V1beta2.Secret
+  )
 
-  rpc :AddSecretVersion,
-      Google.Cloud.Secretmanager.V1beta2.AddSecretVersionRequest,
-      Google.Cloud.Secretmanager.V1beta2.SecretVersion
+  rpc(
+    :AddSecretVersion,
+    Google.Cloud.Secretmanager.V1beta2.AddSecretVersionRequest,
+    Google.Cloud.Secretmanager.V1beta2.SecretVersion
+  )
 
-  rpc :GetSecret,
-      Google.Cloud.Secretmanager.V1beta2.GetSecretRequest,
-      Google.Cloud.Secretmanager.V1beta2.Secret
+  rpc(
+    :GetSecret,
+    Google.Cloud.Secretmanager.V1beta2.GetSecretRequest,
+    Google.Cloud.Secretmanager.V1beta2.Secret
+  )
 
-  rpc :UpdateSecret,
-      Google.Cloud.Secretmanager.V1beta2.UpdateSecretRequest,
-      Google.Cloud.Secretmanager.V1beta2.Secret
+  rpc(
+    :UpdateSecret,
+    Google.Cloud.Secretmanager.V1beta2.UpdateSecretRequest,
+    Google.Cloud.Secretmanager.V1beta2.Secret
+  )
 
-  rpc :DeleteSecret, Google.Cloud.Secretmanager.V1beta2.DeleteSecretRequest, Google.Protobuf.Empty
+  rpc(
+    :DeleteSecret,
+    Google.Cloud.Secretmanager.V1beta2.DeleteSecretRequest,
+    Google.Protobuf.Empty
+  )
 
-  rpc :ListSecretVersions,
-      Google.Cloud.Secretmanager.V1beta2.ListSecretVersionsRequest,
-      Google.Cloud.Secretmanager.V1beta2.ListSecretVersionsResponse
+  rpc(
+    :ListSecretVersions,
+    Google.Cloud.Secretmanager.V1beta2.ListSecretVersionsRequest,
+    Google.Cloud.Secretmanager.V1beta2.ListSecretVersionsResponse
+  )
 
-  rpc :GetSecretVersion,
-      Google.Cloud.Secretmanager.V1beta2.GetSecretVersionRequest,
-      Google.Cloud.Secretmanager.V1beta2.SecretVersion
+  rpc(
+    :GetSecretVersion,
+    Google.Cloud.Secretmanager.V1beta2.GetSecretVersionRequest,
+    Google.Cloud.Secretmanager.V1beta2.SecretVersion
+  )
 
-  rpc :AccessSecretVersion,
-      Google.Cloud.Secretmanager.V1beta2.AccessSecretVersionRequest,
-      Google.Cloud.Secretmanager.V1beta2.AccessSecretVersionResponse
+  rpc(
+    :AccessSecretVersion,
+    Google.Cloud.Secretmanager.V1beta2.AccessSecretVersionRequest,
+    Google.Cloud.Secretmanager.V1beta2.AccessSecretVersionResponse
+  )
 
-  rpc :DisableSecretVersion,
-      Google.Cloud.Secretmanager.V1beta2.DisableSecretVersionRequest,
-      Google.Cloud.Secretmanager.V1beta2.SecretVersion
+  rpc(
+    :DisableSecretVersion,
+    Google.Cloud.Secretmanager.V1beta2.DisableSecretVersionRequest,
+    Google.Cloud.Secretmanager.V1beta2.SecretVersion
+  )
 
-  rpc :EnableSecretVersion,
-      Google.Cloud.Secretmanager.V1beta2.EnableSecretVersionRequest,
-      Google.Cloud.Secretmanager.V1beta2.SecretVersion
+  rpc(
+    :EnableSecretVersion,
+    Google.Cloud.Secretmanager.V1beta2.EnableSecretVersionRequest,
+    Google.Cloud.Secretmanager.V1beta2.SecretVersion
+  )
 
-  rpc :DestroySecretVersion,
-      Google.Cloud.Secretmanager.V1beta2.DestroySecretVersionRequest,
-      Google.Cloud.Secretmanager.V1beta2.SecretVersion
+  rpc(
+    :DestroySecretVersion,
+    Google.Cloud.Secretmanager.V1beta2.DestroySecretVersionRequest,
+    Google.Cloud.Secretmanager.V1beta2.SecretVersion
+  )
 
-  rpc :SetIamPolicy, Google.Iam.V1.SetIamPolicyRequest, Google.Iam.V1.Policy
+  rpc(:SetIamPolicy, Google.Iam.V1.SetIamPolicyRequest, Google.Iam.V1.Policy)
 
-  rpc :GetIamPolicy, Google.Iam.V1.GetIamPolicyRequest, Google.Iam.V1.Policy
+  rpc(:GetIamPolicy, Google.Iam.V1.GetIamPolicyRequest, Google.Iam.V1.Policy)
 
-  rpc :TestIamPermissions,
-      Google.Iam.V1.TestIamPermissionsRequest,
-      Google.Iam.V1.TestIamPermissionsResponse
+  rpc(
+    :TestIamPermissions,
+    Google.Iam.V1.TestIamPermissionsRequest,
+    Google.Iam.V1.TestIamPermissionsResponse
+  )
 end
 
 defmodule Google.Cloud.Secretmanager.V1beta2.SecretManagerService.Stub do

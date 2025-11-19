@@ -3,9 +3,9 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta2.ArrowSerializationOptions.Format
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :FORMAT_UNSPECIFIED, 0
-  field :ARROW_0_14, 1
-  field :ARROW_0_15, 2
+  field(:FORMAT_UNSPECIFIED, 0)
+  field(:ARROW_0_14, 1)
+  field(:ARROW_0_15, 2)
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta2.ArrowSchema do
@@ -13,7 +13,7 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta2.ArrowSchema do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :serialized_schema, 1, type: :bytes, json_name: "serializedSchema"
+  field(:serialized_schema, 1, type: :bytes, json_name: "serializedSchema")
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta2.ArrowRecordBatch do
@@ -21,7 +21,7 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta2.ArrowRecordBatch do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :serialized_record_batch, 1, type: :bytes, json_name: "serializedRecordBatch"
+  field(:serialized_record_batch, 1, type: :bytes, json_name: "serializedRecordBatch")
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1beta2.ArrowSerializationOptions do
@@ -29,7 +29,8 @@ defmodule Google.Cloud.Bigquery.Storage.V1beta2.ArrowSerializationOptions do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :format, 1,
+  field(:format, 1,
     type: Google.Cloud.Bigquery.Storage.V1beta2.ArrowSerializationOptions.Format,
     enum: true
+  )
 end

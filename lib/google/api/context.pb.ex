@@ -3,7 +3,7 @@ defmodule Google.Api.Context do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :rules, 1, repeated: true, type: Google.Api.ContextRule
+  field(:rules, 1, repeated: true, type: Google.Api.ContextRule)
 end
 
 defmodule Google.Api.ContextRule do
@@ -11,17 +11,19 @@ defmodule Google.Api.ContextRule do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :selector, 1, type: :string
-  field :requested, 2, repeated: true, type: :string
-  field :provided, 3, repeated: true, type: :string
+  field(:selector, 1, type: :string)
+  field(:requested, 2, repeated: true, type: :string)
+  field(:provided, 3, repeated: true, type: :string)
 
-  field :allowed_request_extensions, 4,
+  field(:allowed_request_extensions, 4,
     repeated: true,
     type: :string,
     json_name: "allowedRequestExtensions"
+  )
 
-  field :allowed_response_extensions, 5,
+  field(:allowed_response_extensions, 5,
     repeated: true,
     type: :string,
     json_name: "allowedResponseExtensions"
+  )
 end

@@ -3,5 +3,5 @@ defmodule Google.Cloud.Bigquery.V2.LocationMetadata do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :legacy_location_id, 1, type: :string, json_name: "legacyLocationId"
+  field(:legacy_location_id, 1, type: :string, json_name: "legacyLocationId")
 end

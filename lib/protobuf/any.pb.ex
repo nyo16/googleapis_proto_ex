@@ -3,6 +3,6 @@ defmodule Google.Protobuf.Any do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :type_url, 1, type: :string, json_name: "typeUrl"
-  field :value, 2, type: :bytes
+  field(:type_url, 1, type: :string, json_name: "typeUrl")
+  field(:value, 2, type: :bytes)
 end

@@ -3,7 +3,7 @@ defmodule Google.Api.Visibility do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :rules, 1, repeated: true, type: Google.Api.VisibilityRule
+  field(:rules, 1, repeated: true, type: Google.Api.VisibilityRule)
 end
 
 defmodule Google.Api.VisibilityRule do
@@ -11,6 +11,6 @@ defmodule Google.Api.VisibilityRule do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :selector, 1, type: :string
-  field :restriction, 2, type: :string
+  field(:selector, 1, type: :string)
+  field(:restriction, 2, type: :string)
 end

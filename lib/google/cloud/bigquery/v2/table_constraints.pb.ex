@@ -3,7 +3,7 @@ defmodule Google.Cloud.Bigquery.V2.PrimaryKey do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :columns, 1, repeated: true, type: :string, deprecated: false
+  field(:columns, 1, repeated: true, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.V2.ColumnReference do
@@ -11,8 +11,8 @@ defmodule Google.Cloud.Bigquery.V2.ColumnReference do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :referencing_column, 1, type: :string, json_name: "referencingColumn", deprecated: false
-  field :referenced_column, 2, type: :string, json_name: "referencedColumn", deprecated: false
+  field(:referencing_column, 1, type: :string, json_name: "referencingColumn", deprecated: false)
+  field(:referenced_column, 2, type: :string, json_name: "referencedColumn", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.V2.ForeignKey do
@@ -20,18 +20,20 @@ defmodule Google.Cloud.Bigquery.V2.ForeignKey do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 
-  field :referenced_table, 2,
+  field(:referenced_table, 2,
     type: Google.Cloud.Bigquery.V2.TableReference,
     json_name: "referencedTable",
     deprecated: false
+  )
 
-  field :column_references, 3,
+  field(:column_references, 3,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.ColumnReference,
     json_name: "columnReferences",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.TableConstraints do
@@ -39,14 +41,16 @@ defmodule Google.Cloud.Bigquery.V2.TableConstraints do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :primary_key, 1,
+  field(:primary_key, 1,
     type: Google.Cloud.Bigquery.V2.PrimaryKey,
     json_name: "primaryKey",
     deprecated: false
+  )
 
-  field :foreign_keys, 2,
+  field(:foreign_keys, 2,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.ForeignKey,
     json_name: "foreignKeys",
     deprecated: false
+  )
 end

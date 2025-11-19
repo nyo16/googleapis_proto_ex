@@ -3,8 +3,8 @@ defmodule Google.Api.Billing.BillingDestination do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :monitored_resource, 1, type: :string, json_name: "monitoredResource"
-  field :metrics, 2, repeated: true, type: :string
+  field(:monitored_resource, 1, type: :string, json_name: "monitoredResource")
+  field(:metrics, 2, repeated: true, type: :string)
 end
 
 defmodule Google.Api.Billing do
@@ -12,8 +12,9 @@ defmodule Google.Api.Billing do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :consumer_destinations, 8,
+  field(:consumer_destinations, 8,
     repeated: true,
     type: Google.Api.Billing.BillingDestination,
     json_name: "consumerDestinations"
+  )
 end

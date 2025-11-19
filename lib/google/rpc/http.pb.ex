@@ -3,10 +3,10 @@ defmodule Google.Rpc.HttpRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :method, 1, type: :string
-  field :uri, 2, type: :string
-  field :headers, 3, repeated: true, type: Google.Rpc.HttpHeader
-  field :body, 4, type: :bytes
+  field(:method, 1, type: :string)
+  field(:uri, 2, type: :string)
+  field(:headers, 3, repeated: true, type: Google.Rpc.HttpHeader)
+  field(:body, 4, type: :bytes)
 end
 
 defmodule Google.Rpc.HttpResponse do
@@ -14,10 +14,10 @@ defmodule Google.Rpc.HttpResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :status, 1, type: :int32
-  field :reason, 2, type: :string
-  field :headers, 3, repeated: true, type: Google.Rpc.HttpHeader
-  field :body, 4, type: :bytes
+  field(:status, 1, type: :int32)
+  field(:reason, 2, type: :string)
+  field(:headers, 3, repeated: true, type: Google.Rpc.HttpHeader)
+  field(:body, 4, type: :bytes)
 end
 
 defmodule Google.Rpc.HttpHeader do
@@ -25,6 +25,6 @@ defmodule Google.Rpc.HttpHeader do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :key, 1, type: :string
-  field :value, 2, type: :string
+  field(:key, 1, type: :string)
+  field(:value, 2, type: :string)
 end

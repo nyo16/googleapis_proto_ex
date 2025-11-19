@@ -3,7 +3,7 @@ defmodule Google.Datastore.V1.ExplainOptions do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :analyze, 1, type: :bool, deprecated: false
+  field(:analyze, 1, type: :bool, deprecated: false)
 end
 
 defmodule Google.Datastore.V1.ExplainMetrics do
@@ -11,8 +11,12 @@ defmodule Google.Datastore.V1.ExplainMetrics do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :plan_summary, 1, type: Google.Datastore.V1.PlanSummary, json_name: "planSummary"
-  field :execution_stats, 2, type: Google.Datastore.V1.ExecutionStats, json_name: "executionStats"
+  field(:plan_summary, 1, type: Google.Datastore.V1.PlanSummary, json_name: "planSummary")
+
+  field(:execution_stats, 2,
+    type: Google.Datastore.V1.ExecutionStats,
+    json_name: "executionStats"
+  )
 end
 
 defmodule Google.Datastore.V1.PlanSummary do
@@ -20,7 +24,7 @@ defmodule Google.Datastore.V1.PlanSummary do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :indexes_used, 1, repeated: true, type: Google.Protobuf.Struct, json_name: "indexesUsed"
+  field(:indexes_used, 1, repeated: true, type: Google.Protobuf.Struct, json_name: "indexesUsed")
 end
 
 defmodule Google.Datastore.V1.ExecutionStats do
@@ -28,8 +32,8 @@ defmodule Google.Datastore.V1.ExecutionStats do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :results_returned, 1, type: :int64, json_name: "resultsReturned"
-  field :execution_duration, 3, type: Google.Protobuf.Duration, json_name: "executionDuration"
-  field :read_operations, 4, type: :int64, json_name: "readOperations"
-  field :debug_stats, 5, type: Google.Protobuf.Struct, json_name: "debugStats"
+  field(:results_returned, 1, type: :int64, json_name: "resultsReturned")
+  field(:execution_duration, 3, type: Google.Protobuf.Duration, json_name: "executionDuration")
+  field(:read_operations, 4, type: :int64, json_name: "readOperations")
+  field(:debug_stats, 5, type: Google.Protobuf.Struct, json_name: "debugStats")
 end

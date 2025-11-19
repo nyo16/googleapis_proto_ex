@@ -3,10 +3,10 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.Edition do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :EDITION_UNSPECIFIED, 0
-  field :STANDARD, 1
-  field :ENTERPRISE, 2
-  field :ENTERPRISE_PLUS, 3
+  field(:EDITION_UNSPECIFIED, 0)
+  field(:STANDARD, 1)
+  field(:ENTERPRISE, 2)
+  field(:ENTERPRISE_PLUS, 3)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.FailoverMode do
@@ -14,9 +14,9 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.FailoverMode do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :FAILOVER_MODE_UNSPECIFIED, 0
-  field :SOFT, 1
-  field :HARD, 2
+  field(:FAILOVER_MODE_UNSPECIFIED, 0)
+  field(:SOFT, 1)
+  field(:HARD, 2)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.Reservation.ScalingMode do
@@ -24,10 +24,10 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.Reservation.ScalingMode do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :SCALING_MODE_UNSPECIFIED, 0
-  field :AUTOSCALE_ONLY, 1
-  field :IDLE_SLOTS_ONLY, 2
-  field :ALL_SLOTS, 3
+  field(:SCALING_MODE_UNSPECIFIED, 0)
+  field(:AUTOSCALE_ONLY, 1)
+  field(:IDLE_SLOTS_ONLY, 2)
+  field(:ALL_SLOTS, 3)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment.CommitmentPlan do
@@ -35,16 +35,16 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment.CommitmentPlan
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :COMMITMENT_PLAN_UNSPECIFIED, 0
-  field :FLEX, 3
-  field :FLEX_FLAT_RATE, 7
-  field :TRIAL, 5
-  field :MONTHLY, 2
-  field :MONTHLY_FLAT_RATE, 8
-  field :ANNUAL, 4
-  field :ANNUAL_FLAT_RATE, 9
-  field :THREE_YEAR, 10
-  field :NONE, 6
+  field(:COMMITMENT_PLAN_UNSPECIFIED, 0)
+  field(:FLEX, 3)
+  field(:FLEX_FLAT_RATE, 7)
+  field(:TRIAL, 5)
+  field(:MONTHLY, 2)
+  field(:MONTHLY_FLAT_RATE, 8)
+  field(:ANNUAL, 4)
+  field(:ANNUAL_FLAT_RATE, 9)
+  field(:THREE_YEAR, 10)
+  field(:NONE, 6)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment.State do
@@ -52,10 +52,10 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment.State do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :STATE_UNSPECIFIED, 0
-  field :PENDING, 1
-  field :ACTIVE, 2
-  field :FAILED, 3
+  field(:STATE_UNSPECIFIED, 0)
+  field(:PENDING, 1)
+  field(:ACTIVE, 2)
+  field(:FAILED, 3)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.Assignment.JobType do
@@ -63,15 +63,15 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.Assignment.JobType do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :JOB_TYPE_UNSPECIFIED, 0
-  field :PIPELINE, 1
-  field :QUERY, 2
-  field :ML_EXTERNAL, 3
-  field :BACKGROUND, 4
-  field :CONTINUOUS, 6
-  field :BACKGROUND_CHANGE_DATA_CAPTURE, 7
-  field :BACKGROUND_COLUMN_METADATA_INDEX, 8
-  field :BACKGROUND_SEARCH_INDEX_REFRESH, 9
+  field(:JOB_TYPE_UNSPECIFIED, 0)
+  field(:PIPELINE, 1)
+  field(:QUERY, 2)
+  field(:ML_EXTERNAL, 3)
+  field(:BACKGROUND, 4)
+  field(:CONTINUOUS, 6)
+  field(:BACKGROUND_CHANGE_DATA_CAPTURE, 7)
+  field(:BACKGROUND_COLUMN_METADATA_INDEX, 8)
+  field(:BACKGROUND_SEARCH_INDEX_REFRESH, 9)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.Assignment.State do
@@ -79,9 +79,9 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.Assignment.State do
 
   use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :STATE_UNSPECIFIED, 0
-  field :PENDING, 1
-  field :ACTIVE, 2
+  field(:STATE_UNSPECIFIED, 0)
+  field(:PENDING, 1)
+  field(:ACTIVE, 2)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.Reservation.Autoscale do
@@ -89,8 +89,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.Reservation.Autoscale do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :current_slots, 1, type: :int64, json_name: "currentSlots", deprecated: false
-  field :max_slots, 2, type: :int64, json_name: "maxSlots", deprecated: false
+  field(:current_slots, 1, type: :int64, json_name: "currentSlots", deprecated: false)
+  field(:max_slots, 2, type: :int64, json_name: "maxSlots", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.Reservation.ReplicationStatus do
@@ -98,22 +98,25 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.Reservation.ReplicationStatus do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :error, 1, type: Google.Rpc.Status, deprecated: false
+  field(:error, 1, type: Google.Rpc.Status, deprecated: false)
 
-  field :last_error_time, 2,
+  field(:last_error_time, 2,
     type: Google.Protobuf.Timestamp,
     json_name: "lastErrorTime",
     deprecated: false
+  )
 
-  field :last_replication_time, 3,
+  field(:last_replication_time, 3,
     type: Google.Protobuf.Timestamp,
     json_name: "lastReplicationTime",
     deprecated: false
+  )
 
-  field :soft_failover_start_time, 4,
+  field(:soft_failover_start_time, 4,
     type: Google.Protobuf.Timestamp,
     json_name: "softFailoverStartTime",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.Reservation.LabelsEntry do
@@ -121,8 +124,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.Reservation.LabelsEntry do
 
   use Protobuf, map: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :key, 1, type: :string
-  field :value, 2, type: :string
+  field(:key, 1, type: :string)
+  field(:value, 2, type: :string)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.Reservation do
@@ -130,73 +133,84 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.Reservation do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :slot_capacity, 2, type: :int64, json_name: "slotCapacity", deprecated: false
-  field :ignore_idle_slots, 4, type: :bool, json_name: "ignoreIdleSlots", deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
+  field(:slot_capacity, 2, type: :int64, json_name: "slotCapacity", deprecated: false)
+  field(:ignore_idle_slots, 4, type: :bool, json_name: "ignoreIdleSlots", deprecated: false)
 
-  field :autoscale, 7,
+  field(:autoscale, 7,
     type: Google.Cloud.Bigquery.Reservation.V1.Reservation.Autoscale,
     deprecated: false
+  )
 
-  field :concurrency, 16, type: :int64, deprecated: false
+  field(:concurrency, 16, type: :int64, deprecated: false)
 
-  field :creation_time, 8,
+  field(:creation_time, 8,
     type: Google.Protobuf.Timestamp,
     json_name: "creationTime",
     deprecated: false
+  )
 
-  field :update_time, 9,
+  field(:update_time, 9,
     type: Google.Protobuf.Timestamp,
     json_name: "updateTime",
     deprecated: false
+  )
 
-  field :multi_region_auxiliary, 14,
+  field(:multi_region_auxiliary, 14,
     type: :bool,
     json_name: "multiRegionAuxiliary",
     deprecated: true
+  )
 
-  field :edition, 17,
+  field(:edition, 17,
     type: Google.Cloud.Bigquery.Reservation.V1.Edition,
     enum: true,
     deprecated: false
+  )
 
-  field :primary_location, 18, type: :string, json_name: "primaryLocation", deprecated: false
-  field :secondary_location, 19, type: :string, json_name: "secondaryLocation", deprecated: false
+  field(:primary_location, 18, type: :string, json_name: "primaryLocation", deprecated: false)
+  field(:secondary_location, 19, type: :string, json_name: "secondaryLocation", deprecated: false)
 
-  field :original_primary_location, 20,
+  field(:original_primary_location, 20,
     type: :string,
     json_name: "originalPrimaryLocation",
     deprecated: false
+  )
 
-  field :max_slots, 21,
+  field(:max_slots, 21,
     proto3_optional: true,
     type: :int64,
     json_name: "maxSlots",
     deprecated: false
+  )
 
-  field :scaling_mode, 22,
+  field(:scaling_mode, 22,
     type: Google.Cloud.Bigquery.Reservation.V1.Reservation.ScalingMode,
     json_name: "scalingMode",
     enum: true,
     deprecated: false
+  )
 
-  field :labels, 23,
+  field(:labels, 23,
     repeated: true,
     type: Google.Cloud.Bigquery.Reservation.V1.Reservation.LabelsEntry,
     map: true,
     deprecated: false
+  )
 
-  field :reservation_group, 25, type: :string, json_name: "reservationGroup", deprecated: false
+  field(:reservation_group, 25, type: :string, json_name: "reservationGroup", deprecated: false)
 
-  field :replication_status, 24,
+  field(:replication_status, 24,
     type: Google.Cloud.Bigquery.Reservation.V1.Reservation.ReplicationStatus,
     json_name: "replicationStatus",
     deprecated: false
+  )
 
-  field :scheduling_policy, 27,
+  field(:scheduling_policy, 27,
     type: Google.Cloud.Bigquery.Reservation.V1.SchedulingPolicy,
     json_name: "schedulingPolicy",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.SchedulingPolicy do
@@ -204,13 +218,14 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.SchedulingPolicy do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :concurrency, 1, proto3_optional: true, type: :int64, deprecated: false
+  field(:concurrency, 1, proto3_optional: true, type: :int64, deprecated: false)
 
-  field :max_slots, 2,
+  field(:max_slots, 2,
     proto3_optional: true,
     type: :int64,
     json_name: "maxSlots",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ReservationGroup do
@@ -218,7 +233,7 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.ReservationGroup do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment do
@@ -226,48 +241,59 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :slot_count, 2, type: :int64, json_name: "slotCount", deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
+  field(:slot_count, 2, type: :int64, json_name: "slotCount", deprecated: false)
 
-  field :plan, 3,
+  field(:plan, 3,
     type: Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment.CommitmentPlan,
     enum: true,
     deprecated: false
+  )
 
-  field :state, 4,
+  field(:state, 4,
     type: Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment.State,
     enum: true,
     deprecated: false
+  )
 
-  field :commitment_start_time, 9,
+  field(:commitment_start_time, 9,
     type: Google.Protobuf.Timestamp,
     json_name: "commitmentStartTime",
     deprecated: false
+  )
 
-  field :commitment_end_time, 5,
+  field(:commitment_end_time, 5,
     type: Google.Protobuf.Timestamp,
     json_name: "commitmentEndTime",
     deprecated: false
+  )
 
-  field :failure_status, 7, type: Google.Rpc.Status, json_name: "failureStatus", deprecated: false
+  field(:failure_status, 7,
+    type: Google.Rpc.Status,
+    json_name: "failureStatus",
+    deprecated: false
+  )
 
-  field :renewal_plan, 8,
+  field(:renewal_plan, 8,
     type: Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment.CommitmentPlan,
     json_name: "renewalPlan",
     enum: true,
     deprecated: false
+  )
 
-  field :multi_region_auxiliary, 10,
+  field(:multi_region_auxiliary, 10,
     type: :bool,
     json_name: "multiRegionAuxiliary",
     deprecated: true
+  )
 
-  field :edition, 12,
+  field(:edition, 12,
     type: Google.Cloud.Bigquery.Reservation.V1.Edition,
     enum: true,
     deprecated: false
+  )
 
-  field :is_flat_rate, 14, type: :bool, json_name: "isFlatRate", deprecated: false
+  field(:is_flat_rate, 14, type: :bool, json_name: "isFlatRate", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.CreateReservationRequest do
@@ -275,9 +301,9 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.CreateReservationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :reservation_id, 2, type: :string, json_name: "reservationId"
-  field :reservation, 3, type: Google.Cloud.Bigquery.Reservation.V1.Reservation
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:reservation_id, 2, type: :string, json_name: "reservationId")
+  field(:reservation, 3, type: Google.Cloud.Bigquery.Reservation.V1.Reservation)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ListReservationsRequest do
@@ -285,9 +311,9 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.ListReservationsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :page_size, 2, type: :int32, json_name: "pageSize"
-  field :page_token, 3, type: :string, json_name: "pageToken"
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:page_size, 2, type: :int32, json_name: "pageSize")
+  field(:page_token, 3, type: :string, json_name: "pageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ListReservationsResponse do
@@ -295,8 +321,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.ListReservationsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :reservations, 1, repeated: true, type: Google.Cloud.Bigquery.Reservation.V1.Reservation
-  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
+  field(:reservations, 1, repeated: true, type: Google.Cloud.Bigquery.Reservation.V1.Reservation)
+  field(:next_page_token, 2, type: :string, json_name: "nextPageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.GetReservationRequest do
@@ -304,7 +330,7 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.GetReservationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.DeleteReservationRequest do
@@ -312,7 +338,7 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.DeleteReservationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.UpdateReservationRequest do
@@ -320,8 +346,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.UpdateReservationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :reservation, 1, type: Google.Cloud.Bigquery.Reservation.V1.Reservation
-  field :update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask"
+  field(:reservation, 1, type: Google.Cloud.Bigquery.Reservation.V1.Reservation)
+  field(:update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.FailoverReservationRequest do
@@ -329,13 +355,14 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.FailoverReservationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 
-  field :failover_mode, 2,
+  field(:failover_mode, 2,
     type: Google.Cloud.Bigquery.Reservation.V1.FailoverMode,
     json_name: "failoverMode",
     enum: true,
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.CreateReservationGroupRequest do
@@ -343,17 +370,19 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.CreateReservationGroupRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
 
-  field :reservation_group_id, 2,
+  field(:reservation_group_id, 2,
     type: :string,
     json_name: "reservationGroupId",
     deprecated: false
+  )
 
-  field :reservation_group, 3,
+  field(:reservation_group, 3,
     type: Google.Cloud.Bigquery.Reservation.V1.ReservationGroup,
     json_name: "reservationGroup",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.GetReservationGroupRequest do
@@ -361,7 +390,7 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.GetReservationGroupRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ListReservationGroupsRequest do
@@ -369,9 +398,9 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.ListReservationGroupsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :page_size, 2, type: :int32, json_name: "pageSize"
-  field :page_token, 3, type: :string, json_name: "pageToken"
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:page_size, 2, type: :int32, json_name: "pageSize")
+  field(:page_token, 3, type: :string, json_name: "pageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ListReservationGroupsResponse do
@@ -379,12 +408,13 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.ListReservationGroupsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :reservation_groups, 1,
+  field(:reservation_groups, 1,
     repeated: true,
     type: Google.Cloud.Bigquery.Reservation.V1.ReservationGroup,
     json_name: "reservationGroups"
+  )
 
-  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
+  field(:next_page_token, 2, type: :string, json_name: "nextPageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.DeleteReservationGroupRequest do
@@ -392,7 +422,7 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.DeleteReservationGroupRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.CreateCapacityCommitmentRequest do
@@ -400,17 +430,19 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.CreateCapacityCommitmentRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
 
-  field :capacity_commitment, 2,
+  field(:capacity_commitment, 2,
     type: Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment,
     json_name: "capacityCommitment"
+  )
 
-  field :enforce_single_admin_project_per_org, 4,
+  field(:enforce_single_admin_project_per_org, 4,
     type: :bool,
     json_name: "enforceSingleAdminProjectPerOrg"
+  )
 
-  field :capacity_commitment_id, 5, type: :string, json_name: "capacityCommitmentId"
+  field(:capacity_commitment_id, 5, type: :string, json_name: "capacityCommitmentId")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ListCapacityCommitmentsRequest do
@@ -418,9 +450,9 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.ListCapacityCommitmentsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :page_size, 2, type: :int32, json_name: "pageSize"
-  field :page_token, 3, type: :string, json_name: "pageToken"
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:page_size, 2, type: :int32, json_name: "pageSize")
+  field(:page_token, 3, type: :string, json_name: "pageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ListCapacityCommitmentsResponse do
@@ -428,12 +460,13 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.ListCapacityCommitmentsResponse d
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :capacity_commitments, 1,
+  field(:capacity_commitments, 1,
     repeated: true,
     type: Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment,
     json_name: "capacityCommitments"
+  )
 
-  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
+  field(:next_page_token, 2, type: :string, json_name: "nextPageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.GetCapacityCommitmentRequest do
@@ -441,7 +474,7 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.GetCapacityCommitmentRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.DeleteCapacityCommitmentRequest do
@@ -449,8 +482,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.DeleteCapacityCommitmentRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :force, 3, type: :bool
+  field(:name, 1, type: :string, deprecated: false)
+  field(:force, 3, type: :bool)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.UpdateCapacityCommitmentRequest do
@@ -458,11 +491,12 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.UpdateCapacityCommitmentRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :capacity_commitment, 1,
+  field(:capacity_commitment, 1,
     type: Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment,
     json_name: "capacityCommitment"
+  )
 
-  field :update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask"
+  field(:update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.SplitCapacityCommitmentRequest do
@@ -470,8 +504,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.SplitCapacityCommitmentRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :slot_count, 2, type: :int64, json_name: "slotCount"
+  field(:name, 1, type: :string, deprecated: false)
+  field(:slot_count, 2, type: :int64, json_name: "slotCount")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.SplitCapacityCommitmentResponse do
@@ -479,8 +513,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.SplitCapacityCommitmentResponse d
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :first, 1, type: Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment
-  field :second, 2, type: Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment
+  field(:first, 1, type: Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment)
+  field(:second, 2, type: Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.MergeCapacityCommitmentsRequest do
@@ -488,17 +522,19 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.MergeCapacityCommitmentsRequest d
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
+  field(:parent, 1, type: :string, deprecated: false)
 
-  field :capacity_commitment_ids, 2,
+  field(:capacity_commitment_ids, 2,
     repeated: true,
     type: :string,
     json_name: "capacityCommitmentIds"
+  )
 
-  field :capacity_commitment_id, 3,
+  field(:capacity_commitment_id, 3,
     type: :string,
     json_name: "capacityCommitmentId",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.Assignment do
@@ -506,29 +542,33 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.Assignment do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :assignee, 4, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
+  field(:assignee, 4, type: :string, deprecated: false)
 
-  field :job_type, 3,
+  field(:job_type, 3,
     type: Google.Cloud.Bigquery.Reservation.V1.Assignment.JobType,
     json_name: "jobType",
     enum: true,
     deprecated: false
+  )
 
-  field :state, 6,
+  field(:state, 6,
     type: Google.Cloud.Bigquery.Reservation.V1.Assignment.State,
     enum: true,
     deprecated: false
+  )
 
-  field :enable_gemini_in_bigquery, 10,
+  field(:enable_gemini_in_bigquery, 10,
     type: :bool,
     json_name: "enableGeminiInBigquery",
     deprecated: false
+  )
 
-  field :scheduling_policy, 11,
+  field(:scheduling_policy, 11,
     type: Google.Cloud.Bigquery.Reservation.V1.SchedulingPolicy,
     json_name: "schedulingPolicy",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.CreateAssignmentRequest do
@@ -536,9 +576,9 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.CreateAssignmentRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :assignment, 2, type: Google.Cloud.Bigquery.Reservation.V1.Assignment
-  field :assignment_id, 4, type: :string, json_name: "assignmentId"
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:assignment, 2, type: Google.Cloud.Bigquery.Reservation.V1.Assignment)
+  field(:assignment_id, 4, type: :string, json_name: "assignmentId")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ListAssignmentsRequest do
@@ -546,9 +586,9 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.ListAssignmentsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :page_size, 2, type: :int32, json_name: "pageSize"
-  field :page_token, 3, type: :string, json_name: "pageToken"
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:page_size, 2, type: :int32, json_name: "pageSize")
+  field(:page_token, 3, type: :string, json_name: "pageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ListAssignmentsResponse do
@@ -556,8 +596,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.ListAssignmentsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :assignments, 1, repeated: true, type: Google.Cloud.Bigquery.Reservation.V1.Assignment
-  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
+  field(:assignments, 1, repeated: true, type: Google.Cloud.Bigquery.Reservation.V1.Assignment)
+  field(:next_page_token, 2, type: :string, json_name: "nextPageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.DeleteAssignmentRequest do
@@ -565,7 +605,7 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.DeleteAssignmentRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.SearchAssignmentsRequest do
@@ -573,10 +613,10 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.SearchAssignmentsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :query, 2, type: :string
-  field :page_size, 3, type: :int32, json_name: "pageSize"
-  field :page_token, 4, type: :string, json_name: "pageToken"
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:query, 2, type: :string)
+  field(:page_size, 3, type: :int32, json_name: "pageSize")
+  field(:page_token, 4, type: :string, json_name: "pageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.SearchAllAssignmentsRequest do
@@ -584,10 +624,10 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.SearchAllAssignmentsRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :parent, 1, type: :string, deprecated: false
-  field :query, 2, type: :string
-  field :page_size, 3, type: :int32, json_name: "pageSize"
-  field :page_token, 4, type: :string, json_name: "pageToken"
+  field(:parent, 1, type: :string, deprecated: false)
+  field(:query, 2, type: :string)
+  field(:page_size, 3, type: :int32, json_name: "pageSize")
+  field(:page_token, 4, type: :string, json_name: "pageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.SearchAssignmentsResponse do
@@ -595,8 +635,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.SearchAssignmentsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :assignments, 1, repeated: true, type: Google.Cloud.Bigquery.Reservation.V1.Assignment
-  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
+  field(:assignments, 1, repeated: true, type: Google.Cloud.Bigquery.Reservation.V1.Assignment)
+  field(:next_page_token, 2, type: :string, json_name: "nextPageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.SearchAllAssignmentsResponse do
@@ -604,8 +644,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.SearchAllAssignmentsResponse do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :assignments, 1, repeated: true, type: Google.Cloud.Bigquery.Reservation.V1.Assignment
-  field :next_page_token, 2, type: :string, json_name: "nextPageToken"
+  field(:assignments, 1, repeated: true, type: Google.Cloud.Bigquery.Reservation.V1.Assignment)
+  field(:next_page_token, 2, type: :string, json_name: "nextPageToken")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.MoveAssignmentRequest do
@@ -613,9 +653,9 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.MoveAssignmentRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
-  field :destination_id, 3, type: :string, json_name: "destinationId", deprecated: false
-  field :assignment_id, 5, type: :string, json_name: "assignmentId"
+  field(:name, 1, type: :string, deprecated: false)
+  field(:destination_id, 3, type: :string, json_name: "destinationId", deprecated: false)
+  field(:assignment_id, 5, type: :string, json_name: "assignmentId")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.UpdateAssignmentRequest do
@@ -623,8 +663,8 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.UpdateAssignmentRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :assignment, 1, type: Google.Cloud.Bigquery.Reservation.V1.Assignment
-  field :update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask"
+  field(:assignment, 1, type: Google.Cloud.Bigquery.Reservation.V1.Assignment)
+  field(:update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.TableReference do
@@ -632,9 +672,9 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.TableReference do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :project_id, 1, type: :string, json_name: "projectId", deprecated: false
-  field :dataset_id, 2, type: :string, json_name: "datasetId", deprecated: false
-  field :table_id, 3, type: :string, json_name: "tableId", deprecated: false
+  field(:project_id, 1, type: :string, json_name: "projectId", deprecated: false)
+  field(:dataset_id, 2, type: :string, json_name: "datasetId", deprecated: false)
+  field(:table_id, 3, type: :string, json_name: "tableId", deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.BiReservation do
@@ -642,20 +682,22 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.BiReservation do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 
-  field :update_time, 3,
+  field(:update_time, 3,
     type: Google.Protobuf.Timestamp,
     json_name: "updateTime",
     deprecated: false
+  )
 
-  field :size, 4, type: :int64, deprecated: false
+  field(:size, 4, type: :int64, deprecated: false)
 
-  field :preferred_tables, 5,
+  field(:preferred_tables, 5,
     repeated: true,
     type: Google.Cloud.Bigquery.Reservation.V1.TableReference,
     json_name: "preferredTables",
     deprecated: false
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.GetBiReservationRequest do
@@ -663,7 +705,7 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.GetBiReservationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :name, 1, type: :string, deprecated: false
+  field(:name, 1, type: :string, deprecated: false)
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.UpdateBiReservationRequest do
@@ -671,11 +713,12 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.UpdateBiReservationRequest do
 
   use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
 
-  field :bi_reservation, 1,
+  field(:bi_reservation, 1,
     type: Google.Cloud.Bigquery.Reservation.V1.BiReservation,
     json_name: "biReservation"
+  )
 
-  field :update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask"
+  field(:update_mask, 2, type: Google.Protobuf.FieldMask, json_name: "updateMask")
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ReservationService.Service do
@@ -685,117 +728,171 @@ defmodule Google.Cloud.Bigquery.Reservation.V1.ReservationService.Service do
     name: "google.cloud.bigquery.reservation.v1.ReservationService",
     protoc_gen_elixir_version: "0.15.0"
 
-  rpc :CreateReservation,
-      Google.Cloud.Bigquery.Reservation.V1.CreateReservationRequest,
-      Google.Cloud.Bigquery.Reservation.V1.Reservation
+  rpc(
+    :CreateReservation,
+    Google.Cloud.Bigquery.Reservation.V1.CreateReservationRequest,
+    Google.Cloud.Bigquery.Reservation.V1.Reservation
+  )
 
-  rpc :ListReservations,
-      Google.Cloud.Bigquery.Reservation.V1.ListReservationsRequest,
-      Google.Cloud.Bigquery.Reservation.V1.ListReservationsResponse
+  rpc(
+    :ListReservations,
+    Google.Cloud.Bigquery.Reservation.V1.ListReservationsRequest,
+    Google.Cloud.Bigquery.Reservation.V1.ListReservationsResponse
+  )
 
-  rpc :GetReservation,
-      Google.Cloud.Bigquery.Reservation.V1.GetReservationRequest,
-      Google.Cloud.Bigquery.Reservation.V1.Reservation
+  rpc(
+    :GetReservation,
+    Google.Cloud.Bigquery.Reservation.V1.GetReservationRequest,
+    Google.Cloud.Bigquery.Reservation.V1.Reservation
+  )
 
-  rpc :DeleteReservation,
-      Google.Cloud.Bigquery.Reservation.V1.DeleteReservationRequest,
-      Google.Protobuf.Empty
+  rpc(
+    :DeleteReservation,
+    Google.Cloud.Bigquery.Reservation.V1.DeleteReservationRequest,
+    Google.Protobuf.Empty
+  )
 
-  rpc :UpdateReservation,
-      Google.Cloud.Bigquery.Reservation.V1.UpdateReservationRequest,
-      Google.Cloud.Bigquery.Reservation.V1.Reservation
+  rpc(
+    :UpdateReservation,
+    Google.Cloud.Bigquery.Reservation.V1.UpdateReservationRequest,
+    Google.Cloud.Bigquery.Reservation.V1.Reservation
+  )
 
-  rpc :FailoverReservation,
-      Google.Cloud.Bigquery.Reservation.V1.FailoverReservationRequest,
-      Google.Cloud.Bigquery.Reservation.V1.Reservation
+  rpc(
+    :FailoverReservation,
+    Google.Cloud.Bigquery.Reservation.V1.FailoverReservationRequest,
+    Google.Cloud.Bigquery.Reservation.V1.Reservation
+  )
 
-  rpc :CreateCapacityCommitment,
-      Google.Cloud.Bigquery.Reservation.V1.CreateCapacityCommitmentRequest,
-      Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment
+  rpc(
+    :CreateCapacityCommitment,
+    Google.Cloud.Bigquery.Reservation.V1.CreateCapacityCommitmentRequest,
+    Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment
+  )
 
-  rpc :ListCapacityCommitments,
-      Google.Cloud.Bigquery.Reservation.V1.ListCapacityCommitmentsRequest,
-      Google.Cloud.Bigquery.Reservation.V1.ListCapacityCommitmentsResponse
+  rpc(
+    :ListCapacityCommitments,
+    Google.Cloud.Bigquery.Reservation.V1.ListCapacityCommitmentsRequest,
+    Google.Cloud.Bigquery.Reservation.V1.ListCapacityCommitmentsResponse
+  )
 
-  rpc :GetCapacityCommitment,
-      Google.Cloud.Bigquery.Reservation.V1.GetCapacityCommitmentRequest,
-      Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment
+  rpc(
+    :GetCapacityCommitment,
+    Google.Cloud.Bigquery.Reservation.V1.GetCapacityCommitmentRequest,
+    Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment
+  )
 
-  rpc :DeleteCapacityCommitment,
-      Google.Cloud.Bigquery.Reservation.V1.DeleteCapacityCommitmentRequest,
-      Google.Protobuf.Empty
+  rpc(
+    :DeleteCapacityCommitment,
+    Google.Cloud.Bigquery.Reservation.V1.DeleteCapacityCommitmentRequest,
+    Google.Protobuf.Empty
+  )
 
-  rpc :UpdateCapacityCommitment,
-      Google.Cloud.Bigquery.Reservation.V1.UpdateCapacityCommitmentRequest,
-      Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment
+  rpc(
+    :UpdateCapacityCommitment,
+    Google.Cloud.Bigquery.Reservation.V1.UpdateCapacityCommitmentRequest,
+    Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment
+  )
 
-  rpc :SplitCapacityCommitment,
-      Google.Cloud.Bigquery.Reservation.V1.SplitCapacityCommitmentRequest,
-      Google.Cloud.Bigquery.Reservation.V1.SplitCapacityCommitmentResponse
+  rpc(
+    :SplitCapacityCommitment,
+    Google.Cloud.Bigquery.Reservation.V1.SplitCapacityCommitmentRequest,
+    Google.Cloud.Bigquery.Reservation.V1.SplitCapacityCommitmentResponse
+  )
 
-  rpc :MergeCapacityCommitments,
-      Google.Cloud.Bigquery.Reservation.V1.MergeCapacityCommitmentsRequest,
-      Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment
+  rpc(
+    :MergeCapacityCommitments,
+    Google.Cloud.Bigquery.Reservation.V1.MergeCapacityCommitmentsRequest,
+    Google.Cloud.Bigquery.Reservation.V1.CapacityCommitment
+  )
 
-  rpc :CreateAssignment,
-      Google.Cloud.Bigquery.Reservation.V1.CreateAssignmentRequest,
-      Google.Cloud.Bigquery.Reservation.V1.Assignment
+  rpc(
+    :CreateAssignment,
+    Google.Cloud.Bigquery.Reservation.V1.CreateAssignmentRequest,
+    Google.Cloud.Bigquery.Reservation.V1.Assignment
+  )
 
-  rpc :ListAssignments,
-      Google.Cloud.Bigquery.Reservation.V1.ListAssignmentsRequest,
-      Google.Cloud.Bigquery.Reservation.V1.ListAssignmentsResponse
+  rpc(
+    :ListAssignments,
+    Google.Cloud.Bigquery.Reservation.V1.ListAssignmentsRequest,
+    Google.Cloud.Bigquery.Reservation.V1.ListAssignmentsResponse
+  )
 
-  rpc :DeleteAssignment,
-      Google.Cloud.Bigquery.Reservation.V1.DeleteAssignmentRequest,
-      Google.Protobuf.Empty
+  rpc(
+    :DeleteAssignment,
+    Google.Cloud.Bigquery.Reservation.V1.DeleteAssignmentRequest,
+    Google.Protobuf.Empty
+  )
 
-  rpc :SearchAssignments,
-      Google.Cloud.Bigquery.Reservation.V1.SearchAssignmentsRequest,
-      Google.Cloud.Bigquery.Reservation.V1.SearchAssignmentsResponse
+  rpc(
+    :SearchAssignments,
+    Google.Cloud.Bigquery.Reservation.V1.SearchAssignmentsRequest,
+    Google.Cloud.Bigquery.Reservation.V1.SearchAssignmentsResponse
+  )
 
-  rpc :SearchAllAssignments,
-      Google.Cloud.Bigquery.Reservation.V1.SearchAllAssignmentsRequest,
-      Google.Cloud.Bigquery.Reservation.V1.SearchAllAssignmentsResponse
+  rpc(
+    :SearchAllAssignments,
+    Google.Cloud.Bigquery.Reservation.V1.SearchAllAssignmentsRequest,
+    Google.Cloud.Bigquery.Reservation.V1.SearchAllAssignmentsResponse
+  )
 
-  rpc :MoveAssignment,
-      Google.Cloud.Bigquery.Reservation.V1.MoveAssignmentRequest,
-      Google.Cloud.Bigquery.Reservation.V1.Assignment
+  rpc(
+    :MoveAssignment,
+    Google.Cloud.Bigquery.Reservation.V1.MoveAssignmentRequest,
+    Google.Cloud.Bigquery.Reservation.V1.Assignment
+  )
 
-  rpc :UpdateAssignment,
-      Google.Cloud.Bigquery.Reservation.V1.UpdateAssignmentRequest,
-      Google.Cloud.Bigquery.Reservation.V1.Assignment
+  rpc(
+    :UpdateAssignment,
+    Google.Cloud.Bigquery.Reservation.V1.UpdateAssignmentRequest,
+    Google.Cloud.Bigquery.Reservation.V1.Assignment
+  )
 
-  rpc :GetBiReservation,
-      Google.Cloud.Bigquery.Reservation.V1.GetBiReservationRequest,
-      Google.Cloud.Bigquery.Reservation.V1.BiReservation
+  rpc(
+    :GetBiReservation,
+    Google.Cloud.Bigquery.Reservation.V1.GetBiReservationRequest,
+    Google.Cloud.Bigquery.Reservation.V1.BiReservation
+  )
 
-  rpc :UpdateBiReservation,
-      Google.Cloud.Bigquery.Reservation.V1.UpdateBiReservationRequest,
-      Google.Cloud.Bigquery.Reservation.V1.BiReservation
+  rpc(
+    :UpdateBiReservation,
+    Google.Cloud.Bigquery.Reservation.V1.UpdateBiReservationRequest,
+    Google.Cloud.Bigquery.Reservation.V1.BiReservation
+  )
 
-  rpc :GetIamPolicy, Google.Iam.V1.GetIamPolicyRequest, Google.Iam.V1.Policy
+  rpc(:GetIamPolicy, Google.Iam.V1.GetIamPolicyRequest, Google.Iam.V1.Policy)
 
-  rpc :SetIamPolicy, Google.Iam.V1.SetIamPolicyRequest, Google.Iam.V1.Policy
+  rpc(:SetIamPolicy, Google.Iam.V1.SetIamPolicyRequest, Google.Iam.V1.Policy)
 
-  rpc :TestIamPermissions,
-      Google.Iam.V1.TestIamPermissionsRequest,
-      Google.Iam.V1.TestIamPermissionsResponse
+  rpc(
+    :TestIamPermissions,
+    Google.Iam.V1.TestIamPermissionsRequest,
+    Google.Iam.V1.TestIamPermissionsResponse
+  )
 
-  rpc :CreateReservationGroup,
-      Google.Cloud.Bigquery.Reservation.V1.CreateReservationGroupRequest,
-      Google.Cloud.Bigquery.Reservation.V1.ReservationGroup
+  rpc(
+    :CreateReservationGroup,
+    Google.Cloud.Bigquery.Reservation.V1.CreateReservationGroupRequest,
+    Google.Cloud.Bigquery.Reservation.V1.ReservationGroup
+  )
 
-  rpc :GetReservationGroup,
-      Google.Cloud.Bigquery.Reservation.V1.GetReservationGroupRequest,
-      Google.Cloud.Bigquery.Reservation.V1.ReservationGroup
+  rpc(
+    :GetReservationGroup,
+    Google.Cloud.Bigquery.Reservation.V1.GetReservationGroupRequest,
+    Google.Cloud.Bigquery.Reservation.V1.ReservationGroup
+  )
 
-  rpc :DeleteReservationGroup,
-      Google.Cloud.Bigquery.Reservation.V1.DeleteReservationGroupRequest,
-      Google.Protobuf.Empty
+  rpc(
+    :DeleteReservationGroup,
+    Google.Cloud.Bigquery.Reservation.V1.DeleteReservationGroupRequest,
+    Google.Protobuf.Empty
+  )
 
-  rpc :ListReservationGroups,
-      Google.Cloud.Bigquery.Reservation.V1.ListReservationGroupsRequest,
-      Google.Cloud.Bigquery.Reservation.V1.ListReservationGroupsResponse
+  rpc(
+    :ListReservationGroups,
+    Google.Cloud.Bigquery.Reservation.V1.ListReservationGroupsRequest,
+    Google.Cloud.Bigquery.Reservation.V1.ListReservationGroupsResponse
+  )
 end
 
 defmodule Google.Cloud.Bigquery.Reservation.V1.ReservationService.Stub do
