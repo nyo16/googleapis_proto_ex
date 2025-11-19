@@ -46,16 +46,16 @@ ARCH=$(uname -m)
 case "$PLATFORM" in
     Darwin)
         if [ "$ARCH" = "arm64" ]; then
-            PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-osx-aarch_64.zip
+            PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v33.1/protoc-33.1-osx-aarch_64.zip
         else
-            PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-osx-x86_64.zip
+            PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v33.1/protoc-33.1-osx-x86_64.zip
         fi
         ;;
     Linux)
         if [ "$ARCH" = "x86_64" ]; then
-            PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-x86_64.zip
+            PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v33.1/protoc-33.1-linux-x86_64.zip
         else
-            PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v32.0/protoc-32.0-linux-aarch_64.zip
+            PROTOC_URL=https://github.com/protocolbuffers/protobuf/releases/download/v33.1/protoc-33.1-linux-aarch_64.zip
         fi
         ;;
     *)
@@ -241,6 +241,12 @@ $PROTOC -I $GOOGLEAPIS_PATH \
 --plugin=protoc-gen-elixir=$PLUGIN_PATH \
 --elixir_out=plugins=grpc:$OUT \
 $(find $GOOGLEAPIS_PATH/google/ai/generativelanguage -iname "*.proto")
+
+echo_info "Generating Google Cloud BigQuery v2..."
+$PROTOC -I $GOOGLEAPIS_PATH \
+--plugin=protoc-gen-elixir=$PLUGIN_PATH \
+--elixir_out=plugins=grpc:$OUT \
+$(find $GOOGLEAPIS_PATH/google/cloud/bigquery -iname "*.proto")
 
 echo_info "Protobuf generation completed successfully!"
 echo_info "Generated files are in: $OUT"

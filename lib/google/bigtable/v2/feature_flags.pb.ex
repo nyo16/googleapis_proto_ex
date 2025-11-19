@@ -12,4 +12,5 @@ defmodule Google.Bigtable.V2.FeatureFlags do
   field :client_side_metrics_enabled, 8, type: :bool, json_name: "clientSideMetricsEnabled"
   field :traffic_director_enabled, 9, type: :bool, json_name: "trafficDirectorEnabled"
   field :direct_access_requested, 10, type: :bool, json_name: "directAccessRequested"
+  field :peer_info, 11, type: :bool, json_name: "peerInfo"
 end

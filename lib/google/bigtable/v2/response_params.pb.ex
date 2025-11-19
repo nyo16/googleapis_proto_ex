@@ -5,4 +5,5 @@ defmodule Google.Bigtable.V2.ResponseParams do
 
   field :zone_id, 1, proto3_optional: true, type: :string, json_name: "zoneId"
   field :cluster_id, 2, proto3_optional: true, type: :string, json_name: "clusterId"
+  field :afe_id, 3, proto3_optional: true, type: :int64, json_name: "afeId"
 end
