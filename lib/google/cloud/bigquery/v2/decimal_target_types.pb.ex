@@ -1,10 +1,14 @@
 defmodule Google.Cloud.Bigquery.V2.DecimalTargetType do
   @moduledoc false
 
-  use Protobuf, enum: true, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    enum: true,
+    full_name: "google.cloud.bigquery.v2.DecimalTargetType",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:DECIMAL_TARGET_TYPE_UNSPECIFIED, 0)
-  field(:NUMERIC, 1)
-  field(:BIGNUMERIC, 2)
-  field(:STRING, 3)
+  field :DECIMAL_TARGET_TYPE_UNSPECIFIED, 0
+  field :NUMERIC, 1
+  field :BIGNUMERIC, 2
+  field :STRING, 3
 end

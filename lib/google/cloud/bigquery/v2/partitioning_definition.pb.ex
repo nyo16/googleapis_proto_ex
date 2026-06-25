@@ -1,20 +1,25 @@
 defmodule Google.Cloud.Bigquery.V2.PartitioningDefinition do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.cloud.bigquery.v2.PartitioningDefinition",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:partitioned_column, 1,
+  field :partitioned_column, 1,
     repeated: true,
     type: Google.Cloud.Bigquery.V2.PartitionedColumn,
     json_name: "partitionedColumn",
     deprecated: false
-  )
 end
 
 defmodule Google.Cloud.Bigquery.V2.PartitionedColumn do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.cloud.bigquery.v2.PartitionedColumn",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:field, 1, proto3_optional: true, type: :string, deprecated: false)
+  field :field, 1, proto3_optional: true, type: :string, deprecated: false
 end

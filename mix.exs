@@ -4,8 +4,8 @@ defmodule GoogleapisProtoEx.MixProject do
   def project do
     [
       app: :googleapis_proto_ex,
-      version: "0.3.3",
-      elixir: "~> 1.10",
+      version: "0.4.0",
+      elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: description(),
@@ -20,7 +20,7 @@ defmodule GoogleapisProtoEx.MixProject do
   end
 
   defp description() do
-    "Google protos for Bigtable v2/Admin v2, Pubsub (including Schema), Datastore and more"
+    "Google API protobufs for Elixir/gRPC: Datastore, Bigtable, Pub/Sub, Storage, KMS, Tasks, Secret Manager, BigQuery, IAM, Logging, Long-Running Operations and AI Generative Language"
   end
 
   defp package() do
@@ -44,9 +44,9 @@ defmodule GoogleapisProtoEx.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:protobuf, "~> 0.15.0"},
-      {:grpc, "~> 0.11.5"},
-      {:ex_doc, "~> 0.39.1", only: :dev, runtime: false}
+      {:protobuf, "~> 0.17"},
+      {:grpc, "~> 1.0"},
+      {:ex_doc, "~> 0.40", only: :dev, runtime: false}
     ]
   end
 end

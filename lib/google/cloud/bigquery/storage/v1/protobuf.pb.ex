@@ -1,15 +1,21 @@
 defmodule Google.Cloud.Bigquery.Storage.V1.ProtoSchema do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.cloud.bigquery.storage.v1.ProtoSchema",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:proto_descriptor, 1, type: Google.Protobuf.DescriptorProto, json_name: "protoDescriptor")
+  field :proto_descriptor, 1, type: Google.Protobuf.DescriptorProto, json_name: "protoDescriptor"
 end
 
 defmodule Google.Cloud.Bigquery.Storage.V1.ProtoRows do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.cloud.bigquery.storage.v1.ProtoRows",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:serialized_rows, 1, repeated: true, type: :bytes, json_name: "serializedRows")
+  field :serialized_rows, 1, repeated: true, type: :bytes, json_name: "serializedRows"
 end
