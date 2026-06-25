@@ -13,8 +13,8 @@ defmodule GoogleapisProtoEx.MixProject do
       package: package(),
       source_url: "https://github.com/nyo16/googleapis_proto_ex",
       docs: [
-        main: "GoogleapisProtoEx",
-        extras: ["README.md"]
+        main: "readme",
+        extras: ["README.md", "CHANGELOG.md"]
       ]
     ]
   end
@@ -28,7 +28,7 @@ defmodule GoogleapisProtoEx.MixProject do
       # This option is only needed when you don't want to use the OTP application name
       name: "googleapis_proto_ex",
       # These are the default files included in the package
-      files: ~w(lib .formatter.exs mix.exs README* LICENSE*),
+      files: ~w(lib .formatter.exs mix.exs README* LICENSE* CHANGELOG*),
       licenses: ["Apache-2.0"],
       links: %{"GitHub" => "https://github.com/nyo16/googleapis_proto_ex"}
     ]
