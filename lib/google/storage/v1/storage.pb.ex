@@ -1,1382 +1,1435 @@
 defmodule Google.Storage.V1.DeleteBucketAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.DeleteBucketAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetBucketAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetBucketAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.InsertBucketAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.InsertBucketAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
 
-  field(:bucket_access_control, 3,
+  field :bucket_access_control, 3,
     type: Google.Storage.V1.BucketAccessControl,
     json_name: "bucketAccessControl"
-  )
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.ListBucketAccessControlsRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ListBucketAccessControlsRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
 
-  field(:common_request_params, 3,
+  field :common_request_params, 3,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.PatchBucketAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.PatchBucketAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
 
-  field(:bucket_access_control, 4,
+  field :bucket_access_control, 4,
     type: Google.Storage.V1.BucketAccessControl,
     json_name: "bucketAccessControl"
-  )
 
-  field(:update_mask, 5, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field :update_mask, 5, type: Google.Protobuf.FieldMask, json_name: "updateMask"
 
-  field(:common_request_params, 6,
+  field :common_request_params, 6,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.UpdateBucketAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.UpdateBucketAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
 
-  field(:bucket_access_control, 4,
+  field :bucket_access_control, 4,
     type: Google.Storage.V1.BucketAccessControl,
     json_name: "bucketAccessControl"
-  )
 
-  field(:common_request_params, 5,
+  field :common_request_params, 5,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.DeleteBucketRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.DeleteBucketRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
 
-  field(:if_metageneration_match, 2,
+  field :if_metageneration_match, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 3,
+  field :if_metageneration_not_match, 3,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:common_request_params, 5,
+  field :common_request_params, 5,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetBucketRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetBucketRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
 
-  field(:if_metageneration_match, 2,
+  field :if_metageneration_match, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 3,
+  field :if_metageneration_not_match, 3,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:projection, 4, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
+  field :projection, 4, type: Google.Storage.V1.CommonEnums.Projection, enum: true
 
-  field(:common_request_params, 6,
+  field :common_request_params, 6,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.InsertBucketRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.InsertBucketRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:predefined_acl, 1,
+  field :predefined_acl, 1,
     type: Google.Storage.V1.CommonEnums.PredefinedBucketAcl,
     json_name: "predefinedAcl",
     enum: true
-  )
 
-  field(:predefined_default_object_acl, 2,
+  field :predefined_default_object_acl, 2,
     type: Google.Storage.V1.CommonEnums.PredefinedObjectAcl,
     json_name: "predefinedDefaultObjectAcl",
     enum: true
-  )
 
-  field(:project, 3, type: :string, deprecated: false)
-  field(:projection, 4, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
-  field(:bucket, 6, type: Google.Storage.V1.Bucket)
+  field :project, 3, type: :string, deprecated: false
+  field :projection, 4, type: Google.Storage.V1.CommonEnums.Projection, enum: true
+  field :bucket, 6, type: Google.Storage.V1.Bucket
 
-  field(:common_request_params, 7,
+  field :common_request_params, 7,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.ListChannelsRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ListChannelsRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
 
-  field(:common_request_params, 3,
+  field :common_request_params, 3,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.ListBucketsRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ListBucketsRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:max_results, 1, type: :int32, json_name: "maxResults")
-  field(:page_token, 2, type: :string, json_name: "pageToken")
-  field(:prefix, 3, type: :string)
-  field(:project, 4, type: :string, deprecated: false)
-  field(:projection, 5, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
+  field :max_results, 1, type: :int32, json_name: "maxResults"
+  field :page_token, 2, type: :string, json_name: "pageToken"
+  field :prefix, 3, type: :string
+  field :project, 4, type: :string, deprecated: false
+  field :projection, 5, type: Google.Storage.V1.CommonEnums.Projection, enum: true
 
-  field(:common_request_params, 7,
+  field :common_request_params, 7,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.LockRetentionPolicyRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.LockRetentionPolicyRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:if_metageneration_match, 2, type: :int64, json_name: "ifMetagenerationMatch")
+  field :bucket, 1, type: :string, deprecated: false
+  field :if_metageneration_match, 2, type: :int64, json_name: "ifMetagenerationMatch"
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.PatchBucketRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.PatchBucketRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
 
-  field(:if_metageneration_match, 2,
+  field :if_metageneration_match, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 3,
+  field :if_metageneration_not_match, 3,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:predefined_acl, 4,
+  field :predefined_acl, 4,
     type: Google.Storage.V1.CommonEnums.PredefinedBucketAcl,
     json_name: "predefinedAcl",
     enum: true
-  )
 
-  field(:predefined_default_object_acl, 5,
+  field :predefined_default_object_acl, 5,
     type: Google.Storage.V1.CommonEnums.PredefinedObjectAcl,
     json_name: "predefinedDefaultObjectAcl",
     enum: true
-  )
 
-  field(:projection, 6, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
-  field(:metadata, 8, type: Google.Storage.V1.Bucket)
-  field(:update_mask, 9, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field :projection, 6, type: Google.Storage.V1.CommonEnums.Projection, enum: true
+  field :metadata, 8, type: Google.Storage.V1.Bucket
+  field :update_mask, 9, type: Google.Protobuf.FieldMask, json_name: "updateMask"
 
-  field(:common_request_params, 10,
+  field :common_request_params, 10,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.UpdateBucketRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.UpdateBucketRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
 
-  field(:if_metageneration_match, 2,
+  field :if_metageneration_match, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 3,
+  field :if_metageneration_not_match, 3,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:predefined_acl, 4,
+  field :predefined_acl, 4,
     type: Google.Storage.V1.CommonEnums.PredefinedBucketAcl,
     json_name: "predefinedAcl",
     enum: true
-  )
 
-  field(:predefined_default_object_acl, 5,
+  field :predefined_default_object_acl, 5,
     type: Google.Storage.V1.CommonEnums.PredefinedObjectAcl,
     json_name: "predefinedDefaultObjectAcl",
     enum: true
-  )
 
-  field(:projection, 6, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
-  field(:metadata, 8, type: Google.Storage.V1.Bucket)
+  field :projection, 6, type: Google.Storage.V1.CommonEnums.Projection, enum: true
+  field :metadata, 8, type: Google.Storage.V1.Bucket
 
-  field(:common_request_params, 9,
+  field :common_request_params, 9,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.StopChannelRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.StopChannelRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:channel, 1, type: Google.Storage.V1.Channel)
+  field :channel, 1, type: Google.Storage.V1.Channel
 
-  field(:common_request_params, 2,
+  field :common_request_params, 2,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.DeleteDefaultObjectAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.DeleteDefaultObjectAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetDefaultObjectAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetDefaultObjectAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.InsertDefaultObjectAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.InsertDefaultObjectAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
 
-  field(:object_access_control, 3,
+  field :object_access_control, 3,
     type: Google.Storage.V1.ObjectAccessControl,
     json_name: "objectAccessControl"
-  )
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.ListDefaultObjectAccessControlsRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ListDefaultObjectAccessControlsRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
 
-  field(:if_metageneration_match, 2,
+  field :if_metageneration_match, 2,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 3,
+  field :if_metageneration_not_match, 3,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:common_request_params, 5,
+  field :common_request_params, 5,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.PatchDefaultObjectAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.PatchDefaultObjectAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
 
-  field(:object_access_control, 4,
+  field :object_access_control, 4,
     type: Google.Storage.V1.ObjectAccessControl,
     json_name: "objectAccessControl"
-  )
 
-  field(:update_mask, 5, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field :update_mask, 5, type: Google.Protobuf.FieldMask, json_name: "updateMask"
 
-  field(:common_request_params, 6,
+  field :common_request_params, 6,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.UpdateDefaultObjectAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.UpdateDefaultObjectAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
 
-  field(:object_access_control, 4,
+  field :object_access_control, 4,
     type: Google.Storage.V1.ObjectAccessControl,
     json_name: "objectAccessControl"
-  )
 
-  field(:common_request_params, 5,
+  field :common_request_params, 5,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.DeleteNotificationRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.DeleteNotificationRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:notification, 2, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
+  field :notification, 2, type: :string, deprecated: false
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetNotificationRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetNotificationRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:notification, 2, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
+  field :notification, 2, type: :string, deprecated: false
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.InsertNotificationRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.InsertNotificationRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:notification, 3, type: Google.Storage.V1.Notification)
+  field :bucket, 1, type: :string, deprecated: false
+  field :notification, 3, type: Google.Storage.V1.Notification
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.ListNotificationsRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ListNotificationsRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
+  field :bucket, 1, type: :string, deprecated: false
 
-  field(:common_request_params, 3,
+  field :common_request_params, 3,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.DeleteObjectAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.DeleteObjectAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
-  field(:object, 3, type: :string, deprecated: false)
-  field(:generation, 4, type: :int64)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
+  field :object, 3, type: :string, deprecated: false
+  field :generation, 4, type: :int64
 
-  field(:common_request_params, 6,
+  field :common_request_params, 6,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetObjectAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetObjectAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
-  field(:object, 3, type: :string, deprecated: false)
-  field(:generation, 4, type: :int64)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
+  field :object, 3, type: :string, deprecated: false
+  field :generation, 4, type: :int64
 
-  field(:common_request_params, 6,
+  field :common_request_params, 6,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.InsertObjectAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.InsertObjectAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:object, 2, type: :string, deprecated: false)
-  field(:generation, 3, type: :int64)
+  field :bucket, 1, type: :string, deprecated: false
+  field :object, 2, type: :string, deprecated: false
+  field :generation, 3, type: :int64
 
-  field(:object_access_control, 5,
+  field :object_access_control, 5,
     type: Google.Storage.V1.ObjectAccessControl,
     json_name: "objectAccessControl"
-  )
 
-  field(:common_request_params, 6,
+  field :common_request_params, 6,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.ListObjectAccessControlsRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ListObjectAccessControlsRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:object, 2, type: :string, deprecated: false)
-  field(:generation, 3, type: :int64)
+  field :bucket, 1, type: :string, deprecated: false
+  field :object, 2, type: :string, deprecated: false
+  field :generation, 3, type: :int64
 
-  field(:common_request_params, 5,
+  field :common_request_params, 5,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.PatchObjectAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.PatchObjectAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
-  field(:object, 3, type: :string, deprecated: false)
-  field(:generation, 4, type: :int64)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
+  field :object, 3, type: :string, deprecated: false
+  field :generation, 4, type: :int64
 
-  field(:object_access_control, 5,
+  field :object_access_control, 5,
     type: Google.Storage.V1.ObjectAccessControl,
     json_name: "objectAccessControl"
-  )
 
-  field(:common_request_params, 6,
+  field :common_request_params, 6,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 
-  field(:update_mask, 7, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field :update_mask, 7, type: Google.Protobuf.FieldMask, json_name: "updateMask"
 end
 
 defmodule Google.Storage.V1.UpdateObjectAccessControlRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.UpdateObjectAccessControlRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:entity, 2, type: :string, deprecated: false)
-  field(:object, 3, type: :string, deprecated: false)
-  field(:generation, 4, type: :int64)
+  field :bucket, 1, type: :string, deprecated: false
+  field :entity, 2, type: :string, deprecated: false
+  field :object, 3, type: :string, deprecated: false
+  field :generation, 4, type: :int64
 
-  field(:object_access_control, 6,
+  field :object_access_control, 6,
     type: Google.Storage.V1.ObjectAccessControl,
     json_name: "objectAccessControl"
-  )
 
-  field(:common_request_params, 7,
+  field :common_request_params, 7,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 
-  field(:update_mask, 8, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field :update_mask, 8, type: Google.Protobuf.FieldMask, json_name: "updateMask"
 end
 
 defmodule Google.Storage.V1.ComposeObjectRequest.SourceObjects.ObjectPreconditions do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ComposeObjectRequest.SourceObjects.ObjectPreconditions",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:if_generation_match, 1, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch")
+  field :if_generation_match, 1, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch"
 end
 
 defmodule Google.Storage.V1.ComposeObjectRequest.SourceObjects do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ComposeObjectRequest.SourceObjects",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:name, 1, type: :string)
-  field(:generation, 2, type: :int64)
+  field :name, 1, type: :string
+  field :generation, 2, type: :int64
 
-  field(:object_preconditions, 3,
+  field :object_preconditions, 3,
     type: Google.Storage.V1.ComposeObjectRequest.SourceObjects.ObjectPreconditions,
     json_name: "objectPreconditions"
-  )
 end
 
 defmodule Google.Storage.V1.ComposeObjectRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ComposeObjectRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:destination_bucket, 1, type: :string, json_name: "destinationBucket", deprecated: false)
-  field(:destination_object, 2, type: :string, json_name: "destinationObject", deprecated: false)
+  field :destination_bucket, 1, type: :string, json_name: "destinationBucket", deprecated: false
+  field :destination_object, 2, type: :string, json_name: "destinationObject", deprecated: false
 
-  field(:destination_predefined_acl, 3,
+  field :destination_predefined_acl, 3,
     type: Google.Storage.V1.CommonEnums.PredefinedObjectAcl,
     json_name: "destinationPredefinedAcl",
     enum: true
-  )
 
-  field(:destination, 11, type: Google.Storage.V1.Object)
+  field :destination, 11, type: Google.Storage.V1.Object
 
-  field(:source_objects, 12,
+  field :source_objects, 12,
     repeated: true,
     type: Google.Storage.V1.ComposeObjectRequest.SourceObjects,
     json_name: "sourceObjects"
-  )
 
-  field(:if_generation_match, 4, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch")
+  field :if_generation_match, 4, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch"
 
-  field(:if_metageneration_match, 5,
+  field :if_metageneration_match, 5,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:kms_key_name, 6, type: :string, json_name: "kmsKeyName")
+  field :kms_key_name, 6, type: :string, json_name: "kmsKeyName"
 
-  field(:common_object_request_params, 9,
+  field :common_object_request_params, 9,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 10,
+  field :common_request_params, 10,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.CopyObjectRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.CopyObjectRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:destination_bucket, 1, type: :string, json_name: "destinationBucket", deprecated: false)
-  field(:destination_object, 2, type: :string, json_name: "destinationObject", deprecated: false)
+  field :destination_bucket, 1, type: :string, json_name: "destinationBucket", deprecated: false
+  field :destination_object, 2, type: :string, json_name: "destinationObject", deprecated: false
 
-  field(:destination_predefined_acl, 3,
+  field :destination_predefined_acl, 3,
     type: Google.Storage.V1.CommonEnums.PredefinedObjectAcl,
     json_name: "destinationPredefinedAcl",
     enum: true
-  )
 
-  field(:if_generation_match, 4, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch")
+  field :if_generation_match, 4, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch"
 
-  field(:if_generation_not_match, 5,
+  field :if_generation_not_match, 5,
     type: Google.Protobuf.Int64Value,
     json_name: "ifGenerationNotMatch"
-  )
 
-  field(:if_metageneration_match, 6,
+  field :if_metageneration_match, 6,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 7,
+  field :if_metageneration_not_match, 7,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:if_source_generation_match, 8,
+  field :if_source_generation_match, 8,
     type: Google.Protobuf.Int64Value,
     json_name: "ifSourceGenerationMatch"
-  )
 
-  field(:if_source_generation_not_match, 9,
+  field :if_source_generation_not_match, 9,
     type: Google.Protobuf.Int64Value,
     json_name: "ifSourceGenerationNotMatch"
-  )
 
-  field(:if_source_metageneration_match, 10,
+  field :if_source_metageneration_match, 10,
     type: Google.Protobuf.Int64Value,
     json_name: "ifSourceMetagenerationMatch"
-  )
 
-  field(:if_source_metageneration_not_match, 11,
+  field :if_source_metageneration_not_match, 11,
     type: Google.Protobuf.Int64Value,
     json_name: "ifSourceMetagenerationNotMatch"
-  )
 
-  field(:projection, 12, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
-  field(:source_bucket, 13, type: :string, json_name: "sourceBucket", deprecated: false)
-  field(:source_object, 14, type: :string, json_name: "sourceObject", deprecated: false)
-  field(:source_generation, 15, type: :int64, json_name: "sourceGeneration")
-  field(:destination, 17, type: Google.Storage.V1.Object)
-  field(:destination_kms_key_name, 20, type: :string, json_name: "destinationKmsKeyName")
+  field :projection, 12, type: Google.Storage.V1.CommonEnums.Projection, enum: true
+  field :source_bucket, 13, type: :string, json_name: "sourceBucket", deprecated: false
+  field :source_object, 14, type: :string, json_name: "sourceObject", deprecated: false
+  field :source_generation, 15, type: :int64, json_name: "sourceGeneration"
+  field :destination, 17, type: Google.Storage.V1.Object
+  field :destination_kms_key_name, 20, type: :string, json_name: "destinationKmsKeyName"
 
-  field(:common_object_request_params, 18,
+  field :common_object_request_params, 18,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 19,
+  field :common_request_params, 19,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.DeleteObjectRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.DeleteObjectRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:object, 2, type: :string, deprecated: false)
-  field(:upload_id, 3, type: :string, json_name: "uploadId")
-  field(:generation, 4, type: :int64)
-  field(:if_generation_match, 5, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch")
+  field :bucket, 1, type: :string, deprecated: false
+  field :object, 2, type: :string, deprecated: false
+  field :upload_id, 3, type: :string, json_name: "uploadId"
+  field :generation, 4, type: :int64
+  field :if_generation_match, 5, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch"
 
-  field(:if_generation_not_match, 6,
+  field :if_generation_not_match, 6,
     type: Google.Protobuf.Int64Value,
     json_name: "ifGenerationNotMatch"
-  )
 
-  field(:if_metageneration_match, 7,
+  field :if_metageneration_match, 7,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 8,
+  field :if_metageneration_not_match, 8,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:common_object_request_params, 10,
+  field :common_object_request_params, 10,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 11,
+  field :common_request_params, 11,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetObjectMediaRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetObjectMediaRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string)
-  field(:object, 2, type: :string)
-  field(:generation, 3, type: :int64)
-  field(:read_offset, 4, type: :int64, json_name: "readOffset")
-  field(:read_limit, 5, type: :int64, json_name: "readLimit")
-  field(:if_generation_match, 6, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch")
+  field :bucket, 1, type: :string
+  field :object, 2, type: :string
+  field :generation, 3, type: :int64
+  field :read_offset, 4, type: :int64, json_name: "readOffset"
+  field :read_limit, 5, type: :int64, json_name: "readLimit"
+  field :if_generation_match, 6, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch"
 
-  field(:if_generation_not_match, 7,
+  field :if_generation_not_match, 7,
     type: Google.Protobuf.Int64Value,
     json_name: "ifGenerationNotMatch"
-  )
 
-  field(:if_metageneration_match, 8,
+  field :if_metageneration_match, 8,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 9,
+  field :if_metageneration_not_match, 9,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:common_object_request_params, 11,
+  field :common_object_request_params, 11,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 12,
+  field :common_request_params, 12,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetObjectRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetObjectRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:object, 2, type: :string, deprecated: false)
-  field(:generation, 3, type: :int64)
-  field(:if_generation_match, 4, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch")
+  field :bucket, 1, type: :string, deprecated: false
+  field :object, 2, type: :string, deprecated: false
+  field :generation, 3, type: :int64
+  field :if_generation_match, 4, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch"
 
-  field(:if_generation_not_match, 5,
+  field :if_generation_not_match, 5,
     type: Google.Protobuf.Int64Value,
     json_name: "ifGenerationNotMatch"
-  )
 
-  field(:if_metageneration_match, 6,
+  field :if_metageneration_match, 6,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 7,
+  field :if_metageneration_not_match, 7,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:projection, 8, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
+  field :projection, 8, type: Google.Storage.V1.CommonEnums.Projection, enum: true
 
-  field(:common_object_request_params, 10,
+  field :common_object_request_params, 10,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 11,
+  field :common_request_params, 11,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetObjectMediaResponse do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetObjectMediaResponse",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:checksummed_data, 1,
+  field :checksummed_data, 1,
     type: Google.Storage.V1.ChecksummedData,
     json_name: "checksummedData"
-  )
 
-  field(:object_checksums, 2,
+  field :object_checksums, 2,
     type: Google.Storage.V1.ObjectChecksums,
     json_name: "objectChecksums"
-  )
 
-  field(:content_range, 3, type: Google.Storage.V1.ContentRange, json_name: "contentRange")
-  field(:metadata, 4, type: Google.Storage.V1.Object)
+  field :content_range, 3, type: Google.Storage.V1.ContentRange, json_name: "contentRange"
+  field :metadata, 4, type: Google.Storage.V1.Object
 end
 
 defmodule Google.Storage.V1.InsertObjectSpec do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.InsertObjectSpec",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:resource, 1, type: Google.Storage.V1.Object)
+  field :resource, 1, type: Google.Storage.V1.Object
 
-  field(:predefined_acl, 2,
+  field :predefined_acl, 2,
     type: Google.Storage.V1.CommonEnums.PredefinedObjectAcl,
     json_name: "predefinedAcl",
     enum: true
-  )
 
-  field(:if_generation_match, 3, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch")
+  field :if_generation_match, 3, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch"
 
-  field(:if_generation_not_match, 4,
+  field :if_generation_not_match, 4,
     type: Google.Protobuf.Int64Value,
     json_name: "ifGenerationNotMatch"
-  )
 
-  field(:if_metageneration_match, 5,
+  field :if_metageneration_match, 5,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 6,
+  field :if_metageneration_not_match, 6,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:projection, 7, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
+  field :projection, 7, type: Google.Storage.V1.CommonEnums.Projection, enum: true
 end
 
 defmodule Google.Storage.V1.InsertObjectRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.InsertObjectRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  oneof(:first_message, 0)
+  oneof :first_message, 0
 
-  oneof(:data, 1)
+  oneof :data, 1
 
-  field(:upload_id, 1, type: :string, json_name: "uploadId", oneof: 0)
+  field :upload_id, 1, type: :string, json_name: "uploadId", oneof: 0
 
-  field(:insert_object_spec, 2,
+  field :insert_object_spec, 2,
     type: Google.Storage.V1.InsertObjectSpec,
     json_name: "insertObjectSpec",
     oneof: 0
-  )
 
-  field(:write_offset, 3, type: :int64, json_name: "writeOffset", deprecated: false)
+  field :write_offset, 3, type: :int64, json_name: "writeOffset", deprecated: false
 
-  field(:checksummed_data, 4,
+  field :checksummed_data, 4,
     type: Google.Storage.V1.ChecksummedData,
     json_name: "checksummedData",
     oneof: 1
-  )
 
-  field(:reference, 5, type: Google.Storage.V1.GetObjectMediaRequest, oneof: 1)
+  field :reference, 5, type: Google.Storage.V1.GetObjectMediaRequest, oneof: 1
 
-  field(:object_checksums, 6,
+  field :object_checksums, 6,
     type: Google.Storage.V1.ObjectChecksums,
     json_name: "objectChecksums"
-  )
 
-  field(:finish_write, 7, type: :bool, json_name: "finishWrite")
+  field :finish_write, 7, type: :bool, json_name: "finishWrite"
 
-  field(:common_object_request_params, 8,
+  field :common_object_request_params, 8,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 9,
+  field :common_request_params, 9,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.ListObjectsRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ListObjectsRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:delimiter, 2, type: :string)
-  field(:include_trailing_delimiter, 3, type: :bool, json_name: "includeTrailingDelimiter")
-  field(:max_results, 4, type: :int32, json_name: "maxResults")
-  field(:page_token, 5, type: :string, json_name: "pageToken")
-  field(:prefix, 6, type: :string)
-  field(:projection, 7, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
-  field(:versions, 9, type: :bool)
-  field(:lexicographic_start, 11, type: :string, json_name: "lexicographicStart")
-  field(:lexicographic_end, 12, type: :string, json_name: "lexicographicEnd")
+  field :bucket, 1, type: :string, deprecated: false
+  field :delimiter, 2, type: :string
+  field :include_trailing_delimiter, 3, type: :bool, json_name: "includeTrailingDelimiter"
+  field :max_results, 4, type: :int32, json_name: "maxResults"
+  field :page_token, 5, type: :string, json_name: "pageToken"
+  field :prefix, 6, type: :string
+  field :projection, 7, type: Google.Storage.V1.CommonEnums.Projection, enum: true
+  field :versions, 9, type: :bool
+  field :lexicographic_start, 11, type: :string, json_name: "lexicographicStart"
+  field :lexicographic_end, 12, type: :string, json_name: "lexicographicEnd"
 
-  field(:common_request_params, 10,
+  field :common_request_params, 10,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.QueryWriteStatusRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.QueryWriteStatusRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:upload_id, 1, type: :string, json_name: "uploadId", deprecated: false)
+  field :upload_id, 1, type: :string, json_name: "uploadId", deprecated: false
 
-  field(:common_object_request_params, 2,
+  field :common_object_request_params, 2,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 3,
+  field :common_request_params, 3,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.QueryWriteStatusResponse do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.QueryWriteStatusResponse",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:committed_size, 1, type: :int64, json_name: "committedSize")
-  field(:complete, 2, type: :bool)
-  field(:resource, 3, type: Google.Storage.V1.Object)
+  field :committed_size, 1, type: :int64, json_name: "committedSize"
+  field :complete, 2, type: :bool
+  field :resource, 3, type: Google.Storage.V1.Object
 end
 
 defmodule Google.Storage.V1.RewriteObjectRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.RewriteObjectRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:destination_bucket, 1, type: :string, json_name: "destinationBucket", deprecated: false)
-  field(:destination_object, 2, type: :string, json_name: "destinationObject", deprecated: false)
-  field(:destination_kms_key_name, 3, type: :string, json_name: "destinationKmsKeyName")
+  field :destination_bucket, 1, type: :string, json_name: "destinationBucket", deprecated: false
+  field :destination_object, 2, type: :string, json_name: "destinationObject", deprecated: false
+  field :destination_kms_key_name, 3, type: :string, json_name: "destinationKmsKeyName"
 
-  field(:destination_predefined_acl, 4,
+  field :destination_predefined_acl, 4,
     type: Google.Storage.V1.CommonEnums.PredefinedObjectAcl,
     json_name: "destinationPredefinedAcl",
     enum: true
-  )
 
-  field(:if_generation_match, 5, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch")
+  field :if_generation_match, 5, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch"
 
-  field(:if_generation_not_match, 6,
+  field :if_generation_not_match, 6,
     type: Google.Protobuf.Int64Value,
     json_name: "ifGenerationNotMatch"
-  )
 
-  field(:if_metageneration_match, 7,
+  field :if_metageneration_match, 7,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 8,
+  field :if_metageneration_not_match, 8,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:if_source_generation_match, 9,
+  field :if_source_generation_match, 9,
     type: Google.Protobuf.Int64Value,
     json_name: "ifSourceGenerationMatch"
-  )
 
-  field(:if_source_generation_not_match, 10,
+  field :if_source_generation_not_match, 10,
     type: Google.Protobuf.Int64Value,
     json_name: "ifSourceGenerationNotMatch"
-  )
 
-  field(:if_source_metageneration_match, 11,
+  field :if_source_metageneration_match, 11,
     type: Google.Protobuf.Int64Value,
     json_name: "ifSourceMetagenerationMatch"
-  )
 
-  field(:if_source_metageneration_not_match, 12,
+  field :if_source_metageneration_not_match, 12,
     type: Google.Protobuf.Int64Value,
     json_name: "ifSourceMetagenerationNotMatch"
-  )
 
-  field(:max_bytes_rewritten_per_call, 13, type: :int64, json_name: "maxBytesRewrittenPerCall")
-  field(:projection, 14, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
-  field(:rewrite_token, 15, type: :string, json_name: "rewriteToken")
-  field(:source_bucket, 16, type: :string, json_name: "sourceBucket", deprecated: false)
-  field(:source_object, 17, type: :string, json_name: "sourceObject", deprecated: false)
-  field(:source_generation, 18, type: :int64, json_name: "sourceGeneration")
-  field(:object, 20, type: Google.Storage.V1.Object)
+  field :max_bytes_rewritten_per_call, 13, type: :int64, json_name: "maxBytesRewrittenPerCall"
+  field :projection, 14, type: Google.Storage.V1.CommonEnums.Projection, enum: true
+  field :rewrite_token, 15, type: :string, json_name: "rewriteToken"
+  field :source_bucket, 16, type: :string, json_name: "sourceBucket", deprecated: false
+  field :source_object, 17, type: :string, json_name: "sourceObject", deprecated: false
+  field :source_generation, 18, type: :int64, json_name: "sourceGeneration"
+  field :object, 20, type: Google.Storage.V1.Object
 
-  field(:copy_source_encryption_algorithm, 21,
+  field :copy_source_encryption_algorithm, 21,
     type: :string,
     json_name: "copySourceEncryptionAlgorithm"
-  )
 
-  field(:copy_source_encryption_key, 22, type: :string, json_name: "copySourceEncryptionKey")
+  field :copy_source_encryption_key, 22, type: :string, json_name: "copySourceEncryptionKey"
 
-  field(:copy_source_encryption_key_sha256, 23,
+  field :copy_source_encryption_key_sha256, 23,
     type: :string,
     json_name: "copySourceEncryptionKeySha256"
-  )
 
-  field(:common_object_request_params, 24,
+  field :common_object_request_params, 24,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 25,
+  field :common_request_params, 25,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.RewriteResponse do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.RewriteResponse",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:total_bytes_rewritten, 1, type: :int64, json_name: "totalBytesRewritten")
-  field(:object_size, 2, type: :int64, json_name: "objectSize")
-  field(:done, 3, type: :bool)
-  field(:rewrite_token, 4, type: :string, json_name: "rewriteToken")
-  field(:resource, 5, type: Google.Storage.V1.Object)
+  field :total_bytes_rewritten, 1, type: :int64, json_name: "totalBytesRewritten"
+  field :object_size, 2, type: :int64, json_name: "objectSize"
+  field :done, 3, type: :bool
+  field :rewrite_token, 4, type: :string, json_name: "rewriteToken"
+  field :resource, 5, type: Google.Storage.V1.Object
 end
 
 defmodule Google.Storage.V1.StartResumableWriteRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.StartResumableWriteRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:insert_object_spec, 1,
+  field :insert_object_spec, 1,
     type: Google.Storage.V1.InsertObjectSpec,
     json_name: "insertObjectSpec"
-  )
 
-  field(:common_object_request_params, 3,
+  field :common_object_request_params, 3,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 4,
+  field :common_request_params, 4,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.StartResumableWriteResponse do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.StartResumableWriteResponse",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:upload_id, 1, type: :string, json_name: "uploadId")
+  field :upload_id, 1, type: :string, json_name: "uploadId"
 end
 
 defmodule Google.Storage.V1.PatchObjectRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.PatchObjectRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:object, 2, type: :string, deprecated: false)
-  field(:generation, 3, type: :int64)
-  field(:if_generation_match, 4, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch")
+  field :bucket, 1, type: :string, deprecated: false
+  field :object, 2, type: :string, deprecated: false
+  field :generation, 3, type: :int64
+  field :if_generation_match, 4, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch"
 
-  field(:if_generation_not_match, 5,
+  field :if_generation_not_match, 5,
     type: Google.Protobuf.Int64Value,
     json_name: "ifGenerationNotMatch"
-  )
 
-  field(:if_metageneration_match, 6,
+  field :if_metageneration_match, 6,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 7,
+  field :if_metageneration_not_match, 7,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:predefined_acl, 8,
+  field :predefined_acl, 8,
     type: Google.Storage.V1.CommonEnums.PredefinedObjectAcl,
     json_name: "predefinedAcl",
     enum: true
-  )
 
-  field(:projection, 9, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
-  field(:metadata, 11, type: Google.Storage.V1.Object)
-  field(:update_mask, 12, type: Google.Protobuf.FieldMask, json_name: "updateMask")
+  field :projection, 9, type: Google.Storage.V1.CommonEnums.Projection, enum: true
+  field :metadata, 11, type: Google.Storage.V1.Object
+  field :update_mask, 12, type: Google.Protobuf.FieldMask, json_name: "updateMask"
 
-  field(:common_object_request_params, 13,
+  field :common_object_request_params, 13,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 14,
+  field :common_request_params, 14,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.UpdateObjectRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.UpdateObjectRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string, deprecated: false)
-  field(:object, 2, type: :string, deprecated: false)
-  field(:generation, 3, type: :int64)
-  field(:if_generation_match, 4, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch")
+  field :bucket, 1, type: :string, deprecated: false
+  field :object, 2, type: :string, deprecated: false
+  field :generation, 3, type: :int64
+  field :if_generation_match, 4, type: Google.Protobuf.Int64Value, json_name: "ifGenerationMatch"
 
-  field(:if_generation_not_match, 5,
+  field :if_generation_not_match, 5,
     type: Google.Protobuf.Int64Value,
     json_name: "ifGenerationNotMatch"
-  )
 
-  field(:if_metageneration_match, 6,
+  field :if_metageneration_match, 6,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationMatch"
-  )
 
-  field(:if_metageneration_not_match, 7,
+  field :if_metageneration_not_match, 7,
     type: Google.Protobuf.Int64Value,
     json_name: "ifMetagenerationNotMatch"
-  )
 
-  field(:predefined_acl, 8,
+  field :predefined_acl, 8,
     type: Google.Storage.V1.CommonEnums.PredefinedObjectAcl,
     json_name: "predefinedAcl",
     enum: true
-  )
 
-  field(:projection, 9, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
-  field(:metadata, 11, type: Google.Storage.V1.Object)
+  field :projection, 9, type: Google.Storage.V1.CommonEnums.Projection, enum: true
+  field :metadata, 11, type: Google.Storage.V1.Object
 
-  field(:common_object_request_params, 12,
+  field :common_object_request_params, 12,
     type: Google.Storage.V1.CommonObjectRequestParams,
     json_name: "commonObjectRequestParams"
-  )
 
-  field(:common_request_params, 13,
+  field :common_request_params, 13,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.WatchAllObjectsRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.WatchAllObjectsRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:bucket, 1, type: :string)
-  field(:versions, 2, type: :bool)
-  field(:delimiter, 3, type: :string)
-  field(:max_results, 4, type: :int32, json_name: "maxResults")
-  field(:prefix, 5, type: :string)
-  field(:include_trailing_delimiter, 6, type: :bool, json_name: "includeTrailingDelimiter")
-  field(:page_token, 7, type: :string, json_name: "pageToken")
-  field(:projection, 8, type: Google.Storage.V1.CommonEnums.Projection, enum: true)
-  field(:channel, 10, type: Google.Storage.V1.Channel)
+  field :bucket, 1, type: :string
+  field :versions, 2, type: :bool
+  field :delimiter, 3, type: :string
+  field :max_results, 4, type: :int32, json_name: "maxResults"
+  field :prefix, 5, type: :string
+  field :include_trailing_delimiter, 6, type: :bool, json_name: "includeTrailingDelimiter"
+  field :page_token, 7, type: :string, json_name: "pageToken"
+  field :projection, 8, type: Google.Storage.V1.CommonEnums.Projection, enum: true
+  field :channel, 10, type: Google.Storage.V1.Channel
 
-  field(:common_request_params, 11,
+  field :common_request_params, 11,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetProjectServiceAccountRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetProjectServiceAccountRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:project_id, 1, type: :string, json_name: "projectId", deprecated: false)
+  field :project_id, 1, type: :string, json_name: "projectId", deprecated: false
 
-  field(:common_request_params, 3,
+  field :common_request_params, 3,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.CreateHmacKeyRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.CreateHmacKeyRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:project_id, 1, type: :string, json_name: "projectId", deprecated: false)
+  field :project_id, 1, type: :string, json_name: "projectId", deprecated: false
 
-  field(:service_account_email, 2,
+  field :service_account_email, 2,
     type: :string,
     json_name: "serviceAccountEmail",
     deprecated: false
-  )
 
-  field(:common_request_params, 3,
+  field :common_request_params, 3,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.CreateHmacKeyResponse do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.CreateHmacKeyResponse",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:metadata, 1, type: Google.Storage.V1.HmacKeyMetadata)
-  field(:secret, 2, type: :string)
+  field :metadata, 1, type: Google.Storage.V1.HmacKeyMetadata
+  field :secret, 2, type: :string
 end
 
 defmodule Google.Storage.V1.DeleteHmacKeyRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.DeleteHmacKeyRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:access_id, 1, type: :string, json_name: "accessId", deprecated: false)
-  field(:project_id, 2, type: :string, json_name: "projectId", deprecated: false)
+  field :access_id, 1, type: :string, json_name: "accessId", deprecated: false
+  field :project_id, 2, type: :string, json_name: "projectId", deprecated: false
 
-  field(:common_request_params, 3,
+  field :common_request_params, 3,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetHmacKeyRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetHmacKeyRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:access_id, 1, type: :string, json_name: "accessId", deprecated: false)
-  field(:project_id, 2, type: :string, json_name: "projectId", deprecated: false)
+  field :access_id, 1, type: :string, json_name: "accessId", deprecated: false
+  field :project_id, 2, type: :string, json_name: "projectId", deprecated: false
 
-  field(:common_request_params, 3,
+  field :common_request_params, 3,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.ListHmacKeysRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ListHmacKeysRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:project_id, 1, type: :string, json_name: "projectId", deprecated: false)
-  field(:service_account_email, 2, type: :string, json_name: "serviceAccountEmail")
-  field(:show_deleted_keys, 3, type: :bool, json_name: "showDeletedKeys")
-  field(:max_results, 4, type: :int32, json_name: "maxResults")
-  field(:page_token, 5, type: :string, json_name: "pageToken")
+  field :project_id, 1, type: :string, json_name: "projectId", deprecated: false
+  field :service_account_email, 2, type: :string, json_name: "serviceAccountEmail"
+  field :show_deleted_keys, 3, type: :bool, json_name: "showDeletedKeys"
+  field :max_results, 4, type: :int32, json_name: "maxResults"
+  field :page_token, 5, type: :string, json_name: "pageToken"
 
-  field(:common_request_params, 6,
+  field :common_request_params, 6,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.ListHmacKeysResponse do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.ListHmacKeysResponse",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:next_page_token, 1, type: :string, json_name: "nextPageToken")
-  field(:items, 2, repeated: true, type: Google.Storage.V1.HmacKeyMetadata)
+  field :next_page_token, 1, type: :string, json_name: "nextPageToken"
+  field :items, 2, repeated: true, type: Google.Storage.V1.HmacKeyMetadata
 end
 
 defmodule Google.Storage.V1.UpdateHmacKeyRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.UpdateHmacKeyRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:access_id, 1, type: :string, json_name: "accessId", deprecated: false)
-  field(:project_id, 2, type: :string, json_name: "projectId", deprecated: false)
-  field(:metadata, 3, type: Google.Storage.V1.HmacKeyMetadata, deprecated: false)
+  field :access_id, 1, type: :string, json_name: "accessId", deprecated: false
+  field :project_id, 2, type: :string, json_name: "projectId", deprecated: false
+  field :metadata, 3, type: Google.Storage.V1.HmacKeyMetadata, deprecated: false
 
-  field(:common_request_params, 5,
+  field :common_request_params, 5,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.GetIamPolicyRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.GetIamPolicyRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:iam_request, 1, type: Google.Iam.V1.GetIamPolicyRequest, json_name: "iamRequest")
+  field :iam_request, 1, type: Google.Iam.V1.GetIamPolicyRequest, json_name: "iamRequest"
 
-  field(:common_request_params, 2,
+  field :common_request_params, 2,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.SetIamPolicyRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.SetIamPolicyRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:iam_request, 1, type: Google.Iam.V1.SetIamPolicyRequest, json_name: "iamRequest")
+  field :iam_request, 1, type: Google.Iam.V1.SetIamPolicyRequest, json_name: "iamRequest"
 
-  field(:common_request_params, 2,
+  field :common_request_params, 2,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.TestIamPermissionsRequest do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.TestIamPermissionsRequest",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:iam_request, 1, type: Google.Iam.V1.TestIamPermissionsRequest, json_name: "iamRequest")
+  field :iam_request, 1, type: Google.Iam.V1.TestIamPermissionsRequest, json_name: "iamRequest"
 
-  field(:common_request_params, 2,
+  field :common_request_params, 2,
     type: Google.Storage.V1.CommonRequestParams,
     json_name: "commonRequestParams"
-  )
 end
 
 defmodule Google.Storage.V1.CommonObjectRequestParams do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.CommonObjectRequestParams",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:encryption_algorithm, 1, type: :string, json_name: "encryptionAlgorithm")
-  field(:encryption_key, 2, type: :string, json_name: "encryptionKey")
-  field(:encryption_key_sha256, 3, type: :string, json_name: "encryptionKeySha256")
+  field :encryption_algorithm, 1, type: :string, json_name: "encryptionAlgorithm"
+  field :encryption_key, 2, type: :string, json_name: "encryptionKey"
+  field :encryption_key_sha256, 3, type: :string, json_name: "encryptionKeySha256"
 end
 
 defmodule Google.Storage.V1.CommonRequestParams do
   @moduledoc false
 
-  use Protobuf, protoc_gen_elixir_version: "0.15.0", syntax: :proto3
+  use Protobuf,
+    full_name: "google.storage.v1.CommonRequestParams",
+    protoc_gen_elixir_version: "0.17.0",
+    syntax: :proto3
 
-  field(:user_project, 1, type: :string, json_name: "userProject", deprecated: false)
-  field(:quota_user, 2, type: :string, json_name: "quotaUser")
-  field(:fields, 4, type: Google.Protobuf.FieldMask)
+  field :user_project, 1, type: :string, json_name: "userProject", deprecated: false
+  field :quota_user, 2, type: :string, json_name: "quotaUser"
+  field :fields, 4, type: Google.Protobuf.FieldMask
 end

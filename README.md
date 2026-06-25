@@ -13,8 +13,25 @@ This package provides pre-compiled Elixir modules from Google's Protocol Buffer 
 - **Google Cloud KMS** (v1) - Key management service  
 - **Google Cloud Tasks** (v2) - Task queue service
 - **Google Cloud Secret Manager** (v1, v1beta2) - Secret storage
+- **Google Cloud BigQuery** (incl. Storage v1 read/write API) - Data warehouse
 - **Google AI Generative Language** (v1, v1alpha, v1beta, v1beta2, v1beta3) - AI/ML APIs
-- **Core Google APIs** - Common types, RPC definitions, and annotations
+- **Google IAM** (v1) - Policy / `SetIamPolicy` / `GetIamPolicy` types used by the service IAM RPCs
+- **Google Long-Running Operations** (`google.longrunning`) - `Operation` types for admin/LRO APIs
+- **Google Cloud Logging** (v2) - Log entry and logging service types
+
+### Shared modules inherited from dependencies
+
+To avoid duplicate-module collisions in your application, this package does **not**
+generate the common Google types that its dependencies already ship — it reuses them:
+
+- `Google.Protobuf.*` (Timestamp, Duration, Empty, Any, FieldMask, Struct, Wrappers, …)
+  come from the [`protobuf`](https://hex.pm/packages/protobuf) package.
+- `Google.Api.*`, `Google.Rpc.*`, `Google.Type.*`, `Google.Longrunning.*`,
+  `Google.Bytestream.*`, `Google.Geo.*` come from the
+  [`googleapis`](https://hex.pm/packages/googleapis) package (pulled in transitively by
+  `grpc`). The only exception is a handful of `google.api` monitoring types
+  (`MetricDescriptor`, `MonitoredResource`, `Distribution`, `LabelDescriptor`) that the
+  `googleapis` package omits but Cloud Logging/BigQuery reference — those are generated here.
 
 ## Installation
 
@@ -23,8 +40,8 @@ Add `googleapis_proto_ex` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:googleapis_proto_ex, "~> 0.2.0"},
-    {:grpc, "~> 0.10.2"}
+    {:googleapis_proto_ex, "~> 0.4"},
+    {:grpc, "~> 1.0"}
   ]
 end
 ```
@@ -50,11 +67,11 @@ If you want to update the protobuf files or contribute to this project, you'll n
 
 ### Prerequisites
 
-1. **Elixir** (>= 1.10)
+1. **Elixir** (>= 1.15)
 2. **Mix** 
 3. **Git**
-4. **protoc** (Protocol Buffer Compiler) - automatically downloaded by the script
-5. **protoc-gen-elixir** plugin - automatically installed by the script
+4. **protoc** (Protocol Buffer Compiler) - uses your system `protoc` if present, otherwise downloads a pinned version
+5. **protoc-gen-elixir** plugin - automatically installed by the script (resolved even behind asdf/rtx shims)
 
 ### Updating Protobuf Files
 
@@ -71,10 +88,11 @@ chmod +x update-protos.sh
 ### What the Update Script Does
 
 1. **Installs dependencies**: Automatically installs the `protoc-gen-elixir` plugin if not present
-2. **Downloads protoc**: Downloads the latest Protocol Buffer compiler (v32.0) for your platform
-3. **Clones googleapis**: Downloads the latest Google API definitions
-4. **Generates Elixir code**: Compiles all `.proto` files into Elixir modules with gRPC support
-5. **Cross-platform support**: Works on macOS (Intel/ARM) and Linux (x86_64/ARM64)
+2. **Resolves protoc**: Prefers a system `protoc`; falls back to downloading a pinned version (override with `PROTOC_VERSION=xx.y`)
+3. **Clones googleapis**: Shallow-clones (or updates) the latest Google API definitions
+4. **Generates Elixir code**: Compiles `.proto` files into Elixir modules with gRPC support, skipping types provided by the `protobuf`/`googleapis` deps
+5. **Flattens & cleans**: Collapses the duplicated package directories that protobuf ≥ 0.16 emits, and removes any inherited types
+6. **Cross-platform support**: Works on macOS (Intel/ARM) and Linux (x86_64/ARM64)
 
 ### Manual Installation of protoc-gen-elixir
 
@@ -94,17 +112,19 @@ export PATH="$HOME/.mix/escripts:$PATH"
 ```
 googleapis_proto_ex/
 ├── lib/                          # Generated Elixir modules
-│   ├── google/
-│   │   ├── api/                  # Google API annotations
-│   │   ├── rpc/                  # Google RPC definitions  
-│   │   ├── type/                 # Common Google types
-│   │   ├── datastore/            # Datastore APIs
-│   │   ├── bigtable/             # Bigtable APIs
-│   │   ├── pubsub/               # Pub/Sub APIs
-│   │   ├── storage/              # Storage APIs
-│   │   ├── cloud/                # Other Cloud APIs
-│   │   └── ai/                   # AI/ML APIs
-│   └── protobuf/                 # Core protobuf types
+│   └── google/
+│       ├── api/                  # Only monitoring types missing from :googleapis
+│       ├── iam/                  # IAM v1 policy types
+│       ├── longrunning/          # (inherited from :googleapis at runtime)
+│       ├── logging/              # Cloud Logging v2
+│       ├── datastore/            # Datastore APIs
+│       ├── bigtable/             # Bigtable APIs
+│       ├── pubsub/               # Pub/Sub APIs
+│       ├── storage/              # Storage APIs
+│       ├── cloud/                # Other Cloud APIs (KMS, Tasks, Secret Manager, BigQuery, …)
+│       └── ai/                   # AI/ML APIs
+│                                 # NOTE: google/{protobuf,rpc,type} are provided by deps,
+│                                 #       not generated here (see "Shared modules" above)
 ├── staging_folder/               # Temporary build directory
 │   ├── googleapis/               # Cloned googleapis repo
 │   └── protoc/                   # Downloaded protoc binary
@@ -117,8 +137,8 @@ googleapis_proto_ex/
 
 This package depends on:
 
-- **protobuf** (~> 0.15.0) - Elixir Protocol Buffer implementation
-- **grpc** (~> 0.10.2) - Elixir gRPC implementation
+- **protobuf** (~> 0.17) - Elixir Protocol Buffer implementation (provides `Google.Protobuf.*`)
+- **grpc** (~> 1.0) - Elixir gRPC implementation; transitively provides the `googleapis` package (`Google.Api.*`, `Google.Rpc.*`, `Google.Type.*`, `Google.Longrunning.*`)
 
 ## Troubleshooting
 
